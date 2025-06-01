@@ -16,9 +16,9 @@ const decryptedCommonProps = {
   useOriginalCharsOnly: false,
   characters:
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_+1234567890",
-  className: "text-2xl font-mono text-white",
+  className: "text-2xl font-mono text-emerald-400",
   parentClassName: "",
-  encryptedClassName: "text-gray-500",
+  encryptedClassName: "text-emerald-900",
 };
 
 const PrincipalTitle = ({
