@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Jersey+10&family=Orbitron:wght@400..900&family=Pixelify+Sans:wght@400..700&display=swap");
+
 @import "tailwindcss";
 
 @keyframes slideIn {
@@ -11,6 +13,8 @@
   }
 }
 
+/* Animations */
+
 .canvas-hero {
   position: absolute;
   z-index: -1;
@@ -22,4 +26,9 @@
 
 .slide-in-delay-100 {
   animation: slideIn 0.5s ease-out 0.5s forwards;
+}
+
+/* Fonts */
+.font-orbitron {
+  font-family: "Orbitron", sans-serif;
 }
