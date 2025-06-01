@@ -21,11 +21,11 @@
 }
 
 .slide-in {
-  animation: slideIn 0.5s ease-out forwards;
+  animation: slideIn 1s ease-out forwards;
 }
 
 .slide-in-delay-100 {
-  animation: slideIn 0.5s ease-out 0.5s forwards;
+  animation: slideIn 1s ease-out 0.5s forwards;
 }
 
 /* Fonts */

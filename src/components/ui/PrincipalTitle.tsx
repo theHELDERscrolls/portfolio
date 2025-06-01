@@ -1,27 +1,60 @@
-const PrincipalTitle = () => {
+import DecryptedText from "../effects/DecryptedText";
+
+interface PrincipalTitleProps {
+  name: string;
+  lastName: string;
+  roleLine1: string;
+  roleLine2: string;
+}
+
+// Modify to change Title style
+const decryptedCommonProps = {
+  speed: 150,
+  maxIterations: 50,
+  sequential: true,
+  revealDirection: "start" as const, // start | center | end | undefined
+  useOriginalCharsOnly: false,
+  characters:
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_+1234567890",
+  className: "text-2xl font-mono text-white",
+  parentClassName: "",
+  encryptedClassName: "text-gray-500",
+};
+
+const PrincipalTitle = ({
+  name,
+  lastName,
+  roleLine1,
+  roleLine2,
+}: PrincipalTitleProps) => {
   return (
     <div
       id="name-logo"
       className="grid grid-cols-[auto_32px_auto] grid-rows-2 text-white"
     >
-      <div className="col-start-1 row-start-1 text-end overflow-hidden  ">
-        <p className="slide-in text-5xl font-orbitron font-bold">HELDER</p>
+      <div className="col-start-1 row-start-1 text-end overflow-hidden">
+        <p className="slide-in text-5xl font-orbitron font-bold">{name}</p>
       </div>
-      <div className="col-start-1 row-start-2 text-end overflow-hidden  font-orbitron">
+      <div className="col-start-1 row-start-2 text-end overflow-hidden font-orbitron">
         <p className="opacity-0 slide-in slide-in-delay-100 text-5xl font-orbitron">
-          RUIZ
+          {lastName}
         </p>
       </div>
+
       <div
         id="neon-line"
         className="col-start-2 row-span-2 w-[2px] h-full mx-auto bg-indigo-500 shadow-[0_0_25px_5px_#6366f1] rounded animate-pulse"
       />
-      <p className="font-mono col-start-3 row-start-1 text-start text-2xl self-end w-[232px]">
-        <span className="text-amber-500">&lt;</span>FullStack
-      </p>
-      <p className="font-mono col-start-3 row-start-2 text-start text-2xl self-start w-[232px]">
-        Developer<span className="text-amber-500">/&gt;</span>
-      </p>
+
+      <div className="col-start-3 row-start-1 self-end w-[232px] text-start flex gap-1">
+        <span className="text-amber-400 font-mono text-2xl">&lt;</span>
+        <DecryptedText text={roleLine1} {...decryptedCommonProps} />
+      </div>
+
+      <div className="col-start-3 row-start-2 self-start w-[232px] text-start flex gap-1">
+        <DecryptedText text={roleLine2} {...decryptedCommonProps} />
+        <span className="text-amber-400 font-mono text-2xl">/&gt;</span>
+      </div>
     </div>
   );
 };

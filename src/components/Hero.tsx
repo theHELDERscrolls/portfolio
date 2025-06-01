@@ -1,14 +1,18 @@
-import type { ReactNode } from "react";
+import { PrincipalTitle } from "./ui";
 
-interface HeroProps {
-  children: ReactNode;
-}
-
-const Hero = ({ children }: HeroProps) => {
+const Hero = () => {
   return (
     <>
       <header className="relative h-dvh w-full flex flex-col justify-center items-center">
-        {children}
+        {/* barra de navegación */}
+        <PrincipalTitle
+          name="HELDER"
+          lastName="RUIZ"
+          roleLine1="FullStack"
+          roleLine2="Developer"
+        />
+        {/* Texto estoico o frase célebre sobre filosofía o similar */}
+        {/* Enlaces de mail, linkedin y github */}
       </header>
     </>
   );
