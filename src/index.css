@@ -13,6 +13,15 @@
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* Animations */
 
 .canvas-hero {
@@ -20,12 +29,20 @@
   z-index: -1;
 }
 
-.slide-in {
+.animate-slide-in {
   animation: slideIn 1s ease-out forwards;
 }
 
-.slide-in-delay-100 {
+.animate-slide-in-delay-100 {
   animation: slideIn 1s ease-out 0.5s forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out both;
+}
+
+.animate-fade-in-delay-100 {
+  animation: fadeIn 1s ease-out 1s both;
 }
 
 /* Fonts */

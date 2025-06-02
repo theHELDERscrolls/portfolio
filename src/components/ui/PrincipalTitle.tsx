@@ -33,10 +33,10 @@ const PrincipalTitle = ({
       className="grid grid-cols-[auto_32px_auto] grid-rows-2 text-white"
     >
       <div className="col-start-1 row-start-1 text-end overflow-hidden">
-        <p className="slide-in text-5xl font-orbitron font-bold">{name}</p>
+        <p className="animate-slide-in text-5xl font-orbitron font-bold">{name}</p>
       </div>
       <div className="col-start-1 row-start-2 text-end overflow-hidden font-orbitron">
-        <p className="opacity-0 slide-in slide-in-delay-100 text-5xl font-orbitron">
+        <p className="opacity-0 slide-in animate-slide-in-delay-100 text-5xl font-orbitron">
           {lastName}
         </p>
       </div>
