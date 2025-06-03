@@ -1,5 +1,5 @@
 interface ButtonIconProps {
-  href: string;
+  href?: string;
   idName: string;
   className?: string;
 }
@@ -9,7 +9,7 @@ const ButtonIcon = ({
   idName,
   className,
 }: ButtonIconProps) => {
-  const isMailLink = href.startsWith("mailto:");
+  const isMailLink = href?.startsWith("mailto:");
 
   return (
     <a
@@ -26,7 +26,7 @@ const ButtonIcon = ({
         role="img"
         aria-hidden="true"
       >
-        <use href={`public/spriteSheet.svg#${idName}`}/>
+        <use href={`/spriteSheet.svg#${idName}`}/>
       </svg>
     </a>
   );
