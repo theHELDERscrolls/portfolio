@@ -15,7 +15,7 @@ const PrincipalLogo = () => {
         />
       </div>
 
-      <span className="w-0.5 h-24 bg-indigo-500 rounded-full shadow-[0_0_25px_5px_#6366f1] rounded-full animate-pulse"></span>
+      <span className="w-0.5 h-24 bg-indigo-500 rounded-full shadow-[0_0_25px_5px_#6366f1] animate-pulse"></span>
 
       <div className="w-36 font-mono text-start leading-tight">
         <span className="text-amber-400">&lt;</span>
