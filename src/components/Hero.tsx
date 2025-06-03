@@ -1,5 +1,6 @@
 import { PrincipalTitle } from "./ui";
 import QuoteCard from "./ui/QuoteCard";
+import SocialNav from "./ui/SocialNav";
 
 const Hero = () => {
   return (
@@ -17,6 +18,7 @@ const Hero = () => {
         {/* Texto estoico o frase célebre sobre filosofía o similar */}
         <QuoteCard/>
         {/* Enlaces de mail, linkedin y github */}
+        <SocialNav/>
       </header>
     </>
   );

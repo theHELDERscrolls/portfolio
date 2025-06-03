@@ -8,7 +8,7 @@ interface NinjaQuote {
 
 const defaultQuote: NinjaQuote = {
   quote:
-    "Time is like a river made up of the events which happen, and a violent stream; for as soon as a thing has been seen, it is carried away, and another comes in its place.",
+    "It is not death that a man should fear, but he should fear never beginning to live.",
   author: "Marcus Aurelius",
 };
 
@@ -38,7 +38,7 @@ const QuoteCard = () => {
   // }, []);
 
   return (
-    <blockquote className="flex flex-col justify-center w-[min(90vw,380px)] min-h-20 font-mono text-neutral-400 text-xs border border-indigo-500 bg-indigo-500/10 shadow-[0_0_5px_#6366f1] rounded-2xl p-4 animate-fade-in-delay-100">
+    <blockquote className="flex flex-col justify-center w-[min(90vw,380px)] min-h-20 font-mono text-neutral-400 text-xs border border-indigo-500 bg-indigo-800/10 shadow-[0_0_5px_#6366f1] rounded-2xl p-4 animate-fade-in-delay-100">
       {defaultQuote?.quote}
       <footer className="text-end text-amber-400 mt-2">
         {defaultQuote?.author}
