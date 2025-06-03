@@ -1,12 +1,14 @@
-import { PrincipalTitle } from "./ui";
-import ButtonIcon from "./ui/ButtonIcon";
-import QuoteCard from "./ui/QuoteCard";
-import SocialNav from "./ui/SocialNav";
+ import { PrincipalTitle } from "./ui";
+ import ButtonIcon from "./ui/ButtonIcon";
+import PrincipalLogo from "./ui/PrincipalLogo";
+ import QuoteCard from "./ui/QuoteCard";
+ import SocialNav from "./ui/SocialNav";
 
 const Hero = () => {
   return (
     <>
       <header className="relative h-dvh w-full flex flex-col justify-around items-center">
+        <PrincipalLogo />
         <PrincipalTitle
           name="HELDER"
           lastName="RUIZ"

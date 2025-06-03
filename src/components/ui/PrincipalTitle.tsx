@@ -43,7 +43,7 @@ const PrincipalTitle = ({
 
       <div
         id="neon-line"
-        className="col-start-2 row-span-2 w-[2px] h-full mx-auto bg-indigo-500 shadow-[0_0_25px_5px_#6366f1] rounded animate-pulse"
+        className="col-start-2 row-span-2 w-0.5 h-full mx-auto bg-indigo-500 shadow-[0_0_25px_5px_#6366f1] rounded-full animate-pulse"
       />
 
       <div className="col-start-3 row-start-1 self-end w-[232px] text-start flex gap-1">
