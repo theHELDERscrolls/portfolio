@@ -1,5 +1,5 @@
-import Hero from "./components/Hero";
-import Particles from "./components/effects/Particles";
+import { Hero } from "./components";
+import { Particles } from "./components";
 
 function App() {
   /* You can modify these props to change background styles */

@@ -1,9 +1,11 @@
-import useMediaQuery from "../hooks/useMediaQuery";
-import { PrincipalTitle } from "./ui";
-import ButtonIcon from "./ui/ButtonIcon";
-import PrincipalLogo from "./ui/PrincipalLogo";
-import QuoteCard from "./ui/QuoteCard";
-import SocialNav from "./ui/SocialNav";
+import {
+  ButtonIcon,
+  PrincipalLogo,
+  PrincipalTitle,
+  QuoteCard,
+  SocialNav,
+} from "../ui";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 const Hero = () => {
   const isSmallScreen = useMediaQuery("(max-width: 550px)");

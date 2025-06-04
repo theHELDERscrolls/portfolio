@@ -1,4 +1,4 @@
-import DecryptedText from "../effects/DecryptedText";
+import { DecryptedText } from "../effects";
 
 interface PrincipalTitleProps {
   name: string;
