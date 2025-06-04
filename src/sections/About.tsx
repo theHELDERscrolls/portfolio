@@ -6,7 +6,7 @@ const About = () => {
       id="sect-about"
       className="border-2 border-red-500 min-h-dvh text-neutral-400"
     >
-      <h2 className=" text-cyan-500 font-orbitron">About me</h2>
+      <h2 className=" text-cyan-500 font-orbitron font-bold">About me</h2>
       <article className="font-mono">
         {/* About */}
         {/* <h3>

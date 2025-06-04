@@ -7,10 +7,10 @@ const MyInspirationalCard = () => {
       className="flex flex-col gap-4 w-xs h-auto text-xs border border-cyan-500 bg-cyan-800/10 shadow-[0_0_5px_#00B8DB] rounded-2xl p-4"
     >
       <h3>
-        <span className="text-cyan-500 font-bold">PEOPLE</span>| that inspires
+        <span id="my-inspiration-type" className="text-cyan-500 font-bold">PEOPLE</span>| that inspires
         me
       </h3>
-      <div className="flex gap-4 border-l-4 border-l-cyan-500 pl-4">
+      <div className="flex gap-4 border-l-1 border-l-cyan-500 pl-4">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/0_S%C3%A9n%C3%A8que_-_Mus%C3%A9e_du_Prado_-_Cat._144_-_%282%29.JPG/250px-0_S%C3%A9n%C3%A8que_-_Mus%C3%A9e_du_Prado_-_Cat._144_-_%282%29.JPG"
           alt="Imagen de Séneca"
@@ -18,8 +18,8 @@ const MyInspirationalCard = () => {
         />
 
         <div className="flex flex-col gap-2">
-          <h4 className="text-rose-400 text-base">Séneca</h4>
-          <p>
+          <h4 id="my-inspiration-name" className="text-rose-400 text-base">Séneca</h4>
+          <p id="my-inspiration-desc">
             Era un men muy listo que nació en un sitio de la antigüedad y daba
             la chapa, pero no chapa de aburrir, chapa de "buah, como le sabe
             este tío. Menudos factos suelta". Y al parecer motivó a la peña. No
