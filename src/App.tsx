@@ -1,5 +1,6 @@
 import { Hero } from "./components";
 import { Particles } from "./components";
+import { About } from "./sections";
 
 function App() {
   /* You can modify these props to change background styles */
@@ -12,13 +13,15 @@ function App() {
     particleCount: 2000,
     particleSpread: 10,
     speed: 0.1,
-    className: "fixed w-screen h-screen -z-10 bg-[radial-gradient(circle,_#000_70%,_#0c0a1f_100%)]", //! DONT CHANGE THIS PROP
+    className:
+      "fixed w-screen h-screen -z-10 bg-[radial-gradient(circle,_#000_70%,_#0c0a1f_100%)]", //! DONT CHANGE THIS PROP
   };
 
   return (
     <main className="relative">
       <Particles {...particlesDefaultProps} />
       <Hero />
+      <About />
     </main>
   );
 }

@@ -5,6 +5,7 @@ import {
   QuoteCard,
   SocialNav,
 } from "../ui";
+
 import useMediaQuery from "../../hooks/useMediaQuery";
 
 const Hero = () => {
