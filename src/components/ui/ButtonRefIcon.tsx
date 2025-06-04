@@ -1,5 +1,5 @@
 interface ButtonRefIconProps {
-  href?: string;
+  href?: string; // ❗ Cambiar a obligatoria si tenemos creado el ButtonIcon
   idName: string;
   className?: string;
 }

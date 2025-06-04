@@ -1,5 +1,5 @@
 import {
-  ButtonRefIcon,
+  ButtonIcon,
   PrincipalLogo,
   PrincipalTitle,
   QuoteCard,
@@ -28,7 +28,7 @@ const Hero = () => {
 
         <SocialNav />
 
-        <ButtonRefIcon
+        <ButtonIcon
           idName="icon-chevrons-down"
           className="text-neutral-400/20 animate-bounce"
         />
@@ -38,3 +38,10 @@ const Hero = () => {
 };
 
 export default Hero;
+
+{
+  /* <ButtonRefIcon
+          idName="icon-chevrons-down"
+          className="text-neutral-400/20 animate-bounce"
+        /> */
+}
