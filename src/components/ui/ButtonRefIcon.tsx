@@ -1,14 +1,14 @@
-interface ButtonIconProps {
+interface ButtonRefIconProps {
   href?: string;
   idName: string;
   className?: string;
 }
 
-const ButtonIcon = ({
+const ButtonRefIcon = ({
   href,
   idName,
   className,
-}: ButtonIconProps) => {
+}: ButtonRefIconProps) => {
   const isMailLink = href?.startsWith("mailto:");
 
   return (
@@ -32,4 +32,4 @@ const ButtonIcon = ({
   );
 };
 
-export default ButtonIcon;
+export default ButtonRefIcon;
