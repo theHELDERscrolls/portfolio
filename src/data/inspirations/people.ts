@@ -1,7 +1,7 @@
 import type { Inspiration } from "../../types/inspiration";
 
 // id 100-199
-export const books: Inspiration[] = [
+export const people: Inspiration[] = [
   {
     id: 100,
     name: "Marcus Aurelius",
