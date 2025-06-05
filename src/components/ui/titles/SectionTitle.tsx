@@ -3,7 +3,7 @@ interface SectionTitleProps {
 }
 
 const SectionTitle = ({ text }: SectionTitleProps) => {
-  return <h2 className="w-full text-2xl font-bold text-center text-indigo-500 border-yellow-300 border-1 font-orbitron">{text}</h2>;
+  return <h2 className="w-full text-2xl font-bold text-center text-indigo-500 font-orbitron">{text}</h2>;
 };
 
 export default SectionTitle;

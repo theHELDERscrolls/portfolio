@@ -1,4 +1,4 @@
-import { DecryptedText } from "../effects";
+import { DecryptedText } from "../../effects";
 
 interface PrincipalTitleProps {
   name: string;
@@ -33,7 +33,9 @@ const PrincipalTitle = ({
       className="grid grid-cols-[auto_32px_auto] grid-rows-2 text-white"
     >
       <div className="col-start-1 row-start-1 overflow-hidden text-end">
-        <p className="text-5xl font-bold animate-slide-in font-orbitron">{name}</p>
+        <p className="text-5xl font-bold animate-slide-in font-orbitron">
+          {name}
+        </p>
       </div>
       <div className="col-start-1 row-start-2 overflow-hidden text-end font-orbitron">
         <p className="text-5xl opacity-0 slide-in animate-slide-in-delay-100 font-orbitron">

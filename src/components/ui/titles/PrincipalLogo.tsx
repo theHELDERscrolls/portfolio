@@ -1,4 +1,4 @@
-import { DecryptedText } from "../effects";
+import { DecryptedText } from "../../effects";
 
 const PrincipalLogo = () => {
   return (

@@ -1,4 +1,4 @@
-import ButtonRefIcon from "./ButtonRefIcon";
+import { ButtonRefIcon } from "../buttons";
 
 const commonButtonClasses =
   "text-neutral-400 hover:text-indigo-500 border border-neutral-400 hover:border-indigo-500 hover:shadow-[0_0_5px_#6366f1] hover:bg-indigo-800/10 hover:scale-110 rounded-full p-2 transition";
