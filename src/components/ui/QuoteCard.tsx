@@ -40,7 +40,7 @@ const QuoteCard = () => {
   return (
     <blockquote className="flex flex-col justify-center w-[min(90vw,380px)] min-h-20 font-mono text-neutral-400 text-xs border border-indigo-500 bg-indigo-800/10 shadow-[0_0_5px_#6366f1] rounded-2xl p-4 animate-fade-in-delay-100">
       {defaultQuote?.quote}
-      <footer className="text-end text-amber-400 mt-2">
+      <footer className="mt-2 text-end text-amber-400">
         {defaultQuote?.author}
       </footer>
     </blockquote>

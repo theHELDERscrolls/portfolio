@@ -7,7 +7,7 @@ const PrincipalLogo = () => {
       aria-label="Logo personal de Helder Ruiz con título animado"
       className="grid grid-cols-[auto_2px_auto] items-center gap-3 text-white"
     >
-      <div className="w-36 overflow-hidden">
+      <div className="overflow-hidden w-36">
         <img
           src="src/assets/HR_logo_light.svg"
           alt="Logo de Helder Ruiz: letras HR en blanco"
@@ -17,7 +17,7 @@ const PrincipalLogo = () => {
 
       <span className="w-0.5 h-24 bg-indigo-500 rounded-full shadow-[0_0_25px_5px_#6366f1] animate-pulse"></span>
 
-      <div className="w-36 font-mono text-start leading-tight">
+      <div className="font-mono leading-tight w-36 text-start">
         <span className="text-amber-400">&lt;</span>
         <DecryptedText
           text="FullStack Developer"

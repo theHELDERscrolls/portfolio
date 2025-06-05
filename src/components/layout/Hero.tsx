@@ -13,7 +13,7 @@ const Hero = () => {
 
   return (
     <>
-      <header className="relative h-dvh w-full flex flex-col justify-around items-center">
+      <header className="relative flex flex-col items-center justify-around w-full h-dvh">
         {isSmallScreen ? (
           <PrincipalLogo />
         ) : (

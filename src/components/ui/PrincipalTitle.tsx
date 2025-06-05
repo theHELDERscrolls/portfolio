@@ -32,11 +32,11 @@ const PrincipalTitle = ({
       id="name-logo"
       className="grid grid-cols-[auto_32px_auto] grid-rows-2 text-white"
     >
-      <div className="col-start-1 row-start-1 text-end overflow-hidden">
-        <p className="animate-slide-in text-5xl font-orbitron font-bold">{name}</p>
+      <div className="col-start-1 row-start-1 overflow-hidden text-end">
+        <p className="text-5xl font-bold animate-slide-in font-orbitron">{name}</p>
       </div>
-      <div className="col-start-1 row-start-2 text-end overflow-hidden font-orbitron">
-        <p className="opacity-0 slide-in animate-slide-in-delay-100 text-5xl font-orbitron">
+      <div className="col-start-1 row-start-2 overflow-hidden text-end font-orbitron">
+        <p className="text-5xl opacity-0 slide-in animate-slide-in-delay-100 font-orbitron">
           {lastName}
         </p>
       </div>
@@ -47,13 +47,13 @@ const PrincipalTitle = ({
       />
 
       <div className="col-start-3 row-start-1 self-end w-[232px] text-start flex gap-1">
-        <span className="text-amber-400 font-mono text-2xl">&lt;</span>
+        <span className="font-mono text-2xl text-amber-400">&lt;</span>
         <DecryptedText text={roleLine1} {...decryptedCommonProps} />
       </div>
 
       <div className="col-start-3 row-start-2 self-start w-[232px] text-start flex gap-1">
         <DecryptedText text={roleLine2} {...decryptedCommonProps} />
-        <span className="text-amber-400 font-mono text-2xl">/&gt;</span>
+        <span className="font-mono text-2xl text-amber-400">/&gt;</span>
       </div>
     </div>
   );

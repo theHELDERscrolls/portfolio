@@ -1,4 +1,4 @@
-import { MyInspirationalCard } from "../components";
+import { MyInspirationalCard, SectionTitle } from "../components";
 
 const About = () => {
   return (
@@ -6,8 +6,8 @@ const About = () => {
       id="sect-about"
       className="border-2 border-red-500 min-h-dvh text-neutral-400"
     >
-      <h2 className=" text-cyan-500 font-orbitron font-bold">About me</h2>
-      <article className="font-mono">
+      <SectionTitle text="About me" />
+      <article className="">
         {/* About */}
         {/* <h3>
           Beyond the <span className="text-cyan-500">code...</span>
@@ -30,15 +30,12 @@ const About = () => {
           and <span className="text-rose-400">playing the piano</span>, small
           rituals that help me recharge and keep my creativity flowing.
         </p> */}
-        {/* personal inspiration card -> create local "data base". 
-            people|books|podcast|music. */}
-        <MyInspirationalCard />
-        {/* Some stats: years working, projects, coffee consumption */}
-        {/* Skills & tech */}
       </article>
-      <article></article>
-      <article></article>
-      <article></article>
+      <MyInspirationalCard />
+      <article>
+        {/* Some stats: years working, projects, coffee consumption */}
+      </article>
+      <article>{/* Skills & tech */}</article>
     </section>
   );
 };
