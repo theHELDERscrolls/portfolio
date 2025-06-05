@@ -1,4 +1,9 @@
-import { SectionTitle, MyInspirationCard } from "../components";
+import {
+  SectionTitle,
+  MyInspirationCard,
+  CoffeConsumptionCard,
+  YearsExpCard,
+} from "../components";
 const About = () => {
   return (
     <section
@@ -29,9 +34,12 @@ const About = () => {
           rituals that help me recharge and keep my creativity flowing.
         </p>
       </article> */}
-      <MyInspirationCard />
-      <article>
+      {/* <MyInspirationCard /> */}
+      <article className="flex items-center justify-around border border-green-500">
         {/* Some stats: years working, projects, coffee consumption */}
+        <CoffeConsumptionCard />
+        <YearsExpCard />
+        <CoffeConsumptionCard />
       </article>
       <article>{/* Skills & tech */}</article>
     </section>
