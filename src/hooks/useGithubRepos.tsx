@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
  * @example
  * const { repos, loading, error } = useGithubRepos('PepePerez');
  */
+
 const useGithubRepos = (username: string) => {
   // Holds the number of repositories
   const [repos, setRepos] = useState<number | null>(null);

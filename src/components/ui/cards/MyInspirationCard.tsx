@@ -24,7 +24,7 @@ const MyInspirationCard = () => {
   return (
     <div
       id="my-inspiration"
-      className="flex flex-col h-auto gap-4 p-4 font-mono text-xs border border-indigo-900 w-xs bg-indigo-800/10 rounded-2xl hover:border-indigo-500 hover:shadow-[0_0_5px_#6366f1] transition"
+      className="flex mx-auto w-auto flex-col h-auto gap-4 p-4 font-mono text-xs border border-indigo-900 max-w-xs bg-indigo-800/10 rounded-2xl hover:border-indigo-500 hover:shadow-[0_0_5px_#6366f1] transition"
     >
       <h3 className="flex items-center">
         <span
@@ -35,7 +35,7 @@ const MyInspirationCard = () => {
         </span>
         | that inspires me
       </h3>
-      <div className="flex gap-4 pl-4 border-l-1 border-l-indigo-500">
+      <div className="flex items-center gap-4 pl-4 border-l-1 border-l-indigo-500">
         <img
           src={inspiration.imageURL}
           alt={`Imagen de ${inspiration.name}`}
