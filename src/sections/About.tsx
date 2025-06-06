@@ -5,6 +5,7 @@ import {
   YearsExpCard,
   ProjectsCompletedCard,
 } from "../components";
+import TechCard from "../components/ui/cards/TechCard";
 const About = () => {
   return (
     <section
@@ -60,7 +61,9 @@ const About = () => {
             <YearsExpCard />
             <CoffeConsumptionCard />
           </article>
-          <article className="w-full bg-green-400 border h-50"></article>
+          <article className="">
+            <TechCard />
+          </article>
         </div>
       </div>
     </section>
