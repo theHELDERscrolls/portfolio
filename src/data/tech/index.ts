@@ -1,0 +1,1 @@
+export { techList } from "./techList";
