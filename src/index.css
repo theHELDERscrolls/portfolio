@@ -2,7 +2,7 @@
 
 @import "tailwindcss";
 
-@keyframes slideIn {
+@keyframes rightSlideIn {
   0% {
     opacity: 0;
     transform: translateX(100%);
@@ -41,36 +41,40 @@
   z-index: -1;
 }
 
-.animate-slide-in {
-  animation: slideIn 1s ease-out forwards;
+.animate-right-slide-in {
+  animation: rightSlideIn 1s ease-in-out forwards;
 }
 
-.animate-slide-in-delay-100 {
-  animation: slideIn 1s ease-out 0.5s forwards;
+.animate-right-slide-in-delay-100 {
+  animation: rightSlideIn 1s ease-in-out 0.5s forwards;
 }
 
 .animate-fade-in {
-  animation: fadeIn 1s ease-out both;
+  animation: fadeIn 1s ease-in-out both;
 }
 
 .animate-fade-in-delay-100 {
-  animation: fadeIn 1s ease-out 1s both;
+  animation: fadeIn 1s ease-in-out 1s both;
 }
 
 .animate-popup {
-  animation: popUp 0.5s ease-out both;
+  animation: popUp 0.5s ease-in-out both;
+}
+
+.animate-popup-delay-100 {
+    animation: popUp 0.5s ease-in-out 1s both;
 }
 
 .animate-popup-delay-200 {
-    animation: popUp 0.5s ease-out 2s both;
+    animation: popUp 0.5s ease-in-out 2s both;
 }
 
 .animate-popup-delay-250 {
-    animation: popUp 0.5s ease-out 2.5s both;
+    animation: popUp 0.5s ease-in-out 2.5s both;
 }
 
 .animate-popup-delay-300 {
-    animation: popUp 0.5s ease-out 3s both;
+    animation: popUp 0.5s ease-in-out 3s both;
 }
 
 /* Fonts */

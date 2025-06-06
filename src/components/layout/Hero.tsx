@@ -9,11 +9,11 @@ import {
 import useMediaQuery from "../../hooks/useMediaQuery";
 
 const Hero = () => {
-  const isSmallScreen = useMediaQuery("(max-width: 550px)");
+  const isSmallScreen = useMediaQuery("(max-width: 755px)");
 
   return (
     <>
-      <header className="relative flex flex-col items-center justify-around w-full h-dvh">
+      <header className="relative flex flex-col items-center justify-around w-full gap-4 min-h-dvh">
         {isSmallScreen ? (
           <PrincipalLogo />
         ) : (

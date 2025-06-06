@@ -11,13 +11,13 @@ const PrincipalLogo = () => {
         <img
           src="src/assets/HR_logo_light.svg"
           alt="Logo de Helder Ruiz: letras HR en blanco"
-          className="w-36 animate-slide-in drop-shadow-[0_1px_2px_rgba(99,102,241,0.7)]"
+          className="w-36 animate-right-slide-in drop-shadow-[0_1px_2px_rgba(99,102,241,0.7)]"
         />
       </div>
 
       <span className="w-0.5 h-24 bg-indigo-500 rounded-full shadow-[0_0_25px_5px_#6366f1] animate-pulse"></span>
 
-      <div className="font-mono leading-tight w-36 text-start">
+      <div className="font-mono text-2xl leading-tight w-36">
         <span className="text-amber-400">&lt;</span>
         <DecryptedText
           text="FullStack Developer"
