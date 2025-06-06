@@ -1,17 +1,32 @@
-const TechCard = () => {
-  /* Podemos hacer uso tan solo de las rutas para obtener los iconos de la Web
-  en lugar de montar todo un complejo hook con filtro para iterar el array de 
-  techList.
-  
-  Hay que tener en cuenta que tenemos iconos con svg directo y otros con dos img: una 
-  modo oscuro y otra claro.
-  
-  Por ello puede ser interesante indicar con un ternario que si:
-  https://svgl.app/library/${tech}_light.svg ? https://svgl.app/library/${tech}_light.svg : https://svgl.app/library/${tech}.svg
+import { techList } from "../../../data";
 
-  de este modo nos aseguramos que el svg que obtengamos coincide, tengo o no una ruta diferente si hay modo light.
-  */
-  return <img src="https://svgl.app/library/tailwindcss.svg" alt="" />;
+const TechCard = () => {
+  return (
+    <section className="flex flex-col w-full gap-8 mt-8">
+      <h3 className="text-2xl font-bold text-center text-white sm:text-3xl font-orbitron">
+        <span className="text-indigo-500">Tech</span> Stack
+      </h3>
+
+      <div
+        id="tech-grid"
+        className="grid grid-cols-3 gap-4 sm:grid-cols-4 justify-items-center"
+      >
+        {techList.map((tech) => (
+          <div
+            key={tech.name}
+            className="p-3 border border-indigo-900 bg-indigo-800/10 rounded-2xl hover:border-indigo-500 hover:shadow-[0_0_5px_#6366f1] hover:scale-105 transition-transform"
+          >
+            <img
+              src={tech.imgURL}
+              alt={`${tech.name} icon`}
+              className="object-contain w-10 h-10"
+              title={tech.name}
+            />
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 };
 
 export default TechCard;

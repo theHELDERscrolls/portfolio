@@ -61,7 +61,7 @@ const About = () => {
             <YearsExpCard />
             <CoffeConsumptionCard />
           </article>
-          <article className="">
+          <article>
             <TechCard />
           </article>
         </div>
