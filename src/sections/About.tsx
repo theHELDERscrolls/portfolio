@@ -55,7 +55,7 @@ const About = () => {
           id="right-col"
           className="flex flex-col justify-between max-h-full gap-4 break-inside-avoid"
         >
-          <article className="flex flex-wrap justify-evenly gap-4 border border-green-600">
+          <article className="flex flex-wrap gap-4 border border-green-600 justify-evenly">
             <ProjectsCompletedCard />
             <YearsExpCard />
             <CoffeConsumptionCard />
