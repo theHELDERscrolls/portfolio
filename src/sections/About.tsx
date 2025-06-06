@@ -47,7 +47,7 @@ const About = () => {
             </p>
           </article>
           <article className="flex items-center justify-center">
-            <MyInspirationCard infoPassTime={10000} />
+            <MyInspirationCard infoPassTime={15000} />
           </article>
         </div>
 
@@ -55,7 +55,7 @@ const About = () => {
           id="right-col"
           className="flex flex-col justify-between max-h-full gap-4 break-inside-avoid"
         >
-          <article className="flex flex-wrap gap-4 border border-green-600 justify-evenly">
+          <article className="flex flex-wrap gap-4 justify-evenly">
             <ProjectsCompletedCard />
             <YearsExpCard />
             <CoffeConsumptionCard />

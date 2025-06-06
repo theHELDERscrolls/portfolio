@@ -1,8 +1,9 @@
 const TechCard = () => {
   return (
     <div>
-      <h3>My Tech</h3>
-
+      <h3>
+        My <span>Tech</span> skills
+      </h3>
     </div>
   );
 };
