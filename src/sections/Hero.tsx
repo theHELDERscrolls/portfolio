@@ -4,9 +4,9 @@ import {
   PrincipalTitle,
   QuoteCard,
   SocialNav,
-} from "../ui";
+} from "../components/ui";
 
-import useMediaQuery from "../../hooks/useMediaQuery";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 const Hero = () => {
   const isSmallScreen = useMediaQuery("(max-width: 755px)");

@@ -1,6 +1,5 @@
-import { Hero } from "./components";
+import { About, Experience, Hero } from "./sections";
 import { Particles } from "./components";
-import { About } from "./sections";
 
 function App() {
   /* You can modify these props to change background styles */
@@ -22,6 +21,7 @@ function App() {
       <Particles {...particlesDefaultProps} />
       <Hero />
       <About />
+      <Experience />
     </main>
   );
 }
