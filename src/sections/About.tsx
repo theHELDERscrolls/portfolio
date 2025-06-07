@@ -10,7 +10,7 @@ const About = () => {
   return (
     <section
       id="sect-about"
-      className="px-4 mx-auto border border-red-500 max-w-7xl min-h-dvh text-neutral-400"
+      className="px-4 mx-auto max-w-7xl min-h-dvh text-neutral-400"
     >
       <SectionTitle text="About me" />
 
@@ -48,7 +48,7 @@ const About = () => {
             </p>
           </article>
           <article className="flex items-center justify-center">
-            <MyInspirationCard infoPassTime={15000} />
+            <MyInspirationCard infoPassTime={10000} />
           </article>
         </div>
 
