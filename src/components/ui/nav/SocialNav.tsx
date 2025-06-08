@@ -9,17 +9,17 @@ const SocialNav = () => {
       <ButtonRefIcon
         href="mailto:manuhelderruiz@gmail.com"
         idName="icon-mail"
-        className={`${commonButtonClasses} animate-popup-delay-200`}
+        className={`${commonButtonClasses} animate-[popUp_0.5s_ease-in-out_2s_both]`}
       />
       <ButtonRefIcon
         href="https://github.com/theHELDERscrolls"
         idName="icon-github"
-        className={`${commonButtonClasses} animate-popup-delay-250`}
+        className={`${commonButtonClasses} animate-[popUp_0.5s_ease-in-out_2.25s_both]`}
       />
       <ButtonRefIcon
         href="https://www.linkedin.com/in/heldermvr/"
         idName="icon-linkedin"
-        className={`${commonButtonClasses} animate-popup-delay-300`}
+        className={`${commonButtonClasses} animate-[popUp_0.5s_ease-in-out_2.50s_both]`}
       />
     </nav>
   );

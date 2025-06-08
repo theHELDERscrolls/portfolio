@@ -39,10 +39,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-{
-  /* <ButtonRefIcon
-          idName="icon-chevrons-down"
-          className="text-neutral-400/20 animate-bounce"
-        /> */
-}

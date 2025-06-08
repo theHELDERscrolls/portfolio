@@ -1,7 +1,11 @@
 import { About, Experience, Hero } from "./sections";
 import { Particles } from "./components";
+import { useEffect } from "react";
 
 function App() {
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   /* You can modify these props to change background styles */
   const particlesDefaultProps = {
     alphaParticles: true,
@@ -21,7 +25,7 @@ function App() {
       <Particles {...particlesDefaultProps} />
       <Hero />
       <About />
-      <Experience />
+      {/* <Experience /> */}
     </main>
   );
 }

@@ -38,7 +38,7 @@ const QuoteCard = () => {
   // }, []);
 
   return (
-    <blockquote className="flex flex-col text-base sm:text-lg justify-center mx-4 max-w-xl min-h-20 font-mono text-neutral-400 border border-indigo-500 bg-indigo-800/10 shadow-[0_0_5px_#6366f1] rounded-2xl p-4 animate-fade-in-delay-100">
+    <blockquote className="flex flex-col text-base sm:text-lg justify-center mx-4 max-w-xl min-h-20 font-mono text-neutral-400 border border-indigo-500 bg-indigo-800/10 shadow-[0_0_5px_#6366f1] rounded-2xl p-4 animate-[fadeIn_1s_ease-in-out_1.25s_both]">
       {defaultQuote?.quote}
       <footer className="mt-2 text-end text-amber-400">
         {defaultQuote?.author}

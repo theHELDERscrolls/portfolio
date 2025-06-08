@@ -6,6 +6,7 @@
   --font-orbitron: "Orbitron", sans-serif;
 
   --animate-right-slide-in: rightSlideIn 1s ease-in-out forwards;
+  --animate-left-slide-in: leftSlideIn 1s ease-in-out forwards;
   --animate-fade-in: fadeIn 1s ease-in-out both;
   --animate-pop-up: popUp 0.5s ease-in-out both;
 
@@ -13,6 +14,17 @@
     0% {
       opacity: 0;
       transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes leftSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
     }
     100% {
       transform: translateX(0);

@@ -38,7 +38,7 @@ const PrincipalTitle = ({
         </p>
       </div>
       <div className="col-start-1 row-start-2 overflow-hidden text-end font-orbitron">
-        <p className="opacity-0 text-7xl slide-in animate-right-slide-in font-orbitron">
+        <p className="delay-1000 opacity-0 text-7xl font-orbitron animate-[rightSlideIn_1s_ease-in-out_0.5s_forwards]">
           {lastName}
         </p>
       </div>
