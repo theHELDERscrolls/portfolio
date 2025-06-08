@@ -1,6 +1,6 @@
 export type InspirationType = "BOOK" | "MUSIC" | "PEOPLE" | "PODCAST";
 
-export interface Inspiration {
+export default interface Inspiration {
   id: number;
   type: InspirationType;
   name: string;

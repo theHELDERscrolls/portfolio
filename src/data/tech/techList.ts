@@ -1,9 +1,6 @@
-interface TechListProps {
-  name: string;
-  imgURL: string;
-}
+import type Tech from "../../types/tech";
 
-export const techList: TechListProps[] = [
+export const techList: Tech[] = [
   { name: "CSS", imgURL: "https://svgl.app/library/css.svg" },
   { name: "Git", imgURL: "https://svgl.app/library/git.svg" },
   { name: "Github", imgURL: "https://svgl.app/library/github_dark.svg" },

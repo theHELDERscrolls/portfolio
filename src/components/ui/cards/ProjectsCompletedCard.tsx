@@ -1,5 +1,5 @@
 import { useGithubRepos } from "../../../hooks";
-import InfoCard from "./InfoCard";
+import { InfoCard } from "../templates";
 
 const ProjectsCompletedCard = () => {
   const { repos, loading, error } = useGithubRepos("theHELDERscrolls");

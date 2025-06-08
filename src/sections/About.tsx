@@ -1,12 +1,29 @@
+import { useInView } from "react-intersection-observer";
 import {
-  SectionTitle,
-  MyInspirationCard,
   CoffeConsumptionCard,
-  YearsExpCard,
+  MyInspirationCard,
   ProjectsCompletedCard,
+  SectionTitle,
+  TechCard,
+  YearsExpCard,
 } from "../components";
-import TechCard from "../components/ui/cards/TechCard";
+
 const About = () => {
+  const { ref: refMyInfo, inView: inViewMyInfo } = useInView({
+    threshold: 1,
+    triggerOnce: true,
+  });
+
+  const { ref: refInspiration, inView: inViewInspiration } = useInView({
+    threshold: 1,
+    triggerOnce: true,
+  });
+
+  const { ref: refPersonal, inView: inViewPersonal } = useInView({
+    threshold: 1,
+    triggerOnce: true,
+  });
+
   return (
     <section
       id="sect-about"
@@ -22,7 +39,12 @@ const About = () => {
           id="left-col"
           className="flex flex-col max-h-full gap-8 break-inside-avoid"
         >
-          <article className="flex flex-col gap-3 font-mono text-white text-balance">
+          <article
+            ref={refMyInfo}
+            className={`flex flex-col gap-3 font-mono text-white text-balance ${
+              inViewMyInfo ? "animate-left-slide-in" : "opacity-0"
+            }`}
+          >
             <h3 className="text-2xl font-bold sm:text-3xl font-orbitron">
               Beyond the <span className="text-indigo-500">code...</span>
             </h3>
@@ -47,8 +69,13 @@ const About = () => {
               rituals that help me recharge and keep my creativity flowing.
             </p>
           </article>
-          <article className="flex items-center justify-center">
-            <MyInspirationCard infoPassTime={10000} />
+          <article
+            ref={refInspiration}
+            className={`flex items-center justify-center ${
+              inViewInspiration ? "animate-left-slide-in" : "opacity-0"
+            }`}
+          >
+            <MyInspirationCard infoPassTime={8000} />
           </article>
         </div>
 
@@ -56,7 +83,12 @@ const About = () => {
           id="right-col"
           className="flex flex-col justify-between max-h-full gap-4 break-inside-avoid"
         >
-          <article className="flex flex-wrap gap-4 justify-evenly">
+          <article
+            ref={refPersonal}
+            className={`flex flex-wrap gap-4 justify-evenly ${
+              inViewPersonal ? "animate-right-slide-in" : "opacity-0"
+            }`}
+          >
             <ProjectsCompletedCard />
             <YearsExpCard />
             <CoffeConsumptionCard />

@@ -1,4 +1,4 @@
-import InfoCard from "./InfoCard";
+import { InfoCard } from "../templates";
 
 const YearsExpCard = () => {
   const getYearsOfExperience = () => {
@@ -9,7 +9,9 @@ const YearsExpCard = () => {
     return hasAnniversaryPassed ? diffYears : diffYears - 1;
   };
 
-  return <InfoCard value={getYearsOfExperience()} label="experience years" />;
+  return (
+    <InfoCard value={`+${getYearsOfExperience()}`} label="experience years" />
+  );
 };
 
 export default YearsExpCard;
