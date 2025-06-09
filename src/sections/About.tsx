@@ -15,7 +15,7 @@ const About = () => {
   });
 
   const { ref: refInspiration, inView: inViewInspiration } = useInView({
-    threshold: 1,
+    threshold: 0.5,
     triggerOnce: true,
   });
 

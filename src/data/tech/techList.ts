@@ -10,4 +10,5 @@ export const techList: TechProps[] = [
   { name: "React", imgURL: "https://svgl.app/library/react_dark.svg" },
   { name: "Tailwindcss", imgURL: "https://svgl.app/library/tailwindcss.svg" },
   { name: "TypeScript", imgURL: "https://svgl.app/library/typescript.svg" },
+  { name: "Vite", imgURL: "https://svgl.app/library/vitejs.svg" },
 ];
