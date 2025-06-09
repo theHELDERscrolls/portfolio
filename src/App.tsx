@@ -1,4 +1,4 @@
-import { About, Experience, Hero } from "./sections";
+import { About, Experience, Hero, Projects } from "./sections";
 import { Particles } from "./components";
 import { useEffect } from "react";
 
@@ -27,6 +27,7 @@ function App() {
       <Hero />
       <About />
       <Experience />
+      <Projects />
     </main>
   );
 }
