@@ -1,4 +1,4 @@
-export default interface Tech {
+export interface TechProps {
   name: string;
   imgURL: string;
 }

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { books, music, people, podcasts } from "../../../data";
-import type { Inspiration } from "../../../types/inspiration";
+import type Inspiration from "../../../types/inspiration";
 import { useMediaQuery } from "../../../hooks";
 
 interface MyInspirationCardProps {
@@ -48,7 +48,7 @@ const MyInspirationCard = ({ infoPassTime }: MyInspirationCardProps) => {
       id="my-inspiration"
       className={`${
         isSmallScreen ? "h-70" : "h-52"
-      } flex flex-col max-w-lg md:h-auto gap-4 p-4 font-mono border border-indigo-900 bg-indigo-800/10 rounded-2xl hover:border-indigo-500 hover:shadow-[0_0_5px_#6366f1] transition`}
+      } flex flex-col max-w-lg md:h-auto gap-4 p-4 font-mono border border-indigo-900 bg-indigo-800/10 rounded-2xl hover:border-indigo-500 hover:shadow-[0_0_5px_#6366f1] transition-all duration-300`}
     >
       <h3 className="flex items-center">
         <span

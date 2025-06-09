@@ -1,6 +1,6 @@
-import type Tech from "../../types/tech";
+import type { TechProps } from "../../types";
 
-export const techList: Tech[] = [
+export const techList: TechProps[] = [
   { name: "CSS", imgURL: "https://svgl.app/library/css.svg" },
   { name: "Git", imgURL: "https://svgl.app/library/git.svg" },
   { name: "Github", imgURL: "https://svgl.app/library/github_dark.svg" },
