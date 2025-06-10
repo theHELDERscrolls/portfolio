@@ -1,7 +1,7 @@
 import { ButtonRefIcon } from "../buttons";
 
 const commonButtonClasses =
-  "text-neutral-400 hover:text-indigo-500 border-2 border-neutral-400 hover:border-indigo-500 hover:shadow-[0_0_5px_#6366f1] hover:bg-indigo-800/10 hover:scale-110 rounded-full p-2 transition";
+  "text-neutral-400 hover:text-indigo-500 border-2 border-neutral-400 hover:border-indigo-500 hover:shadow-[0_0_5px_#6366f1] hover:bg-indigo-800/10 hover:scale-110 rounded-full p-2 transition-all duration-300";
 
 const SocialNav = () => {
   return (

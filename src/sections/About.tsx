@@ -10,7 +10,7 @@ import {
 
 const About = () => {
   const { ref: refMyInfo, inView: inViewMyInfo } = useInView({
-    threshold: 1,
+    threshold: 0.75,
     triggerOnce: true,
   });
 
