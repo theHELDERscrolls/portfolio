@@ -29,7 +29,7 @@ const About = () => {
       id="sect-about"
       className="px-4 mx-auto max-w-7xl min-h-dvh text-neutral-400"
     >
-      <SectionTitle text="About me" />
+      <SectionTitle text="ABOUT ME" />
 
       <div
         id="aboutme-content"

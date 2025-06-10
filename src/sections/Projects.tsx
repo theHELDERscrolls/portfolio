@@ -8,7 +8,7 @@ const Projects = () => {
       id="sect-projects"
       className="p-4 mx-auto max-w-7xl min-h-dvh"
     >
-      <SectionTitle text="Projects" />
+      <SectionTitle text="PROJECTS" />
       <article
         id="projects-grid"
         className={`grid gap-6 mt-8 justify-items-center ${
