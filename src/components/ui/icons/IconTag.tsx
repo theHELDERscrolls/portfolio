@@ -5,14 +5,15 @@ const IconTag = ({
   text,
   className = "",
   width = "w-fit",
+  size = 16,
 }: IconTagProps) => (
   <div
     className={`flex justify-center items-center gap-1 px-2 py-1 rounded text-xs h-7 ${width} ${className}`}
   >
-    <svg width={16} height={16} role="img" aria-hidden="true">
+    <svg width={size} height={size} role="img" aria-hidden="true">
       <use href={`/spriteSheet.svg#${svgId}`} />
     </svg>
-    <span>{text}</span>
+    {text && <span>{text}</span>}
   </div>
 );
 

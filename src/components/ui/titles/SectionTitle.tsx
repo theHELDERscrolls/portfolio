@@ -16,7 +16,7 @@ const SectionTitle = ({ text }: SectionTitleProps) => {
       <span
         id="neon-line"
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-1/2 w-full h-0.5 -translate-x-1/2 -translate-y-1/2 -z-10 bg-gradient-to-r from-transparent via-indigo-200 to-transparent"
+        className="pointer-events-none absolute left-1/2 top-1/2 w-full h-0.5 -translate-x-1/2 -translate-y-1/2 -z-10 bg-gradient-to-r from-transparent via-indigo-500 to-transparent blur-xs"
       ></span>
       {text}
     </h2>
