@@ -1,11 +1,18 @@
+import { useInView } from "react-intersection-observer";
 import { ButtonRefIcon, IconTag } from "../ui";
 
 const buttonRefIconClassName =
   "p-2 transition-all duration-300 border rounded-xl text-neutral-500 border-neutral-500 bg-neutral-800/10 hover:bg-indigo-800/25 hover:border-indigo-500 hover:text-white hover:scale-105";
 
 const Footer = () => {
+  const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: true });
   return (
-    <footer className="flex flex-col sm:flex-row gap-4 items-center justify-between p-4 mx-auto border-t mt-10 border-indigo-500 max-w-7xl">
+    <footer
+      ref={ref}
+      className={`${
+        inView ? "animate-up-slide-in" : "opacity-0"
+      } flex flex-col sm:flex-row gap-4 items-center justify-between p-4 mx-auto border-t mt-10 border-indigo-500 max-w-7xl`}
+    >
       <div id="footer-left-up" className="flex flex-col gap-2">
         <article
           id="footer-logo"
