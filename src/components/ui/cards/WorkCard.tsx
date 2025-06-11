@@ -13,7 +13,7 @@ const WorkCard = ({ work }: WorkCardProps) => {
     <div
       ref={ref}
       id="work-card"
-      className={`group flex flex-col w-full gap-2 p-4 text-white border border-indigo-900 bg-indigo-800/10 rounded-2xl hover:border-indigo-500 hover:shadow-[0_0_5px_#6366f1] hover:scale-105 transition-all duration-300 ${
+      className={`group flex flex-col w-full gap-2 p-4 text-white border border-indigo-900 bg-indigo-800/10 rounded-2xl hover:border-indigo-500 hover:shadow-[0_0_5px_#6366f1] hover:scale-101 transition-all duration-300 ${
         inView ? "animate-fade-in" : "opacity-0"
       }`}
     >

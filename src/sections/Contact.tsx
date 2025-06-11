@@ -56,7 +56,7 @@ const ContactMe = () => {
           <div className="flex flex-col w-full gap-4 p-4 border-t border-b border-indigo-500">
             <a
               href="mailto:manuhelderruiz@gmail.com?subject=Coffee%20Chat"
-              className="flex p-2 flex-col w-full sm:items-center sm:flex-row border border-amber-500 bg-gradient-to-r from-amber-800/25 to-transparent rounded-2xl hover:border-amber-500 hover:shadow-[0_0_8px_#F0B250] transition-all duration-300"
+              className="flex p-2 flex-col w-full sm:items-center sm:flex-row border border-amber-500 bg-gradient-to-r from-amber-800/25 to-transparent hover:scale-101 rounded-2xl hover:border-amber-500 hover:shadow-[0_0_5px_#F0B250] transition-all duration-300"
             >
               <ContactBlock
                 svgId="icon-coffee"
@@ -73,7 +73,7 @@ const ContactMe = () => {
             </a>
             <a
               href="mailto:manuhelderruiz@gmail.com?subject=Project%20Discussion"
-              className="flex p-2 flex-col w-full sm:items-center sm:flex-row border border-lime-500 bg-gradient-to-r from-lime-800/25 to-transparent rounded-2xl hover:shadow-[0_0_8px_#7CCF00] transition-all duration-300"
+              className="flex p-2 flex-col w-full sm:items-center sm:flex-row border border-lime-500 hover:scale-101 bg-gradient-to-r from-lime-800/25 to-transparent rounded-2xl hover:shadow-[0_0_5px_#7CCF00] transition-all duration-300"
             >
               <ContactBlock
                 svgId="icon-discuss"
@@ -90,7 +90,7 @@ const ContactMe = () => {
             </a>
             <a
               href="mailto:manuhelderruiz@gmail.com?subject=Strategy%20Session"
-              className="flex p-2 flex-col w-full sm:items-center sm:flex-row border border-sky-500 bg-gradient-to-r from-sky-800/25 to-transparent rounded-2xl hover:border-sky-500 hover:shadow-[0_0_8px_#00A6F4] transition-all duration-300"
+              className="flex p-2 flex-col w-full sm:items-center sm:flex-row border hover:scale-101 border-sky-500 bg-gradient-to-r  from-sky-800/25 to-transparent rounded-2xl hover:border-sky-500 hover:shadow-[0_0_5px_#00A6F4] transition-all duration-300"
             >
               <ContactBlock
                 svgId="icon-bolt"
