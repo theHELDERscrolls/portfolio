@@ -1,5 +1,5 @@
 import { About, ContactMe, Experience, Hero, Projects } from "./sections";
-import { Particles } from "./components";
+import { Footer, Particles } from "./components";
 
 function App() {
   /* You can modify these props to change background styles */
@@ -17,14 +17,17 @@ function App() {
   };
 
   return (
-    <main className="relative">
-      <Particles {...particlesDefaultProps} />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <ContactMe />
-    </main>
+    <>
+      <main className="relative">
+        <Particles {...particlesDefaultProps} />
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <ContactMe />
+      </main>
+      <Footer />
+    </>
   );
 }
 
