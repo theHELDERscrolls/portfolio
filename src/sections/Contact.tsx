@@ -47,7 +47,7 @@ const ContactMe = () => {
         <div className="flex flex-col items-center justify-center">
           <ContactBlock
             svgId="icon-camera"
-            color="indigo"
+            textColor="text-indigo-500"
             title="Schedule a Call"
             subTitle="Choose your preferred meeting type"
             className="mb-4"
@@ -60,7 +60,7 @@ const ContactMe = () => {
             >
               <ContactBlock
                 svgId="icon-coffee"
-                color="amber"
+                textColor="text-amber-500"
                 title="Coffee Chat"
                 subTitle="15 min"
                 className="w-48 sm:border-r sm:border-amber-500"
@@ -77,7 +77,7 @@ const ContactMe = () => {
             >
               <ContactBlock
                 svgId="icon-discuss"
-                color="lime"
+                textColor="text-lime-500"
                 title="Project Discussion"
                 subTitle="30 min"
                 className="w-48 sm:border-r border-lime-500"
@@ -94,7 +94,7 @@ const ContactMe = () => {
             >
               <ContactBlock
                 svgId="icon-bolt"
-                color="sky"
+                textColor="text-sky-500"
                 title="Strategy Session"
                 subTitle="60 min"
                 className="w-48 sm:border-r border-sky-500"
@@ -111,21 +111,21 @@ const ContactMe = () => {
         <div className="flex flex-wrap items-center justify-around gap-4">
           <ContactBlock
             svgId="icon-process"
-            color="amber"
+            textColor="text-amber-500"
             title="Response Time"
             subTitle="within 24 hours"
           />
 
           <ContactBlock
             svgId="icon-planet"
-            color="lime"
+            textColor="text-lime-500"
             title="Timezone"
             subTitle="CET (UTC +1)"
           />
 
           <ContactBlock
             svgId="icon-language"
-            color="sky"
+            textColor="text-sky-500"
             title="Language"
             subTitle="Spanish, English"
           />

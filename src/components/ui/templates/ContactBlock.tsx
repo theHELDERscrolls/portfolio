@@ -2,7 +2,7 @@ import { IconTag } from "../icons";
 
 interface ContactBlockProps {
   className?: string;
-  color: string;
+  textColor: string;
   size?: number;
   subTitle: string;
   svgId: string;
@@ -11,7 +11,7 @@ interface ContactBlockProps {
 
 const ContactBlock = ({
   className,
-  color,
+  textColor,
   size,
   subTitle,
   svgId,
@@ -19,7 +19,7 @@ const ContactBlock = ({
 }: ContactBlockProps) => {
   return (
     <div className={`flex items-center  ${className}`}>
-      <IconTag svgId={svgId} className={`text-${color}-500`} size={size} />
+      <IconTag svgId={svgId} className={`${textColor}`} size={size} />
       <div className="flex flex-col">
         <p className="font-bold">{title}</p>
         <p className="text-neutral-400">{subTitle}</p>
