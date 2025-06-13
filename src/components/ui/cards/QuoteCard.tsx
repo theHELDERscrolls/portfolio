@@ -12,9 +12,10 @@ const defaultQuote: NinjaQuote = {
   author: "Marcus Aurelius",
 };
 
+const apiKey = import.meta.env.VITE_API_KEY;
+
 const QuoteCard = () => {
   const [quote, setQuote] = useState<NinjaQuote | null>(null);
-  const apiKey = import.meta.env.VITE_API_KEY;
 
   const fetchData = async () => {
     try {
