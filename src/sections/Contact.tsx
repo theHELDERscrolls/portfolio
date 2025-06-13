@@ -8,7 +8,7 @@ const ContactMe = () => {
   });
 
   const { ref: refContactCard, inView: inViewContactCard } = useInView({
-    threshold: 0.75,
+    threshold: 0.25,
     triggerOnce: true,
   });
 

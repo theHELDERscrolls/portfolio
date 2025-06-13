@@ -6,7 +6,7 @@ const Projects = () => {
   return (
     <section
       id="sect-projects"
-      className="p-4 mx-auto max-w-7xl min-h-dvh mb-10"
+      className="p-4 mx-auto mb-10 max-w-7xl min-h-dvh"
     >
       <SectionTitle text="PROJECTS" />
       <article

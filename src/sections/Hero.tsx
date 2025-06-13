@@ -13,7 +13,7 @@ const Hero = () => {
 
   return (
     <>
-      <header className="relative flex flex-col items-center justify-around w-full gap-4 min-h-dvh">
+      <header id="hero" className="relative flex flex-col items-center justify-around w-full gap-4 min-h-dvh">
         {isSmallScreen ? (
           <PrincipalLogo />
         ) : (
