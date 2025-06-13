@@ -63,8 +63,8 @@ const Footer = () => {
         <p className="flex justify-center items-center gap-1">
           <IconTag svgId="icon-new" className="text-rose-500 animate-pulse" />
           <span>quotes from</span>
-          <a href="https://zenquotes.io/" className="ml-1 text-amber-400">
-            ZenQuotes.io
+          <a href="https://api-ninjas.com/" className="ml-1 text-amber-400">
+            API Ninjas
           </a>
         </p>
       </div>
