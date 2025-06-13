@@ -1,4 +1,4 @@
-import type { Inspiration } from "../../types/inspiration";
+import type Inspiration from "../../types/inspiration";
 
 // id 300-399
 export const podcasts: Inspiration[] = [
