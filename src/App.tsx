@@ -27,55 +27,57 @@ function App() {
   const contactRef = useRef<HTMLElement | null>(null);
 
   // useEffect to implement the scrollspy effect
+  // This effect listens for scroll and resize events to determine which section is most visible in the viewport.
+  // It updates the activeSection state accordingly, which can be used for highlighting navigation or other UI changes.
   useEffect(() => {
-    // Function to handle scroll events
+    // Handler to check which section is most visible
     const handleScroll = () => {
-      // Get the current scroll position, adding an offset for better accuracy
-      const scrollY = window.scrollY + 120; // Adjust the offset as needed
-
-      // Array of sections with their corresponding refs and IDs
+      // Array of section refs and their corresponding IDs
       const sections = [
-        {
-          id: "about",
-          ref: aboutRef,
-        },
-        {
-          id: "experience",
-          ref: experienceRef,
-        },
-        {
-          id: "projects",
-          ref: projectsRef,
-        },
-        {
-          id: "contact",
-          ref: contactRef,
-        },
+        { id: "about", ref: aboutRef },
+        { id: "experience", ref: experienceRef },
+        { id: "projects", ref: projectsRef },
+        { id: "contact", ref: contactRef },
       ];
 
-      // Default to "home" section
-      let current = "home";
-      // Loop through each section to determine which is currently in view
+      let maxVisible = 0; // Tracks the maximum visible height among sections
+      let current = "about"; // Default section, can be "home" if you have a hero section
+
+      // Iterate through each section to determine visibility
       for (const section of sections) {
         const el = section.ref.current;
-        // If the section exists and its top is above the scroll position, set it as current
-        if (el && el.offsetTop <= scrollY) {
-          current = section.id;
+        if (el) {
+          // Get the bounding rectangle of the section
+          const rect = el.getBoundingClientRect();
+          // Calculate the visible part of the section in the viewport
+          const visible =
+            Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+
+          // If this section is more visible than previous ones, update current
+          if (visible > maxVisible && visible > 0) {
+            maxVisible = visible;
+            current = section.id;
+          }
         }
       }
       // Update the active section state
       setActiveSection(current);
     };
 
-    // Add the scroll event listener
+    // Attach event listeners for scroll and resize
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Run once on mount to set initial state
-
-    // Cleanup: remove the event listener on unmount
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+    // Initial check on mount
+    handleScroll();
+    // Cleanup event listeners on unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
   }, []);
 
   // Memoize the Particles component to prevent unnecessary re-renders
+  // This ensures the Particles background does not re-render unless its props change
   const memoParticles = useMemo(
     () => <Particles {...particlesDefaultProps} />,
     []
