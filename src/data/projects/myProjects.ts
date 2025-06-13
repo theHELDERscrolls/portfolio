@@ -26,7 +26,7 @@ export const myProjects: ProjectProps[] = [
     title: "Skyrimzon",
     description:
       "Skyrimzon: Your medieval fantasy store with the best selection of products inspired by Skyrim. Discover armors, weapons, potions, and more to live your own adventure.",
-    tech: ["TypeScript", "React", "Node.js", "GraphQL"],
+    tech: ["JavaScript", "CSS", "HTML"],
     githubURL: "https://github.com/theHELDERscrolls/practica_DOM",
     deployURL: "https://skyrimzon.vercel.app/",
     status: "completed",
