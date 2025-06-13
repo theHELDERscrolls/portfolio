@@ -21,4 +21,14 @@ export const myProjects: ProjectProps[] = [
     deployURL: "https://skyrimzon.vercel.app/",
     status: "completed",
   },
+  {
+    imgUrl: "src/assets/projects/project_heracles.jpg",
+    title: "Heracles",
+    description:
+      "A new project is launching soon. Prepare for an interstellar journey as we build something out of this world.",
+    tech: ["Unknown"],
+    githubURL: "",
+    deployURL: "",
+    status: "coming-soon",
+  },
 ];
