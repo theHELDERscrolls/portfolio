@@ -14,12 +14,13 @@ const defaultQuote: NinjaQuote = {
 
 const QuoteCard = () => {
   const [quote, setQuote] = useState<NinjaQuote | null>(null);
+  const apiKey = import.meta.env.VITE_API_KEY;
 
   const fetchData = async () => {
     try {
       const res = await fetch("https://api.api-ninjas.com/v1/quotes", {
         headers: {
-          "X-Api-Key": import.meta.env.VITE_API_KEY,
+          "X-Api-Key": apiKey,
         },
       });
 
