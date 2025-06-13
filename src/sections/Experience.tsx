@@ -3,7 +3,7 @@ import { workList } from "../data";
 
 const Experience = () => {
   return (
-    <section id="sect-work-exp" className="p-4 mx-auto max-w-7xl min-h-dvh">
+    <section id="sect-work-exp" className="p-4 mx-auto max-w-7xl min-h-screen">
       <SectionTitle text="WORK EXPERIENCE" />
       <article
         id="work-grid"
