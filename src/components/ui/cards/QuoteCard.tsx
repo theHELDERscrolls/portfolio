@@ -1,4 +1,4 @@
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface NinjaQuote {
   quote: string;
@@ -13,35 +13,35 @@ const defaultQuote: NinjaQuote = {
 };
 
 const QuoteCard = () => {
-  // const [quote, setQuote] = useState<NinjaQuote | null>(null);
+  const [quote, setQuote] = useState<NinjaQuote | null>(null);
 
-  // const fetchData = async () => {
-  //   try {
-  //     const res = await fetch("https://api.api-ninjas.com/v1/quotes", {
-  //       headers: {
-  //         "X-Api-Key": import.meta.env.VITE_API_KEY,
-  //       },
-  //     });
+  const fetchData = async () => {
+    try {
+      const res = await fetch("https://api.api-ninjas.com/v1/quotes", {
+        headers: {
+          "X-Api-Key": import.meta.env.VITE_API_KEY,
+        },
+      });
 
-  //     if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
 
-  //     const jsonData: NinjaQuote[] = await res.json();
-  //     setQuote(jsonData[0]);
-  //   } catch (error) {
-  //     console.error("Fetch error: ", error);
-  //     setQuote(defaultQuote);
-  //   }
-  // };
+      const jsonData: NinjaQuote[] = await res.json();
+      setQuote(jsonData[0]);
+    } catch (error) {
+      console.error("Fetch error: ", error);
+      setQuote(defaultQuote);
+    }
+  };
 
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <blockquote className="flex flex-col text-base sm:text-lg justify-center mx-4 max-w-xl min-h-20 font-mono text-neutral-400 border border-indigo-500 bg-indigo-800/10 shadow-[0_0_5px_#6366f1] rounded-2xl p-4 animate-[fadeIn_1s_ease-in-out_1.25s_both]">
-      {defaultQuote?.quote}
+      {(quote ?? defaultQuote).quote}
       <footer className="mt-2 text-end text-amber-400">
-        {defaultQuote?.author}
+        {(quote ?? defaultQuote).author}
       </footer>
     </blockquote>
   );
