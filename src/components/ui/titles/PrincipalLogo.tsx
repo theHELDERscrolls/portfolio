@@ -11,7 +11,7 @@ const PrincipalLogo = () => {
         <img
           src="/assets/HR_logo_light.svg"
           alt="Logo de Helder Ruiz: letras HR en blanco"
-          className="w-36 animate-right-slide-in drop-shadow-[0_1px_2px_rgba(99,102,241,0.7)]"
+          className="w-36 animate-right-slide-in drop-shadow-[0_1px_10px_rgba(99,102,241,0.7)]"
         />
       </div>
 
