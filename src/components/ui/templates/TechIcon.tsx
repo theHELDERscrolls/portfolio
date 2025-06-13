@@ -8,7 +8,7 @@ const TechIcon = ({ name, imgURL }: TechProps) => {
     <div
       ref={ref}
       className={`p-3 border border-indigo-900 bg-indigo-800/10 rounded-2xl hover:border-indigo-500 hover:shadow-[0_0_5px_#6366f1] hover:scale-105 transition-all duration-300 ${
-        inView ? "animate-pop-up" : "opacity-0"
+        inView ? "animate-fade-in sm:animate-pop-up" : "opacity-0"
       }`}
     >
       <img

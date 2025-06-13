@@ -42,7 +42,7 @@ const About = () => {
           <article
             ref={refMyInfo}
             className={`flex flex-col gap-3 font-mono text-white text-balance ${
-              inViewMyInfo ? "animate-left-slide-in" : "opacity-0"
+              inViewMyInfo ? "animate-fade-in sm:animate-left-slide-in" : "opacity-0"
             }`}
           >
             <h3 className="text-2xl font-bold sm:text-3xl font-orbitron">
@@ -72,7 +72,7 @@ const About = () => {
           <article
             ref={refInspiration}
             className={`flex items-center justify-center ${
-              inViewInspiration ? "animate-left-slide-in" : "opacity-0"
+              inViewInspiration ? "animate-fade-in sm:animate-left-slide-in" : "opacity-0"
             }`}
           >
             <MyInspirationCard infoPassTime={8000} />
@@ -86,7 +86,7 @@ const About = () => {
           <article
             ref={refPersonal}
             className={`flex flex-wrap gap-4 justify-evenly ${
-              inViewPersonal ? "animate-right-slide-in" : "opacity-0"
+              inViewPersonal ? "animate-fade-in sm:animate-right-slide-in" : "opacity-0"
             }`}
           >
             <ProjectsCompletedCard />

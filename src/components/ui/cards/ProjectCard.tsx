@@ -9,7 +9,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
-  const { ref, inView } = useInView({ threshold: 0.75, triggerOnce: true });
+  const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: true });
   const projectStatus = getProjectStatus(project);
   const isComingSoon = project.status === "coming-soon";
 

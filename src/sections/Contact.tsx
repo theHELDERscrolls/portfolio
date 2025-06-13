@@ -30,7 +30,7 @@ const ContactMe = () => {
         ref={refContactCard}
         id="contact-email"
         className={`${
-          inViewContactCard ? "animate-right-slide-in" : "opacity-0"
+          inViewContactCard ? "animate-fade-in sm:animate-right-slide-in" : "opacity-0"
         } flex flex-col h-auto max-w-3xl gap-4 p-4 text-white border border-indigo-900 bg-indigo-800/10 rounded-2xl`}
       >
         <div className="flex items-center justify-between">

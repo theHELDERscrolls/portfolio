@@ -13,7 +13,7 @@ const TechCard = () => {
       <h3
         ref={ref}
         className={`text-2xl font-bold text-center text-white sm:text-3xl font-orbitron ${
-          inViewTech ? "animate-right-slide-in" : "opacity-0"
+          inViewTech ? "animate-fade-in sm:animate-right-slide-in" : "opacity-0"
         }`}
       >
         <span className="text-indigo-500">Tech</span> Stack

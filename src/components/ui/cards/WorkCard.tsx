@@ -7,7 +7,7 @@ interface WorkCardProps {
 }
 
 const WorkCard = ({ work }: WorkCardProps) => {
-  const { ref, inView } = useInView({ threshold: 0.7, triggerOnce: true });
+  const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: true });
 
   return (
     <section

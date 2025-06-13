@@ -10,7 +10,7 @@ const Footer = () => {
     <footer
       ref={ref}
       className={`${
-        inView ? "animate-up-slide-in" : "opacity-0"
+        inView ? "animate-fade-in sm:animate-up-slide-in" : "opacity-0"
       } flex flex-col sm:flex-row gap-4 items-center justify-between p-4 mx-auto border-t mt-10 border-indigo-500 max-w-7xl`}
     >
       <div id="footer-left-up" className="flex flex-col gap-2">
