@@ -2,53 +2,23 @@ import type { ProjectProps } from "../../types";
 
 export const myProjects: ProjectProps[] = [
   {
-    imgUrl: "https://placehold.co/600x400?text=Fiction+Project",
-    title: "Nebula Notes",
+    imgUrl: "src/assets/projects/project_bs.png",
+    title: "Brawl Stats",
     description:
-      "A futuristic note-taking app that organizes your thoughts across galaxies. Features AI-powered summaries, cosmic themes, and interstellar collaboration.",
-    tech: ["TypeScript", "React", "Node.js", "GraphQL"],
-    githubURL: "https://github.com/fictional/nebula-notes",
-    deployURL: "https://nebula-notes.example.com",
+      "A web to explore Brawl Stars characters and view their stats across different maps.",
+    tech: ["Rest API", "JavaScript", "CSS", "HTML"],
+    githubURL: "https://github.com/theHELDERscrolls/Brawl_Stats",
+    deployURL: "https://brawl-stats-fan-made.vercel.app/",
     status: "completed",
   },
   {
-    imgUrl: "https://placehold.co/600x400?text=Fiction+Project",
-    title: "Nebula Notes",
+    imgUrl: "src/assets/projects/project_skyrimzon.png",
+    title: "Skyrimzon",
     description:
-      "A futuristic note-taking app that organizes your thoughts across galaxies. Features AI-powered summaries, cosmic themes, and interstellar collaboration.",
+      "Skyrimzon: Your medieval fantasy store with the best selection of products inspired by Skyrim. Discover armors, weapons, potions, and more to live your own adventure.",
     tech: ["TypeScript", "React", "Node.js", "GraphQL"],
-    githubURL: "https://github.com/fictional/nebula-notes",
-    deployURL: "https://nebula-notes.example.com",
+    githubURL: "https://github.com/theHELDERscrolls/practica_DOM",
+    deployURL: "https://skyrimzon.vercel.app/",
     status: "completed",
-  },
-  {
-    imgUrl: "https://placehold.co/600x400?text=Fiction+Project",
-    title: "Nebula Notes",
-    description:
-      "A futuristic note-taking app that organizes your thoughts across galaxies. Features AI-powered summaries, cosmic themes, and interstellar collaboration.",
-    tech: ["TypeScript", "React", "Node.js", "GraphQL"],
-    githubURL: "https://github.com/fictional/nebula-notes",
-    deployURL: "https://nebula-notes.example.com",
-    status: "new",
-  },
-  {
-    imgUrl: "https://placehold.co/600x400?text=Fiction+Project",
-    title: "Nebula Notes",
-    description:
-      "A futuristic note-taking app that organizes your thoughts across galaxies. Features AI-powered summaries, cosmic themes, and interstellar collaboration.",
-    tech: ["TypeScript", "React", "Node.js", "GraphQL"],
-    githubURL: "https://github.com/fictional/nebula-notes",
-    deployURL: "https://nebula-notes.example.com",
-    status: "coming-soon",
-  },
-  {
-    imgUrl: "https://placehold.co/600x400?text=Fiction+Project",
-    title: "Nebula Notes",
-    description:
-      "A futuristic note-taking app that organizes your thoughts across galaxies. Features AI-powered summaries, cosmic themes, and interstellar collaboration.",
-    tech: ["TypeScript", "React", "Node.js", "GraphQL"],
-    githubURL: "https://github.com/fictional/nebula-notes",
-    deployURL: "https://nebula-notes.example.com",
-    status: "in-process",
   },
 ];
