@@ -5,7 +5,7 @@ export const people: Inspiration[] = [
   {
     id: 100,
     name: "Marcus Aurelius",
-    type: "PEOPLE",
+    type: "PERSON",
     description:
       "Roman emperor and Stoic philosopher whose writings in *Meditations* offer timeless wisdom on resilience, duty, and inner peace.",
     imageURL:
@@ -14,7 +14,7 @@ export const people: Inspiration[] = [
   {
     id: 101,
     name: "Séneca",
-    type: "PEOPLE",
+    type: "PERSON",
     description:
       "Roman Stoic, statesman, and playwright. His letters and essays focus on ethics, self-control, and living in harmony with nature.",
     imageURL:
@@ -23,7 +23,7 @@ export const people: Inspiration[] = [
   {
     id: 102,
     name: "Pedro Vivar",
-    type: "PEOPLE",
+    type: "PERSON",
     description:
       "Spanish coach, author, and speaker known for promoting Stoicism, physical discipline, and personal growth through action.",
     imageURL:
@@ -32,7 +32,7 @@ export const people: Inspiration[] = [
   {
     id: 103,
     name: "David Goggins",
-    type: "PEOPLE",
+    type: "PERSON",
     description:
       "Ex-Navy SEAL and ultra-endurance athlete who inspires millions through his mental toughness, discipline, and no-excuses mindset.",
     imageURL:
@@ -41,7 +41,7 @@ export const people: Inspiration[] = [
   {
     id: 104,
     name: "Kobe Bryant",
-    type: "PEOPLE",
+    type: "PERSON",
     description:
       "NBA legend whose 'Mamba Mentality' emphasized relentless effort, focus, and continuous improvement on and off the court.",
     imageURL:
@@ -50,7 +50,7 @@ export const people: Inspiration[] = [
   {
     id: 105,
     name: "Myke Tyson",
-    type: "PEOPLE",
+    type: "PERSON",
     description:
       "Former heavyweight boxing champion known for his explosive power, comeback story, and personal evolution beyond the ring.",
     imageURL:
@@ -59,7 +59,7 @@ export const people: Inspiration[] = [
   {
     id: 106,
     name: "Rafael Nadal",
-    type: "PEOPLE",
+    type: "PERSON",
     description:
       "One of tennis's greatest champions, admired for his humility, fierce competitiveness, and mental strength on every surface.",
     imageURL:
@@ -68,7 +68,7 @@ export const people: Inspiration[] = [
   {
     id: 107,
     name: "Ilia Topuria",
-    type: "PEOPLE",
+    type: "PERSON",
     description:
       "Georgian-Spanish UFC fighter celebrated for his skill, confidence, and rising dominance in the featherweight division.",
     imageURL:

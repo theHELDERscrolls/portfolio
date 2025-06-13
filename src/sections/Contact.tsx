@@ -39,7 +39,7 @@ const ContactMe = () => {
           </h3>
           <IconTag
             svgId="icon-completed"
-            text="avaible"
+            text="available"
             className="border rounded-full bg-gradient-to-r from-emerald-800/35 to-emerald-800/10 border-emerald-400 text-emerald-400 animate-pulse"
           />
         </div>

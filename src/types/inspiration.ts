@@ -1,4 +1,4 @@
-export type InspirationType = "BOOK" | "MUSIC" | "PEOPLE" | "PODCAST";
+export type InspirationType = "BOOK" | "MUSIC" | "PERSON" | "PODCAST";
 
 export default interface Inspiration {
   id: number;
