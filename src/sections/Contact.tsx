@@ -15,7 +15,7 @@ const ContactMe = () => {
   return (
     <section
       id="sect-contact"
-      className="flex flex-col items-center p-4 mx-auto max-w-7xl min-h-dvh"
+      className="flex flex-col items-center p-4 mx-auto max-w-7xl min-h-screen"
     >
       <SectionTitle text="LET'S CONECT!" />
       <p

@@ -27,7 +27,7 @@ const About = () => {
   return (
     <section
       id="sect-about"
-      className="px-4 mx-auto max-w-7xl min-h-dvh text-neutral-400"
+      className="px-4 mx-auto max-w-7xl min-h-screen text-neutral-400"
     >
       <SectionTitle text="ABOUT ME" />
 
