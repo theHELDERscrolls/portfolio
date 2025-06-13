@@ -2,7 +2,7 @@ import type { ProjectProps } from "../../types";
 
 export const myProjects: ProjectProps[] = [
   {
-    imgUrl: "src/assets/projects/project_heracles.jpg",
+    imgUrl: "/assets/projects/project_heracles.jpg",
     title: "Heracles",
     description:
       "When I look at the night sky and feel how vast the universe is, I don't feel small. I feel great, because my atoms come from those very stars. Being alive and conscious is the universe's way of knowing itself.",
@@ -12,7 +12,7 @@ export const myProjects: ProjectProps[] = [
     status: "coming-soon",
   },
   {
-    imgUrl: "src/assets/projects/project_bs.png",
+    imgUrl: "/assets/projects/project_bs.png",
     title: "Brawl Stats",
     description:
       "Check key stats and data for Brawl Stars with this fan-made tool. Explore brawlers’ performance, compare metrics, and access intuitive visualizations. Perfect for players and enthusiasts looking to improve their strategy.",
@@ -22,7 +22,7 @@ export const myProjects: ProjectProps[] = [
     status: "completed",
   },
   {
-    imgUrl: "src/assets/projects/project_skyrimzon.png",
+    imgUrl: "/assets/projects/project_skyrimzon.png",
     title: "Skyrimzon",
     description:
       "Skyrimzon: Your medieval fantasy store with the best selection of products inspired by Skyrim. Discover armors, weapons, potions, and more to live your own adventure.",

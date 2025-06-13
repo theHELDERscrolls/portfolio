@@ -19,7 +19,7 @@ const Footer = () => {
           className="flex items-center justify-center sm:justify-start "
         >
           <img
-            src="src/assets/HR_logo_light.svg"
+            src="/assets/HR_logo_light.svg"
             alt="Helder Ruiz logo"
             className="w-10 drop-shadow-[0_1px_2px_rgba(99,102,241,0.7)]"
           />

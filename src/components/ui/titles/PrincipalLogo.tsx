@@ -9,7 +9,7 @@ const PrincipalLogo = () => {
     >
       <div className="overflow-hidden w-36">
         <img
-          src="src/assets/HR_logo_light.svg"
+          src="/assets/HR_logo_light.svg"
           alt="Logo de Helder Ruiz: letras HR en blanco"
           className="w-36 animate-right-slide-in drop-shadow-[0_1px_2px_rgba(99,102,241,0.7)]"
         />
