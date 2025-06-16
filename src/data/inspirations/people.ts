@@ -67,11 +67,11 @@ export const people: Inspiration[] = [
   },
   {
     id: 107,
-    name: "Ilia Topuria",
+    name: "Alex Hormozi",
     type: "PERSON",
     description:
-      "Georgian-Spanish UFC fighter celebrated for his skill, confidence, and rising dominance in the featherweight division.",
+      "Entrepreneur and author known for his no-fluff business advice. Shares insights on scaling, mindset, and value creation with radical honesty.",
     imageURL:
-      "https://i.pinimg.com/736x/11/7b/58/117b58f0c9caca52491e22fd6f62a0e6.jpg",
+      "https://i.pinimg.com/736x/ab/12/4e/ab124e97bfeb092fa8f174272cbee711.jpg",
   },
 ];

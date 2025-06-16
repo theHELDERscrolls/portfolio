@@ -5,7 +5,7 @@ export const workList: workExperienceProps[] = [
     role: "Fullstack Developer & Product Manager",
     company: "SatoriWare",
     description:
-      "Driving the design and implementation of fullstack web solutions using React, Flask, and REST APIs. Actively contributing to both frontend and backend architecture while also leading product planning, prioritization, and cross-functional coordination to ensure timely delivery. Balancing technical development with product vision to build impactful, user-centered platforms.",
+      "Driving the design and implementation of fullstack web solutions. Actively contributing to both frontend and backend architecture while also leading product planning, prioritization, and cross-functional coordination to ensure timely delivery. Balancing technical development with product vision to build impactful, user-centered platforms.",
     isCurrent: true,
     startDate: "June, 2025",
     endDate: "Present",
@@ -16,7 +16,7 @@ export const workList: workExperienceProps[] = [
       "React",
       "Flask",
       "JavaScript",
-      "MySQL",
+      "PostgreSQL",
       "Python",
       "Tailwind",
       "Vite",

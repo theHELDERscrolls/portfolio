@@ -23,20 +23,18 @@ export const music: Inspiration[] = [
   {
     id: 402,
     type: "MUSIC",
-    name: "The Search",
-    description:
-      "In 'The Search', NF delivers a haunting exploration of mental health, self-doubt, and purpose with cinematic production and rapid-fire rhymes.",
+    name: "Even In Arcadia",
+    description: "A haunting and emotional journey by Sleep Token that blends metal, ambient, and soulful vocals into a deeply immersive experience.",
     imageURL:
-      "https://i.pinimg.com/736x/dd/59/b3/dd59b3f09e6484faed7217176ff11028.jpg",
+      "https://i.pinimg.com/736x/24/9b/6f/249b6fe0eac77f4a751345b8d46705f8.jpg",
   },
   {
     id: 403,
     type: "MUSIC",
-    name: "Beerbongs & Bentleys",
-    description:
-      "Post Malone’s 'Beerbongs & Bentleys' blends hip-hop, trap, and pop with laid-back melodies and themes of fame, heartbreak, and self-doubt.",
+    name: "ATLANTIS",
+    description: "An acoustic reinterpretation of SOEN's powerful tracks, blending intimacy, intensity, and rich melodic textures in a live setting.",
     imageURL:
-      "https://i.pinimg.com/736x/8d/04/e4/8d04e4ed833a89041a81111dd976ba73.jpg",
+      "https://i.pinimg.com/736x/94/7d/4d/947d4db6c985e68592cfbcc4891d8eac.jpg",
   },
   {
     id: 404,

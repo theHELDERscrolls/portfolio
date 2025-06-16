@@ -56,4 +56,12 @@ export const books: Inspiration[] = [
     imageURL:
       "https://i.pinimg.com/736x/a3/28/d7/a328d7c9caf2857e082fe981af6df5b8.jpg",
   },
+  {
+    id: 206,
+    type: "BOOK",
+    name: "Antifragile",
+    description: "Nassim Taleb explores systems that thrive on chaos, showing how embracing disorder can lead to strength, resilience, and growth.",
+    imageURL:
+      "https://i.pinimg.com/736x/1b/5a/58/1b5a58f397ad6ac762db78c61829a527.jpg",
+  },
 ];
