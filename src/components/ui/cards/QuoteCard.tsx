@@ -3,16 +3,32 @@ import { useEffect, useState } from "react";
 interface NinjaQuote {
   quote: string;
   author: string;
-  category?: string;
+  category: string;
 }
 
 const defaultQuote: NinjaQuote = {
   quote:
     "It is not death that a man should fear, but he should fear never beginning to live.",
   author: "Marcus Aurelius",
+  category: "inspirational",
 };
 
 const apiKey = import.meta.env.VITE_API_KEY;
+
+const allowedCategories: string[] = [
+  "attitude",
+  "computers",
+  "courage",
+  "faith",
+  "good",
+  "happiness",
+  "hope",
+  "inspirational",
+  "intelligence",
+  "knowledge",
+  "learning",
+  "life",
+];
 
 const QuoteCard = () => {
   const [quote, setQuote] = useState<NinjaQuote | null>(null);
@@ -28,7 +44,16 @@ const QuoteCard = () => {
       if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
 
       const jsonData: NinjaQuote[] = await res.json();
-      setQuote(jsonData[0]);
+      const fetchedQuote = jsonData[0];
+      console.log("📦 Fetched quote:", fetchedQuote);
+
+      if (
+        allowedCategories.includes(fetchedQuote.category.toLocaleLowerCase())
+      ) {
+        setQuote(fetchedQuote);
+      } else {
+        setQuote(defaultQuote);
+      }
     } catch (error) {
       console.error("Fetch error: ", error);
       setQuote(defaultQuote);
