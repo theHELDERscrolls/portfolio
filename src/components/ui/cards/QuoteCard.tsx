@@ -45,7 +45,6 @@ const QuoteCard = () => {
 
       const jsonData: NinjaQuote[] = await res.json();
       const fetchedQuote = jsonData[0];
-      console.log("📦 Fetched quote:", fetchedQuote);
 
       if (
         allowedCategories.includes(fetchedQuote.category.toLocaleLowerCase())

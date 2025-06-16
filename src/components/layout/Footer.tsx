@@ -60,13 +60,13 @@ const Footer = () => {
         <p className="text-center sm:text-end">
           © 2025 Helder Ruiz. All rights reserved.
         </p>
-        <p className="flex justify-center items-center gap-1">
+        <div className="flex justify-center items-center gap-1">
           <IconTag svgId="icon-new" className="text-rose-500 animate-pulse" />
           <span>quotes from</span>
           <a href="https://api-ninjas.com/" className="ml-1 text-amber-400">
             API Ninjas
           </a>
-        </p>
+        </div>
       </div>
     </footer>
   );

@@ -18,7 +18,7 @@ const Projects = () => {
         }`}
       >
         {myProjects.map((project) => (
-          <ProjectCard project={project} />
+          <ProjectCard key={project.title} project={project} />
         ))}
       </article>
     </section>
