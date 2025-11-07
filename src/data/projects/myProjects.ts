@@ -12,28 +12,23 @@ export const myProjects: ProjectProps[] = [
     status: "coming-soon",
   },
   {
-    imgUrl: "/assets/projects/project_bs.png",
-    title: "Brawl Stats",
+    imgUrl: "/assets/projects/project_bs_v2.png",
+    title: "Brawl Stats V2",
     description:
       "Check key stats and data for Brawl Stars with this fan-made tool. Explore brawlers’ performance, compare metrics, and access intuitive visualizations. Perfect for players and enthusiasts looking to improve their strategy.",
-    tech: ["Rest API", "JavaScript", "CSS", "HTML"],
-    githubURL: "https://github.com/theHELDERscrolls/Brawl_Stats",
-    deployURL: "https://brawl-stats-fan-made.vercel.app/",
+    tech: ["Rest API", "React", "TypeScript", "ExpressJS", "NodeJS"],
+    githubURL: "https://github.com/theHELDERscrolls/brawl_stats_v2",
+    deployURL: "https://brawl-stats-v2.vercel.app/",
     status: "completed",
   },
   {
-    imgUrl: "/assets/projects/project_skyrimzon.png",
-    title: "Skyrimzon",
+    imgUrl: "/assets/projects/project_back.jpg",
+    title: "Lokalqy App (backend)",
     description:
-      "Skyrimzon: Your medieval fantasy store with the best selection of products inspired by Skyrim. Discover armors, weapons, potions, and more to live your own adventure.",
-    tech: ["JavaScript", "CSS", "HTML"],
-    githubURL: "https://github.com/theHELDERscrolls/practica_DOM",
-    deployURL: "https://skyrimzon.vercel.app/",
-    status: "completed",
+      "Backend of LokaLqy App, developed with Node.js + Express + TypeScript using MongoDB and Cloudinary. It enables the management of rental properties and vehicles, including user and role control, payments, and im age uploads.",
+    tech: ["NodeJS", "ExpressJS", "MongoDB", "TypeScript"],
+    githubURL: "https://github.com/theHELDERscrolls/lokalqy-app",
+    deployURL: null,
+    status: "in-process",
   },
 ];
-
-/* 
-  Coming soon default phrase:
-  "We live on an insignificant planet of a humdrum star lost in a galaxy tucked away in some forgotten corner of a universe in which there are far more galaxies than people. And yet, we have dared to contemplate the origin of time, to explore the nature of matter, and to question our place in the cosmos"
-*/

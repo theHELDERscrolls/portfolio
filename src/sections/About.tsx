@@ -42,7 +42,9 @@ const About = () => {
           <article
             ref={refMyInfo}
             className={`flex flex-col gap-3 font-mono text-white text-balance ${
-              inViewMyInfo ? "animate-fade-in sm:animate-left-slide-in" : "opacity-0"
+              inViewMyInfo
+                ? "animate-fade-in sm:animate-left-slide-in"
+                : "opacity-0"
             }`}
           >
             <h3 className="text-2xl font-bold sm:text-3xl font-orbitron">
@@ -65,14 +67,16 @@ const About = () => {
             <p>
               I also find peace in{" "}
               <span className="text-amber-400">reading</span> and{" "}
-              <span className="text-amber-400">playing the piano</span>, small
+              <span className="text-amber-400">playing the guitar</span>, small
               rituals that help me recharge and keep my creativity flowing.
             </p>
           </article>
           <article
             ref={refInspiration}
             className={`flex items-center justify-center ${
-              inViewInspiration ? "animate-fade-in sm:animate-left-slide-in" : "opacity-0"
+              inViewInspiration
+                ? "animate-fade-in sm:animate-left-slide-in"
+                : "opacity-0"
             }`}
           >
             <MyInspirationCard infoPassTime={8000} />
@@ -86,7 +90,9 @@ const About = () => {
           <article
             ref={refPersonal}
             className={`flex flex-wrap gap-4 justify-evenly ${
-              inViewPersonal ? "animate-fade-in sm:animate-right-slide-in" : "opacity-0"
+              inViewPersonal
+                ? "animate-fade-in sm:animate-right-slide-in"
+                : "opacity-0"
             }`}
           >
             <ProjectsCompletedCard />

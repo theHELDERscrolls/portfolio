@@ -2,13 +2,13 @@ import type { workExperienceProps } from "../../types";
 
 export const workList: workExperienceProps[] = [
   {
-    role: "Fullstack Developer & Product Manager",
+    role: "Fullstack Developer",
     company: "SatoriWare",
     description:
       "Driving the design and implementation of fullstack web solutions. Actively contributing to both frontend and backend architecture while also leading product planning, prioritization, and cross-functional coordination to ensure timely delivery. Balancing technical development with product vision to build impactful, user-centered platforms.",
-    isCurrent: true,
+    isCurrent: false,
     startDate: "June, 2025",
-    endDate: "Present",
+    endDate: "August, 2025",
     location: "Remote",
     tech: [
       "REST API",
@@ -40,5 +40,27 @@ export const workList: workExperienceProps[] = [
       "Vercel",
       "MySQL",
     ],
+  },
+  {
+    role: "Personal Trainer & Therapist",
+    company: "Nutrir",
+    description:
+      "Driving the design and implementation of fullstack web solutions. Actively contributing to both frontend and backend architecture while also leading product planning, prioritization, and cross-functional coordination to ensure timely delivery. Balancing technical development with product vision to build impactful, user-centered platforms.",
+    isCurrent: false,
+    startDate: "November, 2020",
+    endDate: "March, 2023",
+    location: "Spain, Cordova",
+    tech: ["PostgreSQL", "Python"],
+  },
+  {
+    role: "Researcher",
+    company: "Raquis: Aparato Locomotor y Deporte",
+    description:
+      "I collaborated on various research projects focused on the prevention and assessment of injury risk in diverse populations, including athletes, individuals with reduced mobility, injuries, or physical disabilities. My work centered on the analysis of joint range of motion to develop preventive strategies and enhance the quality of life for participants.",
+    isCurrent: false,
+    startDate: "January, 2018",
+    endDate: "July, 2020",
+    location: "Spain, Murcia",
+    tech: ["Office 365"],
   },
 ];

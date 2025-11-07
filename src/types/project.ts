@@ -6,6 +6,6 @@ export interface ProjectProps {
   description: string;
   tech: string[];
   githubURL: string;
-  deployURL: string;
+  deployURL: string | null;
   status: ProjectStatus;
 }
