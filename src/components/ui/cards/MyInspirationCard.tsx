@@ -67,6 +67,7 @@ const MyInspirationCard = ({ infoPassTime }: MyInspirationCardProps) => {
           src={inspiration.imageURL}
           alt={`Imagen de ${inspiration.name}`}
           className="object-cover w-20 h-20 border rounded aspect-square border-amber-400"
+          loading="lazy"
         />
 
         <div className="flex flex-col gap-2">

@@ -32,6 +32,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         src={project.imgUrl}
         alt={`${project.title} web image`}
         className="object-cover w-full h-40 aspect-video rounded-t-2xl"
+        loading="lazy"
       />
 
       <section
@@ -66,13 +67,15 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             text="Github"
             className="w-full px-2 py-1 transition-all duration-300 border text-neutral-400 border-neutral-400 rounded-xl bg-neutral-950 hover:border-white hover:text-white hover:bg-neutral-800/25"
           />
-          <ButtonRefIcon
-            href={project.deployURL}
-            idName="icon-web-link"
-            size={16}
-            text="Website"
-            className="w-full px-2 py-1 text-indigo-500 transition-all duration-300 border border-indigo-500 rounded-xl bg-indigo-950 hover:border-indigo-300 hover:text-indigo-300 hover:bg-indigo-800/25"
-          />
+          {project.deployURL && (
+            <ButtonRefIcon
+              href={project.deployURL}
+              idName="icon-web-link"
+              size={16}
+              text="Website"
+              className="w-full px-2 py-1 text-indigo-500 transition-all duration-300 border border-indigo-500 rounded-xl bg-indigo-950 hover:border-indigo-300 hover:text-indigo-300 hover:bg-indigo-800/25"
+            />
+          )}
         </nav>
       </section>
 

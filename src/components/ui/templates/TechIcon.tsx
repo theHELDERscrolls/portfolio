@@ -3,7 +3,7 @@ import type { TechProps } from "../../../types";
 
 const TechIcon = ({ name, imgURL }: TechProps) => {
   const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: true });
-  
+
   return (
     <div
       ref={ref}
@@ -16,6 +16,7 @@ const TechIcon = ({ name, imgURL }: TechProps) => {
         alt={`${name} icon`}
         className="object-contain w-10 h-10"
         title={name}
+        loading="lazy"
       />
     </div>
   );

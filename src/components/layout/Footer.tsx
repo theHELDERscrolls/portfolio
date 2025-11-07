@@ -11,7 +11,7 @@ const Footer = () => {
       ref={ref}
       className={`${
         inView ? "animate-fade-in sm:animate-up-slide-in" : "opacity-0"
-      } flex flex-col sm:flex-row gap-4 items-center justify-between p-4 mx-auto border-t mt-10 border-indigo-500 max-w-7xl`}
+      } flex flex-col sm:flex-row gap-4 items-center justify-between p-4 mx-auto border-t border-indigo-500 max-w-7xl`}
     >
       <div id="footer-left-up" className="flex flex-col gap-2">
         <article
@@ -41,12 +41,6 @@ const Footer = () => {
             <ButtonRefIcon
               href="www.linkedin.com/in/heldermvr"
               idName="icon-linkedin"
-              size={25}
-              className={buttonRefIconClassName}
-            />
-            <ButtonRefIcon
-              href="https://www.instagram.com/heldermvr/?igsh=MW56ejgwOWl0aWNhcQ%3D%3D#"
-              idName="icon-instagram"
               size={25}
               className={buttonRefIconClassName}
             />
