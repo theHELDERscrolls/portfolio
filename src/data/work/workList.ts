@@ -45,7 +45,7 @@ export const workList: workExperienceProps[] = [
     role: "Personal Trainer & Therapist",
     company: "Nutrir",
     description:
-      "Driving the design and implementation of fullstack web solutions. Actively contributing to both frontend and backend architecture while also leading product planning, prioritization, and cross-functional coordination to ensure timely delivery. Balancing technical development with product vision to build impactful, user-centered platforms.",
+      "As a trainer and clinical therapist, I specialize in designing and implementing training programs focused on improving health, with a particular emphasis on managing and alleviating chronic pain conditions such as arthritis and osteoarthritis. Additionally, I work with athletes to optimize their performance by developing personalized strength training routines tailored to their individual needs.",
     isCurrent: false,
     startDate: "November, 2020",
     endDate: "March, 2023",
