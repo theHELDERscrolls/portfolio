@@ -1,5 +1,5 @@
-import { useEffect } from "react";
 import gsap from "gsap";
+import { useEffect } from "react";
 import { DrawSVGPlugin } from "gsap/all";
 
 gsap.registerPlugin(DrawSVGPlugin);
@@ -27,13 +27,17 @@ export const LoadingPage = () => {
 
     tl.to(
       "#second-screen",
-      { y: "-100%", duration: 1.5, ease: "power4.inOut" },
+      {
+        y: "-100%",
+        duration: 1.5,
+        ease: "power4.inOut",
+      },
       "-=1.3",
     );
   }, []);
 
   return (
-    <div className="absolute inset-0 z-50 overflow-hidden">
+    <div className="relative w-full h-dvh overflow-hidden">
       {/* FIRST SCREEN */}
       <div
         id="first-screen"
@@ -73,7 +77,6 @@ export const LoadingPage = () => {
           />
         </svg>
       </div>
-
       {/* SECOND SCREEN */}
       <div
         id="second-screen"
