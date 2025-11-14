@@ -1,10 +1,10 @@
 import gsap from "gsap";
-import { useEffect } from "react";
 import { DrawSVGPlugin } from "gsap/all";
+import { useEffect } from "react";
 
 gsap.registerPlugin(DrawSVGPlugin);
 
-export const LoadingPage = () => {
+export const LoadingScreen = () => {
   useEffect(() => {
     const tl = gsap.timeline({
       defaults: { ease: "power2.inOut" },
@@ -21,7 +21,11 @@ export const LoadingPage = () => {
       { drawSVG: "100%", duration: 3, stagger: 0.2, opacity: 1 },
     );
 
-    tl.to("svg path:nth-child(n+3)", { stroke: "#615FFF" });
+    tl.to("svg path:nth-child(n+3)", {
+      duration: 1,
+      stroke: "#615FFF",
+      filter: "drop-shadow(0px 0px 10px #7C86FF)",
+    });
 
     tl.to("#first-screen", { y: "-100%", duration: 1.5, ease: "power4.inOut" });
 
@@ -32,7 +36,7 @@ export const LoadingPage = () => {
         duration: 1.5,
         ease: "power4.inOut",
       },
-      "-=1.3",
+      "-=1.4",
     );
   }, []);
 

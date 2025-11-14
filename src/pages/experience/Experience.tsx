@@ -1,7 +1,7 @@
-export const HomePage = () => {
+export const ExperiencePage = () => {
   return (
     <div className="flex items-center justify-center w-full h-dvh">
-      HOME PAGE
+      EXPERIENCE PAGE
     </div>
   );
 };
