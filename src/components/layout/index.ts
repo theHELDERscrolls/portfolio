@@ -1,1 +1,2 @@
-export * from "./DesktopLayout.tsx";
+export * from "./desktop/";
+export * from "./shared/";

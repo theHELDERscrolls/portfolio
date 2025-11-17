@@ -29,7 +29,7 @@ export const AppLoaderWrapper = ({ children }: AppLoaderWrapperProps) => {
 
       {showLoadingScreen && (
         <div className="fixed inset-0 z-[9999]">
-          <LoadingScreen />
+          <LoadingScreen onFinish={() => setShowLoadingScreen(false)} />
         </div>
       )}
     </div>

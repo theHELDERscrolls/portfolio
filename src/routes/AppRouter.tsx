@@ -8,6 +8,7 @@ export const AppRouter = () => {
     <BrowserRouter>
       <AppLoaderWrapper>
         <RoutesWithNoFound>
+          {/* Añadir comprobación de tamaño de pantalla */}
           <Route path="/" element={<DesktopLayout />}>
             <Route index element={<HomePage />} />
             <Route path="home" element={<HomePage />} />

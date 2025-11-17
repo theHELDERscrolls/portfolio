@@ -4,7 +4,11 @@ import { useEffect } from "react";
 
 gsap.registerPlugin(DrawSVGPlugin);
 
-export const LoadingScreen = () => {
+interface LoadingScreenProps {
+  onFinish: () => void;
+}
+
+export const LoadingScreen = ({ onFinish }: LoadingScreenProps) => {
   useEffect(() => {
     const tl = gsap.timeline({
       defaults: { ease: "power2.inOut" },
@@ -35,10 +39,13 @@ export const LoadingScreen = () => {
         y: "-100%",
         duration: 1.5,
         ease: "power4.inOut",
+        onComplete: () => {
+          onFinish();
+        },
       },
       "-=1.4",
     );
-  }, []);
+  }, [onFinish]);
 
   return (
     <div className="relative w-full h-dvh overflow-hidden">
