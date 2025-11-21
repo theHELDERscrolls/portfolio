@@ -11,13 +11,13 @@ export const DesktopNavbar = () => {
       "nav",
       { opacity: 0, x: -100 },
       { opacity: 1, x: 0, duration: 1 },
-      "+=6",
+      "+=6.5",
     );
   }, []);
 
   return (
-    <nav className="flex h-full w-full items-center justify-center">
-      <ul className="ml-5 flex h-fit w-fit flex-col items-center justify-center hover:bg-indigo-300/10 hover:backdrop-blur-md hover:shadow-lg hover:shadow-indigo-950 gap-10 rounded-full p-2 transition-all duration-300 ease-in-out">
+    <nav className="flex items-center justify-center w-full h-full">
+      <ul className="flex flex-col items-center justify-center gap-10 p-2 ml-5 transition-all duration-300 ease-in-out rounded-full h-fit w-fit hover:bg-indigo-300/10 hover:backdrop-blur-md">
         {navLinks.map(({ key, iconId, title }) => {
           const to = key === "home" ? "/" : key;
           return (
