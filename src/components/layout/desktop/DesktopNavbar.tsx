@@ -5,19 +5,24 @@ import gsap from "gsap";
 
 export const DesktopNavbar = () => {
   useEffect(() => {
+    const hasSeenLoaderScreen =
+      sessionStorage.getItem("hasSeenLoaderScreen") === "true";
+
     const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
 
-    tl.fromTo(
-      "nav",
-      { opacity: 0, x: -100 },
-      { opacity: 1, x: 0, duration: 1 },
-      "+=6.5",
-    );
+    if (!hasSeenLoaderScreen) {
+      tl.fromTo(
+        "nav",
+        { opacity: 0, x: -100 },
+        { opacity: 1, x: 0, duration: 1 },
+        "+=6.5"
+      );
+    }
   }, []);
 
   return (
     <nav className="flex items-center justify-center w-full h-full">
-      <ul className="flex flex-col items-center justify-center gap-10 p-2 ml-5 transition-all duration-300 ease-in-out rounded-full h-fit w-fit hover:bg-indigo-300/10 hover:backdrop-blur-md">
+      <ul className="flex flex-col items-center justify-center gap-10 p-2 ml-5 transition-all duration-300 ease-in-out border border-transparent rounded-full h-fit w-fit hover:border-neutral-50/10 hover:bg-indigo-300/10 hover:backdrop-blur-xs">
         {navLinks.map(({ key, iconId, title }) => {
           const to = key === "home" ? "/" : key;
           return (
@@ -47,7 +52,7 @@ export const DesktopNavbar = () => {
                       ${
                         isActive
                           ? `bg-gradient-to-r from-indigo-700 to-transparent text-indigo-100`
-                          : `bg-gradient-to-r from-neutral-700 to-transparent text-neutral-100`
+                          : `bg-gradient-to-r from-neutral-600 to-transparent text-neutral-100`
                       }`}
                     >
                       {title.toUpperCase()}

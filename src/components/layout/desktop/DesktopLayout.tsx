@@ -1,4 +1,4 @@
-import { DesktopHeader } from "./header";
+import { DesktopHeader } from "../shared/header";
 import { DesktopNavbar } from "./DesktopNavbar";
 import { Outlet } from "react-router-dom";
 

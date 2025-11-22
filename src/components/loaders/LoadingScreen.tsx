@@ -22,7 +22,7 @@ export const LoadingScreen = ({ onFinish }: LoadingScreenProps) => {
         stroke: "#E5E5E5",
         opacity: 0,
       },
-      { drawSVG: "100%", duration: 3, stagger: 0.2, opacity: 1 },
+      { drawSVG: "100%", duration: 3, stagger: 0.2, opacity: 1 }
     );
 
     tl.to("svg path:nth-child(n+3)", {
@@ -40,10 +40,11 @@ export const LoadingScreen = ({ onFinish }: LoadingScreenProps) => {
         duration: 1.5,
         ease: "power4.inOut",
         onComplete: () => {
+          sessionStorage.setItem("hasSeenLoaderScreen", "true");
           onFinish();
         },
       },
-      "-=1.4",
+      "-=1.4"
     );
   }, [onFinish]);
 
