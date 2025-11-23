@@ -22,7 +22,7 @@ export const DesktopNavbar = () => {
 
   return (
     <nav className="flex items-center justify-center w-full h-full">
-      <ul className="flex flex-col items-center justify-center gap-10 p-2 ml-5 transition-all duration-300 ease-in-out border border-transparent rounded-full h-fit w-fit hover:border-neutral-50/10 hover:bg-indigo-300/10 hover:backdrop-blur-xs">
+      <ul className="flex flex-col items-center justify-center gap-10 p-2 ml-5 transition-all duration-300 ease-in-out h-fit w-fit">
         {navLinks.map(({ key, iconId, title }) => {
           const to = key === "home" ? "/" : key;
           return (
@@ -48,11 +48,11 @@ export const DesktopNavbar = () => {
                     </svg>
 
                     <span
-                      className={`absolute left-full top-1/2 ml-4 -translate-y-1/2 -translate-x-1 whitespace-nowrap px-2 py-1 text-xs font-bold opacity-0 transition-all ease-in-out duration-300 pointer-events-none rounded-full group-hover:opacity-100 group-hover:translate-x-0 
+                      className={`absolute left-full top-1/2 ml-2 -translate-y-1/2 -translate-x-1 whitespace-nowrap px-2 py-1 text-xs font-bold opacity-0 transition-all ease-in-out duration-300 pointer-events-none rounded-xl group-hover:opacity-100 group-hover:translate-x-0 
                       ${
                         isActive
                           ? `bg-gradient-to-r from-indigo-700 to-transparent text-indigo-100`
-                          : `bg-gradient-to-r from-neutral-600 to-transparent text-neutral-100`
+                          : `bg-gradient-to-r from-neutral-700 to-transparent text-neutral-100`
                       }`}
                     >
                       {title.toUpperCase()}
