@@ -21,7 +21,7 @@ export const DesktopHeader = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 flex items-center justify-between w-full px-5 py-2 backdrop-blur-xs">
+    <header className="fixed top-0 z-50 flex items-center justify-between w-full px-5 py-2 backdrop-blur-xs">
       <LogoHeader />
       <WeatherWidget />
     </header>

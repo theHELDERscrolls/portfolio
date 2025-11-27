@@ -14,8 +14,8 @@ export class QuotesApiNinjaService {
     }
 
     try {
-      const response = await this.api.get<QuoteElement[]>("/quotes", {
-        params: { categories: "inspirational" },
+      const response = await this.api.get<QuoteElement[]>("/randomquotes", {
+        params: { categories: "inspirational,wisdom" },
         headers: { "X-Api-Key": API_KEY },
       });
 

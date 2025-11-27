@@ -14,7 +14,7 @@ export const WeatherWidget = () => {
 
   const formatTemp = (t?: number) => (t != null ? Math.round(t) : "20");
   return (
-    <div className="flex items-center gap-2 px-3 py-1 border rounded-xl max-h-13 bg-indigo-300/10 border-neutral-50/10">
+    <div className="flex items-center gap-2 px-3 py-1 border cursor-default rounded-xl max-h-13 bg-indigo-300/10 border-indigo-50/10">
       {icon && (
         <img
           src={`https://openweathermap.org/img/wn/${icon}.png`}

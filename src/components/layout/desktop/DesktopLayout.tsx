@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 
 export const DesktopLayout = () => {
   return (
-    <main className="relative flex flex-col items-center justify-center w-full px-5 min-h-dvh text-neutral-100">
+    <main className="relative flex flex-col items-center justify-around w-full px-5 sm:px-20 min-h-dvh text-neutral-100">
       <Particles
         alphaParticles={true}
         className="fixed inset-0 w-screen h-screen bg-[radial-gradient(circle,_#000_70%,_#0c0a1f_100%)] -z-10"
@@ -14,15 +14,13 @@ export const DesktopLayout = () => {
         particleBaseSize={50}
         particleColors={["#615fff", "#EEF2FF"]}
         particleCount={2000}
-        particleSpread={20}
+        particleSpread={15}
         speed={0.1}
       />
 
       <DesktopHeader />
 
-      <aside className="fixed top-0 left-0 z-50 h-dvh">
-        <DesktopNavbar />
-      </aside>
+      <DesktopNavbar />
 
       <Outlet />
 
@@ -30,7 +28,7 @@ export const DesktopLayout = () => {
         CONTACT ME
       </section>
 
-      <footer className="flex items-center justify-center w-full border-2 border-amber-500"> 
+      <footer className="flex items-center justify-center w-full border-2 border-amber-500">
         <p>FOOTER</p>
       </footer>
     </main>

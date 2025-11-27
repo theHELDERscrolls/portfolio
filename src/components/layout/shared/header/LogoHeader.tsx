@@ -15,6 +15,7 @@ export const LogoHeader = () => {
       stroke: "none",
     });
   }, []);
+  
   return (
     <div className="flex items-center justify-center gap-2">
       <svg
