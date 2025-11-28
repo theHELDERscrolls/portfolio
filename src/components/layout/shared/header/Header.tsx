@@ -1,9 +1,13 @@
 import { LogoHeader } from "./LogoHeader";
 import { useEffect } from "react";
+import { useMediaQuery } from "@/hooks";
 import { WeatherWidget } from "./WeatherWidget";
 import gsap from "gsap";
+import { MobileNavbar } from "../../mobile";
 
-export const DesktopHeader = () => {
+export const Header = () => {
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+
   useEffect(() => {
     const hasSeenLoaderScreen =
       sessionStorage.getItem("hasSeenLoaderScreen") === "true";
@@ -21,9 +25,9 @@ export const DesktopHeader = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 z-50 flex items-center justify-between w-full px-5 py-2 backdrop-blur-xs">
+    <header className="fixed top-0 z-50 flex items-center justify-between w-full gap-5 px-5 py-2 backdrop-blur-xs">
       <LogoHeader />
-      <WeatherWidget />
+      {isDesktop ? <WeatherWidget /> : <MobileNavbar />}
     </header>
   );
 };

@@ -1,15 +1,21 @@
-import {} from "react";
 import { MorphLogo, QuoteCard, SocialNav } from "@/components";
+import gsap from "gsap";
+import { useEffect } from "react";
 
 export const HomePage = () => {
-  const isHeightSmall = window.innerHeight < 550;
+  useEffect(() => {
+    const hasSeenLoaderScreen =
+      sessionStorage.getItem("hasSeenLoaderScreen") === "true";
+
+    const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+
+    if (!hasSeenLoaderScreen) {
+      tl.fromTo("#home-page", { opacity: 0 }, { opacity: 1, duration: 1.5 }, "+=6.5");
+    }
+  }, []);
 
   return (
-    <section
-      className={`flex flex-col items-center w-full gap-10 bg-transparent h-dvh ${
-        isHeightSmall ? "justify-center" : "justify-evenly"
-      }`}
-    >
+    <section id="home-page" className="flex flex-col items-center justify-center w-full sm:gap-10 gap-5 bg-transparent h-dvh">
       <MorphLogo />
       <QuoteCard />
       <SocialNav />

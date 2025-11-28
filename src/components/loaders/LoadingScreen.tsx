@@ -61,7 +61,7 @@ export const LoadingScreen = ({ onFinish }: LoadingScreenProps) => {
           viewBox="0 0 636 440"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="max-h-50"
+          className="sm:max-h-50 max-h-25"
         >
           <path
             d="M215.5 1C167.075 44.7387 140.925 75.2613 92.5 119L53.0001 255L176.5 136L215.5 1Z"

@@ -1,9 +1,8 @@
-import Particles from "@/components/effects/Particles";
-import {  Header } from "../shared/header";
-import { DesktopNavbar } from "./DesktopNavbar";
+import { Header } from "../shared";
 import { Outlet } from "react-router-dom";
+import Particles from "@/components/effects/Particles";
 
-export const DesktopLayout = () => {
+export const MobileLayout = () => {
   return (
     <main className="relative flex flex-col items-center justify-around w-full px-5 sm:px-20 min-h-dvh text-neutral-100">
       <Particles
@@ -13,24 +12,18 @@ export const DesktopLayout = () => {
         moveParticlesOnHover={false}
         particleBaseSize={50}
         particleColors={["#615fff", "#EEF2FF"]}
-        particleCount={2000}
+        particleCount={1000}
         particleSpread={15}
         speed={0.1}
       />
 
       <Header />
 
-      <DesktopNavbar />
-
       <Outlet />
 
-      <section id="contact" className="flex items-center justify-center w-full border-2 h-dvh border-lime-500">
+      <section className="flex items-center justify-center w-full border-2 h-dvh border-lime-500">
         CONTACT ME
       </section>
-
-      <footer className="flex items-center justify-center w-full border-2 border-amber-500">
-        <p>FOOTER</p>
-      </footer>
     </main>
   );
 };

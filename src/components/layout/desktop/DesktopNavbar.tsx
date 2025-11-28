@@ -52,8 +52,8 @@ export const DesktopNavbar = () => {
                         className={`absolute left-full top-1/2 ml-2 -translate-y-1/2 -translate-x-1 whitespace-nowrap px-2 py-1 text-xs font-bold opacity-0 transition-all ease-in-out duration-300 pointer-events-none rounded-xl group-hover:opacity-100 group-hover:translate-x-0 
                       ${
                         isActive
-                          ? `bg-gradient-to-r from-indigo-700 to-transparent text-indigo-100`
-                          : `bg-gradient-to-r from-neutral-700 to-transparent text-neutral-100`
+                          ? `border border-indigo-400/25 bg-indigo-800/50 text-indigo-100`
+                          : `border border-neutral-400/25 bg-neutral-700/50 text-neutral-100`
                       }`}
                       >
                         {title.toUpperCase()}

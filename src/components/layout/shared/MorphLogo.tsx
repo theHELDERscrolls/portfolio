@@ -21,7 +21,7 @@ export const MorphLogo = () => {
           id="svg-title"
           aria-hidden
           
-          className="text-amber-400 animate-slide-in-down w-25 h-25"
+          className="w-20 h-20 text-amber-400 animate-slide-in-down sm:w-25 sm:h-25"
         >
           <use xlinkHref={`/spriteSheet.svg#icon-${icons[index]}`} />
         </svg>
