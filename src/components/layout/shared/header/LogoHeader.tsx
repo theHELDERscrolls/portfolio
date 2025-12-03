@@ -51,7 +51,7 @@ export const LogoHeader = () => {
           strokeLinejoin="round"
         />
       </svg>
-      <span className="w-0.5 h-12.5 bg-indigo-500 rounded-full shadow shadow-indigo-300"></span>
+      <span className="w-0.5 h-10 bg-indigo-500 rounded-full shadow shadow-indigo-300"></span>
       <h2 className="font-extrabold font-orbitron">HELDER RUIZ</h2>
     </div>
   );

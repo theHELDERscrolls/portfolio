@@ -3,8 +3,8 @@ import { useUserLocation, useOpenWeather } from "@/hooks";
 export const WeatherWidget = () => {
   const { coords } = useUserLocation();
   const { weather } = useOpenWeather(
-    coords?.lat.toString() ?? "40.4168",
-    coords?.lon.toString() ?? "-3.7038"
+    coords?.lat.toString(),
+    coords?.lon.toString()
   );
 
   const temp = weather?.main.temp;
@@ -13,6 +13,7 @@ export const WeatherWidget = () => {
   const country = weather?.sys.country;
 
   const formatTemp = (t?: number) => (t != null ? Math.round(t) : "20");
+
   return (
     <div className="flex items-center gap-2 px-3 py-1 border cursor-default rounded-xl max-h-13 bg-indigo-300/10 border-indigo-50/10">
       {icon && (

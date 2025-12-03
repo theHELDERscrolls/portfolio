@@ -14,9 +14,18 @@
     <path d="M9.7 17l4.6 0" />
   </symbol>
 
+  <!-- clock -->
+  <symbol id="icon-clock" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+    <path d="M12 7v5l3 3" />
+  </symbol>
+
   <!-- cross -->
   <symbol id="icon-cross" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
     <path d="M18 6l-12 12" />
     <path d="M6 6l12 12" />
   </symbol>
@@ -28,6 +37,23 @@
     <path d="M12 8m-5 0a5 5 0 1 0 10 0a5 5 0 1 0 -10 0" />
     <path d="M8 11a5 5 0 1 0 3.998 1.997" />
     <path d="M12.002 19.003a5 5 0 1 0 3.998 -8.003" />
+  </symbol>
+
+  <!-- discord -->
+  <symbol id="icon-discord" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M8 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
+    <path d="M14 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
+    <path
+      d="M15.5 17c0 1 1.5 3 2 3c1.5 0 2.833 -1.667 3.5 -3c.667 -1.667 .5 -5.833 -1.5 -11.5c-1.457 -1.015 -3 -1.34 -4.5 -1.5l-.972 1.923a11.913 11.913 0 0 0 -4.053 0l-.975 -1.923c-1.5 .16 -3.043 .485 -4.5 1.5c-2 5.667 -2.167 9.833 -1.5 11.5c.667 1.333 2 3 3.5 3c.5 0 2 -2 2 -3" />
+    <path d="M7 16.5c3.5 1 6.5 1 10 0" />
+  </symbol>
+
+  <!-- dot -->
+  <symbol id="icon-dot" viewBox="0 0 24 24" fill="currentColor">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M7 3.34a10 10 0 1 1 -4.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 4.995 -8.336z" />
   </symbol>
 
   <!-- download -->
@@ -63,6 +89,26 @@
       d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
   </symbol>
 
+  <!-- guide -->
+  <symbol id="icon-guide" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M5 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+    <path d="M7 19h3a2 2 0 0 0 2 -2v-8a2 2 0 0 1 2 -2h7" />
+    <path d="M18 4l3 3l-3 3" />
+  </symbol>
+
+  <!-- hands -->
+  <symbol id="icon-hands" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+    <path
+      d="M12 6l-3.293 3.293a1 1 0 0 0 0 1.414l.543 .543c.69 .69 1.81 .69 2.5 0l1 -1a3.182 3.182 0 0 1 4.5 0l2.25 2.25" />
+    <path d="M12.5 15.5l2 2" />
+    <path d="M15 13l2 2" />
+  </symbol>
+
   <!-- home -->
   <symbol id="icon-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
     <path stroke-linecap="round" stroke-linejoin="round"
@@ -80,6 +126,18 @@
       stroke-width="10" stroke-linejoin="round" />
     <path d="M423 140.5L479 86.5H438L462 1H635L494 140.5L589 438.5L479 319.656L423 140.5Z"
       stroke-width="10" stroke-linejoin="round" />
+  </symbol>
+
+  <!-- language -->
+  <symbol id="icon-language" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M9 6.371c0 4.418 -2.239 6.629 -5 6.629" />
+    <path d="M4 6.371h7" />
+    <path d="M5 9c0 2.144 2.252 3.908 6 4" />
+    <path d="M12 20l4 -9l4 9" />
+    <path d="M19.1 18h-6.2" />
+    <path d="M6.694 3l.793 .582" />
   </symbol>
 
   <!-- linkedin -->
@@ -118,5 +176,29 @@
       d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
     <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />
     <path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+  </symbol>
+
+  <!-- schema -->
+  <symbol id="icon-schema" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M3 15m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+    <path d="M15 15m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+    <path d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" />
+    <path d="M6 15v-1a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v1" />
+    <path d="M12 9l0 3" />
+  </symbol>
+
+  <!-- time -->
+  <symbol id="icon-time" viewBox="0 0 24 24" fill="none"
+    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M20.884 10.554a9 9 0 1 0 -10.337 10.328" />
+    <path d="M3.6 9h16.8" />
+    <path d="M3.6 15h6.9" />
+    <path d="M11.5 3a17 17 0 0 0 -1.502 14.954" />
+    <path d="M12.5 3a17 17 0 0 1 2.52 7.603" />
+    <path d="M18 18m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+    <path d="M18 16.5v1.5l.5 .5" />
   </symbol>
 </svg>

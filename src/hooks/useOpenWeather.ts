@@ -2,22 +2,27 @@ import { OpenWeatherService } from "@/api";
 import type { OpenWeather } from "@/types";
 import { useCallback, useEffect, useState } from "react";
 
-export const useOpenWeather = (lat: string, lon: string) => {
+export const useOpenWeather = (
+  lat: string | undefined,
+  lon: string | undefined
+) => {
   const [weather, setWeather] = useState<OpenWeather | null>(null);
   const [loading, setLoaing] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   const fetchWeather = useCallback(async () => {
+    if (!lat || !lon) return;
+
     try {
       setError(null);
-      const data = await OpenWeatherService.getWeatherByCoords(lat, lon);
 
-      if (!data) return null;
+      const data = await OpenWeatherService.getWeatherByCoords(lat, lon);
+      if (!data) return;
 
       setWeather(data);
     } catch (error) {
-      setError("No data available.");
       console.error(error);
+      setError("No data available.");
     } finally {
       setLoaing(false);
     }
