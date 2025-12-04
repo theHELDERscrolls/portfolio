@@ -1,7 +1,6 @@
 import { ContactDetailItem } from "./ContactDetailItem";
 import { ContactInfoCard } from "./ContactInfoCard";
-import { ContactMethodButton } from "./ContactMethodButton";
-import { SectionTitle, Svg } from "@/components/ui";
+import { SectionTitle, SocialButton, Svg } from "@/components/ui";
 
 export const ContactMe = () => {
   return (
@@ -28,22 +27,22 @@ export const ContactMe = () => {
           </header>
 
           <section className="flex flex-wrap items-center justify-center w-full gap-5 py-5 border-indigo-400/50 border-y">
-            <ContactMethodButton
-              groupHover="group-hover:w-13.5"
+            <SocialButton
+              groupHover="group-hover:w-12"
               href="mailto:manuhelderruiz@gmail.com"
               iconClassName="w-12.5 h-12.5"
               iconId="icon-email"
-              text="gmail"
+              text="Gmail"
             />
 
-            <ContactMethodButton
-              groupHover="group-hover:w-18.5"
+            <SocialButton
+              groupHover="group-hover:w-16"
               href={`https://discord.com/users/${
                 import.meta.env.VITE_DISCORD_ID
               }`}
               iconClassName="w-12.5 h-12.5"
               iconId="icon-discord"
-              text="discord"
+              text="Discord"
             />
 
             <div className="flex flex-wrap items-center justify-center w-full gap-5">

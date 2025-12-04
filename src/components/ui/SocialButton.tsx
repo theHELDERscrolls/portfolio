@@ -1,7 +1,7 @@
 import { Svg } from "@/components/ui";
 import { useMediaQuery } from "@/hooks";
 
-interface ContactMethodButtonProps {
+interface SocialButtonProps {
   groupHover?: string;
   href: string;
   iconClassName?: string;
@@ -9,13 +9,13 @@ interface ContactMethodButtonProps {
   text: string;
 }
 
-export const ContactMethodButton = ({
+export const SocialButton = ({
   groupHover = "group-hover:w-15",
   href,
   iconClassName = "w-12.5 h-12.5",
   iconId,
   text,
-}: ContactMethodButtonProps) => {
+}: SocialButtonProps) => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
   return (
@@ -30,7 +30,7 @@ export const ContactMethodButton = ({
         <p
           className={`w-0 ml-0 overflow-hidden font-semibold transition-all duration-300 ease-in-out opacity-0 group-hover:ml-2 whitespace-nowrap group-hover:opacity-100 ${groupHover}`}
         >
-          {text.toUpperCase()}
+          {text}
         </p>
       )}
     </a>

@@ -1,3 +1,4 @@
+import { SocialButton } from "@/components";
 import { useMediaQuery } from "@/hooks";
 
 export const SocialNav = () => {
@@ -17,38 +18,20 @@ export const SocialNav = () => {
         )}
       </div> */}
 
-      <a
+      <SocialButton
+        groupHover="group-hover:w-14"
         href="https://github.com/theHELDERscrolls"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center justify-center p-2 transition-all ease-in-out border cursor-pointer text-neutral-400 hover:text-neutral-200 bg-indigo-300/10 hover:bg-indigo-300/20 border-indigo-50/10 hover:border-indigo-50/20 hover:shadow-[0_0_5px_#A3B3FF] rounded-xl backdrop-blur-xs group"
-      >
-        <svg aria-hidden className="w-8 h-8">
-          <use xlinkHref="/spriteSheet.svg#icon-github" />
-        </svg>
-
-        {isDesktop && (
-          <p className="w-0 ml-0 overflow-hidden font-semibold transition-all duration-300 ease-in-out opacity-0 group-hover:ml-2 whitespace-nowrap group-hover:opacity-100 group-hover:w-14">
-            GitHub
-          </p>
-        )}
-      </a>
-
-      <a
+        iconClassName="w-8 h-8"
+        iconId="icon-github"
+        text="GitHub"
+      />
+      <SocialButton
+        groupHover="group-hover:w-17"
         href="https://www.linkedin.com/in/heldermvr/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center justify-center p-2 transition-all ease-in-out border cursor-pointer text-neutral-400 hover:text-neutral-200 bg-indigo-300/10 hover:bg-indigo-300/20 border-indigo-50/10 hover:border-indigo-50/20 hover:shadow-[0_0_5px_#A3B3FF] rounded-xl backdrop-blur-xs group"
-      >
-        <svg aria-hidden className="w-8 h-8">
-          <use xlinkHref="/spriteSheet.svg#icon-linkedin" />
-        </svg>
-        {isDesktop && (
-          <p className="w-0 ml-0 overflow-hidden font-semibold transition-all duration-300 ease-in-out opacity-0 group-hover:ml-2 whitespace-nowrap group-hover:opacity-100 group-hover:w-17">
-            LinkedIn
-          </p>
-        )}
-      </a>
+        iconClassName="w-8 h-8"
+        iconId="icon-linkedin"
+        text="LinkedIn"
+      />
 
       <a
         href="#contact"
