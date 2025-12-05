@@ -1,10 +1,14 @@
 import gsap from "gsap";
-import { useEffect } from "react";
 import { DrawSVGPlugin } from "gsap/all";
+import { useEffect } from "react";
 
 gsap.registerPlugin(DrawSVGPlugin);
 
-export const LoadingPage = () => {
+interface LoadingScreenProps {
+  onFinish: () => void;
+}
+
+export const LoadingScreen = ({ onFinish }: LoadingScreenProps) => {
   useEffect(() => {
     const tl = gsap.timeline({
       defaults: { ease: "power2.inOut" },
@@ -14,14 +18,18 @@ export const LoadingPage = () => {
       "svg path",
       {
         drawSVG: "0%",
-        strokeWidth: 3,
+        strokeWidth: 6,
         stroke: "#E5E5E5",
         opacity: 0,
       },
-      { drawSVG: "100%", duration: 3, stagger: 0.2, opacity: 1 },
+      { drawSVG: "100%", duration: 3, stagger: 0.2, opacity: 1 }
     );
 
-    tl.to("svg path:nth-child(n+3)", { stroke: "#615FFF" });
+    tl.to("svg path:nth-child(n+3)", {
+      duration: 1,
+      stroke: "#615FFF",
+      filter: "drop-shadow(0px 0px 10px #7C86FF)",
+    });
 
     tl.to("#first-screen", { y: "-100%", duration: 1.5, ease: "power4.inOut" });
 
@@ -31,10 +39,14 @@ export const LoadingPage = () => {
         y: "-100%",
         duration: 1.5,
         ease: "power4.inOut",
+        onComplete: () => {
+          sessionStorage.setItem("hasSeenLoaderScreen", "true");
+          onFinish();
+        },
       },
-      "-=1.3",
+      "-=1.4"
     );
-  }, []);
+  }, [onFinish]);
 
   return (
     <div className="relative w-full h-dvh overflow-hidden">
@@ -49,7 +61,7 @@ export const LoadingPage = () => {
           viewBox="0 0 636 440"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="max-h-96"
+          className="sm:max-h-50 max-h-25"
         >
           <path
             d="M215.5 1C167.075 44.7387 140.925 75.2613 92.5 119L53.0001 255L176.5 136L215.5 1Z"

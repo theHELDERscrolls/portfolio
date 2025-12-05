@@ -22,19 +22,17 @@ export const Loader = ({ strokeColor = "#E5E5E5" }: LoaderProps) => {
         strokeWidth: 3,
         stroke: strokeColor,
       },
-      { drawSVG: "100%", duration: 1 },
+      { drawSVG: "100%", duration: 1 }
     );
   }, [strokeColor]);
 
   return (
     <div className="flex items-center justify-center">
       <svg
-        width="636"
-        height="440"
         viewBox="0 0 636 440"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="max-h-96"
+        className="w-25 h-25"
       >
         <path
           d="M215.5 1C167.075 44.7387 140.925 75.2613 92.5 119L53.0001 255L176.5 136L215.5 1Z"

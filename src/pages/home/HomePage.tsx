@@ -1,38 +1,32 @@
-import { useEffect, useState } from "react";
-import { LoadingPage } from "../loading";
+import { MorphLogo, QuoteCard, SocialNav } from "./components";
+import { useEffect } from "react";
+import gsap from "gsap";
 
 export const HomePage = () => {
-  const [showLoading, setShowLoading] = useState(false);
-
   useEffect(() => {
-    const visited = sessionStorage.getItem("visited");
+    const hasSeenLoaderScreen =
+      sessionStorage.getItem("hasSeenLoaderScreen") === "true";
 
-    if (!visited) {
-      sessionStorage.setItem("visited", "true");
-      setShowLoading(true);
+    const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
 
-      const timer = setTimeout(() => {
-        setShowLoading(false);
-      }, 4500);
-
-      return () => clearTimeout(timer);
+    if (!hasSeenLoaderScreen) {
+      tl.fromTo(
+        "#home-page",
+        { opacity: 0 },
+        { opacity: 1, duration: 1.5 },
+        "+=6.5"
+      );
     }
   }, []);
 
   return (
-    <div className="relative w-full h-dvh overflow-hidden">
-      {showLoading && (
-        <div className="absolute inset-0 z-50">
-          <LoadingPage />
-        </div>
-      )}
-
-      <div className="flex items-center justify-center w-full h-dvh bg-neutral-950 transition-opacity duration-700">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL4sZBDVtneodnD0VXF1XcGOWVYuIJ5bmCqQ&s"
-          alt="meme"
-        />
-      </div>
-    </div>
+    <section
+      id="home-page"
+      className="flex flex-col items-center justify-center w-full h-screen gap-5 bg-transparent sm:gap-20"
+    >
+      <MorphLogo />
+      <QuoteCard />
+      <SocialNav />
+    </section>
   );
 };

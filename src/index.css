@@ -1,1 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
 @import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  --font-orbitron: "Orbitron", sans-serif;
+  --animate-slide-in-up: slideInUp 6s infinite ease-in-out;
+  --animate-slide-in-down: slideInDown 6s infinite ease-in-out;
+  --animate-change-width: changeWidth 6s infinite ease-in-out;
+
+  @keyframes slideInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    20% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    80% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    90% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
+
+  @keyframes slideInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    20% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    80% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    90% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }
+
+  @keyframes changeWidth {
+    0% {
+      width: 0%;
+    }
+
+    15% {
+      width: 100%;
+    }
+
+    85% {
+      width: 100%;
+    }
+
+    100% {
+      width: 0%;
+    }
+  }
+}
