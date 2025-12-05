@@ -2,6 +2,10 @@
 
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @theme {
   --font-orbitron: "Orbitron", sans-serif;
   --animate-slide-in-up: slideInUp 6s infinite ease-in-out;

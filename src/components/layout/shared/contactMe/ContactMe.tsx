@@ -1,6 +1,7 @@
 import { ContactDetailItem } from "./ContactDetailItem";
 import { ContactInfoCard } from "./ContactInfoCard";
-import { SectionTitle, SocialButton, Svg } from "@/components/ui";
+import { ContactMePresence } from "./ContactMePresence";
+import { SectionTitle, SocialButton } from "@/components/ui";
 
 export const ContactMe = () => {
   return (
@@ -13,17 +14,11 @@ export const ContactMe = () => {
       <div className="flex items-center justify-center flex-1 w-full">
         <article className="flex flex-col items-center justify-center max-w-2xl gap-5 p-5 border border-indigo-400/10 bg-indigo-800/10 rounded-xl">
           <header className="flex items-center justify-between w-full gap-5">
-            <h3 className="sm:text-3xl text-xl font-bold font-orbitron">
+            <h3 className="text-xl font-bold sm:text-3xl font-orbitron">
               Get In Touch
             </h3>
 
-            <div className="flex items-center justify-center gap-2 px-2 py-1 rounded-xl border border-emerald-50/10 bg-emerald-500/10 text-emerald-300 animate-pulse">
-              <Svg
-                className="w-4 h-4 text-emerlad-400 top-1 right-1"
-                iconId="icon-dot"
-              />
-              <p className="font-semibold text-sm">available</p>
-            </div>
+            <ContactMePresence />
           </header>
 
           <section className="flex flex-wrap items-center justify-center w-full gap-5 py-5 border-indigo-400/50 border-y">
