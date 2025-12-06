@@ -1,8 +1,13 @@
-import { AboutPage, ExperiencePage, HomePage, ProjectsPage } from "@/pages";
 import { AppLoaderWrapper, DesktopLayout, MobileLayout } from "@/components";
 import { BrowserRouter, Route } from "react-router-dom";
 import { RoutesWithNoFound } from "./RoutesWithNoFound";
 import { useMediaQuery } from "@/hooks";
+import { lazy } from "react";
+
+const HomePage = lazy(() => import("@/pages/home/HomePage"));
+const AboutPage = lazy(() => import("@/pages/about/AboutPage"));
+const ExperiencePage = lazy(() => import("@/pages/experience/ExperiencePage"));
+const ProjectsPage = lazy(() => import("@/pages/projects/ProjectsPage"));
 
 export const AppRouter = () => {
   const isDesktop = useMediaQuery("(min-width: 768px)");

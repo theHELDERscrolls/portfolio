@@ -20,6 +20,7 @@ export const WeatherWidget = () => {
         <img
           src={`https://openweathermap.org/img/wn/${icon}.png`}
           alt="weather icon"
+          loading="lazy"
           className="object-contain w-8 h-8"
         />
       )}

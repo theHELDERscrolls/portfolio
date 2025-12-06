@@ -2,7 +2,7 @@ import { MorphLogo, QuoteCard, SocialNav } from "./components";
 import { useEffect } from "react";
 import gsap from "gsap";
 
-export const HomePage = () => {
+const HomePage = () => {
   useEffect(() => {
     const hasSeenLoaderScreen =
       sessionStorage.getItem("hasSeenLoaderScreen") === "true";
@@ -30,3 +30,5 @@ export const HomePage = () => {
     </section>
   );
 };
+
+export default HomePage;
