@@ -1,5 +1,5 @@
 import type { IpApi } from "@/types";
-import { IpApiClient } from "./ipApiClient";
+import { IpApiClient } from "../client";
 
 export class IpApiService {
   private static api = new IpApiClient().instance;

@@ -1,5 +1,5 @@
 import type { OpenWeather } from "@/types";
-import { OpenWeatherClient } from "./openWeatherClient";
+import { OpenWeatherClient } from "../client";
 
 const API_KEY = import.meta.env.VITE_OPEN_WEATHER_API_KEY;
 

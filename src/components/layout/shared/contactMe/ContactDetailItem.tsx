@@ -23,7 +23,7 @@ export const ContactDetailItem = ({
   value,
 }: ContactDetailItemProps) => {
   return (
-    <div className="flex items-center justify-center gap-2 rounded-xl">
+    <div className="flex items-center justify-start gap-2 rounded-xl min-w-32">
       <Svg className={`w-5 h-5 ${colorClasses[color]}`} iconId={iconId} />
       <div className="text-xs flex flex-col items-start justify-center gap-1">
         <p className="font-bold">{title}</p>

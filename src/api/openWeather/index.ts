@@ -1,2 +1,2 @@
-export * from "./openWeatherClient";
-export * from "./openWheaterService";
+export * from "./client";
+export * from "./services";

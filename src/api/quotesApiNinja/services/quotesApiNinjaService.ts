@@ -1,5 +1,5 @@
 import type { QuoteElement } from "@/types";
-import { QuotesApiNinjaClient } from "./quotesApiNinjaClient";
+import { QuotesApiNinjaClient } from "../client";
 
 const API_KEY = import.meta.env.VITE_QUOTES_API_NINJA_KEY;
 
