@@ -49,14 +49,15 @@ export const SocialProfile = ({
       {/* Icono grande de fondo */}
       <Svg
         iconId={iconId}
-        className={`-z-10 absolute transition-all duration-300 ease-in-out h-50 w-50 -right-10 -bottom-10 ${iconBgClasses[color]}`}
+        className={`-z-10 absolute transition-all duration-300 ease-in-out h-25 w-25 -right-5 -bottom-5 sm:h-40 sm:w-40 sm:-right-10 sm:-bottom-10 ${iconBgClasses[color]}`}
       />
 
+      {/* Nombre de la red social */}
       <div
-        className={`absolute flex flex-col items-start justify-center font-extrabold transition-all duration-300 ease-in-out font-orbitron bottom-3 left-3 ${textClasses[color]} -translate-x-100 group-hover:translate-0`}
+        className={`flex flex-col h-full w-fit items-start justify-end font-extrabold transition-all duration-300 ease-in-out font-orbitron ${textClasses[color]} -translate-x-100 group-hover:translate-0`}
       >
         <h3>Check out my</h3>
-        <h3 className="text-3xl">{social.toUpperCase()}!</h3>
+        <h3 className="text-[2cqw]">{social.toUpperCase()}!</h3>
       </div>
     </a>
   );
