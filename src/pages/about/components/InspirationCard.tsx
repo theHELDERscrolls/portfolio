@@ -7,7 +7,7 @@ interface InspirationCardProps {
 }
 
 export const InspirationCard = ({
-  infoPassTime = 5000,
+  infoPassTime = 7000,
 }: InspirationCardProps) => {
   const [inspiration, setInspiration] = useState<Inspiration | null>(null);
   const prevIndex = useRef<number | null>(null);
@@ -47,14 +47,14 @@ export const InspirationCard = ({
           {inspiration.type}
         </h3>
         <span className="w-0.5 h-5 sm:h-8 bg-indigo-400 rounded-full"></span>
-        <p className="text-xs font-semibold text-indigo-100 sm:text-base">
+        <p className="text-xs font-semibold text-indigo-100 sm:text-sm">
           that inspires my
         </p>
       </header>
 
       <main
         key={prevIndex.current}
-        className="flex flex-col sm:flex-row items-center justify-center w-full h-full gap-2 sm:gap-8 min-h-[280px] sm:min-h-[200px] mt-2 animate-fade-in"
+        className="flex flex-col lg:flex-row items-center justify-center w-full h-full gap-2 lg:gap-8 min-h-[280px] lg:min-h-[200px] mt-2 animate-fade-in"
       >
         <img
           src={inspiration.imageURL}
@@ -63,11 +63,11 @@ export const InspirationCard = ({
           className="object-cover max-w-25 max-h-25 aspect-square ring-2 ring-amber-400 rounded-xl"
         />
 
-        <div className="flex flex-col items-center justify-center gap-2 font-mono sm:items-start">
+        <div className="flex flex-col items-center justify-center gap-2 font-mono lg:items-start">
           <h4 className="text-lg font-bold text-amber-400">
             {inspiration.name}
           </h4>
-          <p className="text-xs text-center sm:text-sm sm:text-left text-balance text-neutral-300">
+          <p className="text-sm text-left lg:text-left text-balance text-neutral-300">
             {inspiration.description}
           </p>
         </div>
