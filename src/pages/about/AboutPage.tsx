@@ -1,18 +1,11 @@
+import { AboutMeText, InspirationCard, SocialProfile } from "./components";
 import { SectionTitle } from "@/components";
 import { useEffect } from "react";
 import gsap from "gsap";
-import {
-  AboutMeText,
-  GitHubLanguages,
-  GitHubStats,
-  InspirationCard,
-  SocialProfile,
-} from "./components";
-import { useGitHubUserStats } from "@/hooks";
+import { GitHubStatsImage } from "./components/GitHubStatsImage";
+import { GitHubLangaugeImage } from "./components/GitHubLangaugeImage";
 
 const AboutPage = () => {
-  const { stats } = useGitHubUserStats("theHELDERscrolls");
-
   useEffect(() => {
     const hasSeenLoaderScreen =
       sessionStorage.getItem("hasSeenLoaderScreen") === "true";
@@ -45,12 +38,10 @@ const AboutPage = () => {
           <InspirationCard />
         </div>
 
-        {stats && (
-          <div className="flex flex-wrap items-center justify-center gap-4 break-inside-avoid rounded-xl">
-            <GitHubStats gitHubUserStats={stats} />
-            <GitHubLanguages topLanguages={stats.topLanguages} />
-          </div>
-        )}
+        <div className="flex flex-wrap items-start justify-center gap-4 break-inside-avoid rounded-xl">
+          <GitHubStatsImage />
+          <GitHubLangaugeImage/>
+        </div>
 
         <div className="flex items-center justify-center break-inside-avoid bg-emerald-500/10 rounded-xl">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
@@ -76,7 +67,7 @@ const AboutPage = () => {
 
           <SocialProfile
             color="neutral"
-            href={stats ? stats.profileUrl : ""}
+            href={""}
             iconId="icon-github"
             social="github"
           />
