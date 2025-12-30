@@ -10,9 +10,9 @@ interface SocialProfileProps {
 }
 
 const bgClasses: Record<SocialColor, string> = {
-  neutral: "bg-neutral-500/10",
-  lime: "bg-lime-500/10",
-  cyan: "bg-cyan-500/10",
+  neutral: "bg-neutral-600/10 sm:border-none border border-neutral-500/10",
+  lime: "bg-lime-600/10 sm:border-none border border-lime-500/10",
+  cyan: "bg-cyan-600/10 sm:border-none border border-cyan-500/10",
 };
 
 const iconBgClasses: Record<SocialColor, string> = {
