@@ -3,57 +3,76 @@ import type { Inspiration } from "@/types";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 interface InspirationCardProps {
+  // Tiempo (en ms) que pasa antes de cambiar la inspiración
   infoPassTime?: number;
 }
 
 export const InspirationCard = ({
-  infoPassTime = 7000,
+  infoPassTime = 7000, // Valor por defecto: 7 segundos
 }: InspirationCardProps) => {
+  // Inspiración actual que se muestra en la card
   const [inspiration, setInspiration] = useState<Inspiration | null>(null);
+
+  // Guarda el índice anterior para no repetir la misma inspiración seguida
   const prevIndex = useRef<number | null>(null);
 
-  const allInspirations = useMemo(() => [...people, ...books, ...music], []);
+  // Unificamos todas las fuentes de inspiración en un solo array
+  // useMemo evita recalcularlo en cada render
+  const allInspirations = useMemo(() => {
+    return [...people, ...books, ...music];
+  }, []);
 
+  // Devuelve una inspiración aleatoria distinta a la anterior
+  // useCallback evita recrear la función innecesariamente
   const getRandomInspiration = useCallback((): Inspiration => {
     let newIndex: number;
 
+    // Repetimos hasta que el índice sea diferente al anterior
     do {
       newIndex = Math.floor(Math.random() * allInspirations.length);
     } while (newIndex === prevIndex.current);
 
+    // Guardamos el índice actual para la siguiente comparación
     prevIndex.current = newIndex;
+
     return allInspirations[newIndex];
   }, [allInspirations]);
 
   useEffect(() => {
+    // Mostramos una inspiración al montar el componente
     setInspiration(getRandomInspiration());
 
+    // Cambiamos la inspiración cada X milisegundos
     const interval = setInterval(() => {
       setInspiration(getRandomInspiration());
     }, infoPassTime);
 
+    // Limpiamos el intervalo cuando el componente se desmonta
     return () => clearInterval(interval);
   }, [infoPassTime, getRandomInspiration]);
 
+  // Mientras no haya inspiración, no renderizamos nada
   if (!inspiration) return null;
 
   return (
     <div className="flex flex-col items-center justify-center max-w-[500px] px-4 py-2 border rounded-xl border-indigo-500/10 bg-indigo-800/10 shadow-[0_0_5px_#6366f1] cursor-default overflow-hidden">
       <header className="flex items-center justify-start w-full gap-2 font-orbitron">
         <h3
-          key={inspiration.type}
+          key={inspiration.type} // key para reiniciar animación cuando cambia el tipo
           className="text-xl sm:text-2xl font-extrabold text-indigo-400 drop-shadow-[0_0_5px_#6366f1] animate-slide-in-to-right"
         >
           {inspiration.type}
         </h3>
+
         <span className="w-0.5 h-5 sm:h-8 bg-indigo-400 rounded-full"></span>
+
         <p className="text-xs font-semibold text-indigo-100 sm:text-sm">
           that inspires my
         </p>
       </header>
 
       <main
-        key={prevIndex.current}
+        key={prevIndex.current} // fuerza re-render para animación al cambiar
         className="flex flex-col lg:flex-row items-center justify-center w-full h-full gap-2 lg:gap-8 min-h-[280px] lg:min-h-[200px] mt-2 animate-fade-in"
       >
         <img
@@ -67,7 +86,8 @@ export const InspirationCard = ({
           <h4 className="text-lg font-bold text-amber-400">
             {inspiration.name}
           </h4>
-          <p className="text-sm text-left lg:text-left text-balance text-neutral-300">
+
+          <p className="text-sm text-left text-balance text-neutral-300">
             {inspiration.description}
           </p>
         </div>
