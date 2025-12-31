@@ -49,7 +49,7 @@ export const DesktopNavbar = () => {
                       </svg>
 
                       <span
-                        className={`absolute left-full top-1/2 ml-2 -translate-y-1/2 -translate-x-1 whitespace-nowrap px-2 py-1 text-xs font-bold opacity-0 transition-all ease-in-out duration-300 pointer-events-none rounded-xl group-hover:opacity-100 group-hover:translate-x-0 
+                        className={`absolute backdrop-blur-xs left-full top-1/2 ml-2 -translate-y-1/2 -translate-x-1 whitespace-nowrap px-2 py-1 text-xs font-bold opacity-0 transition-all ease-in-out duration-300 pointer-events-none rounded-xl group-hover:opacity-100 group-hover:translate-x-0 
                       ${
                         isActive
                           ? `border border-indigo-400/25 bg-indigo-800/50 text-indigo-100`

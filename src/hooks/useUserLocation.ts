@@ -1,7 +1,7 @@
 import { IpApiService } from "@/api";
 import { useCallback, useEffect, useState } from "react";
 
-const DEFAULT_COORDS = { lat: 37.9557275, lon: -3.49205561203722 }; // Jaén
+const DEFAULT_COORDS = { lat: 37.9557275, lon: -3.49205561203722 }; 
 const STORAGE_KEY = "user_coords";
 
 export const useUserLocation = () => {

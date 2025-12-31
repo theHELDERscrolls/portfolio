@@ -1,7 +1,9 @@
-export const ExperiencePage = () => {
+const ExperiencePage = () => {
   return (
     <div className="flex items-center justify-center w-full h-dvh border-3 border-lime-500">
       EXPERIENCE PAGE
     </div>
   );
 };
+
+export default ExperiencePage;

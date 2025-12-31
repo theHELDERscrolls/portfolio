@@ -1,2 +1,2 @@
-export * from "./quotesApiNinjaClient";
-export * from "./quotesApiNinjaService";
+export * from "./client";
+export * from "./services";

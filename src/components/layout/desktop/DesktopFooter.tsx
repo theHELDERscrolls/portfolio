@@ -16,7 +16,7 @@ const USED_APIS = [
 
 export const DesktopFooter = () => {
   return (
-    <footer className="flex items-center justify-between w-full p-5 border-t border-indigo-400/50">
+    <footer className="flex items-center justify-between w-full p-5 mt-5 border-t border-indigo-400/50">
       <div className="flex flex-col items-start self-start justify-center gap-3">
         <div className="flex items-center justify-center gap-1">
           <Svg iconId="icon-hr" className="w-6 h-6" />

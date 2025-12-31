@@ -1,2 +1,2 @@
-export * from "./ipApiClient";
-export * from "./ipApiService";
+export * from "./client";
+export * from "./services";
