@@ -15,6 +15,8 @@ const USED_APIS = [
 ];
 
 export const DesktopFooter = () => {
+  const date = new Date;
+
   return (
     <footer className="flex items-center justify-between w-full p-5 mt-5 border-t border-indigo-400/50">
       <div className="flex flex-col items-start self-start justify-center gap-3">
@@ -25,7 +27,7 @@ export const DesktopFooter = () => {
         </div>
 
         <p className="font-mono text-xs text-center text-neutral-400">
-          Copyright © 2025 HELDER RUIZ
+          Copyright © {date.getFullYear()} HELDER RUIZ
         </p>
 
         <div className="flex gap-3">
@@ -58,7 +60,7 @@ export const DesktopFooter = () => {
                 href={api.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex gap-2 px-2 py-1 text-indigo-200 hover:text-indigo-400 border border-indigo-50/10 bg-indigo-500/10 hover:shadow-[0_0_5px_#6366f1] hover:-translate-y-0.5 rounded-xl transition-all ease-in-out duration-300"
+                className="flex gap-2 px-2 py-1 text-indigo-200 hover:text-indigo-400 border border-indigo-50/10 bg-indigo-500/10 hover:shadow-[0_0_5px_#7C86FF] hover:-translate-y-0.5 rounded-xl transition-all ease-in-out duration-300"
               >
                 <Svg iconId={api.iconId} />
                 {api.name}

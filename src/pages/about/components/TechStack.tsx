@@ -22,7 +22,7 @@ export const TechStack = () => {
               alt={tech.name}
               title={tech.name}
               loading="lazy"
-              className="w-12 h-12 p-2 border bg-indigo-800/10 border-indigo-500/10 rounded-xl shadow-[0_0_5px_#6366f1]"
+              className="w-12 h-12 p-2 border bg-indigo-800/10 border-indigo-500/10 rounded-xl shadow-[0_0_5px_#7C86FF]"
             />
           ))}
         </div>
@@ -40,7 +40,7 @@ export const TechStack = () => {
               alt={tech.name}
               title={tech.name}
               loading="lazy"
-              className="w-12 h-12 p-2 border bg-indigo-800/10 border-indigo-500/10 rounded-xl shadow-[0_0_5px_#6366f1]"
+              className="w-12 h-12 p-2 border bg-indigo-800/10 border-indigo-500/10 rounded-xl shadow-[0_0_5px_#7C86FF]"
             />
           ))}
         </div>
