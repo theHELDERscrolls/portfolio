@@ -4,11 +4,11 @@ import {
   SocialProfile,
   TechStack,
 } from "./components";
+import { GitHubLangaugeImage } from "./components/GitHubLangaugeImage";
+import { GitHubStatsImage } from "./components/GitHubStatsImage";
 import { SectionTitle } from "@/components";
 import { useEffect } from "react";
 import gsap from "gsap";
-import { GitHubStatsImage } from "./components/GitHubStatsImage";
-import { GitHubLangaugeImage } from "./components/GitHubLangaugeImage";
 
 const AboutPage = () => {
   useEffect(() => {
@@ -55,7 +55,7 @@ const AboutPage = () => {
         <div className="flex items-center justify-center gap-4 break-inside-avoid rounded-xl">
           <SocialProfile
             color="cyan"
-            href="www.linkedin.com/in/heldermvr"
+            href="https://www.linkedin.com/in/heldermvr/"
             iconId="icon-linkedin"
             social="linkedin"
           />
@@ -69,7 +69,7 @@ const AboutPage = () => {
 
           <SocialProfile
             color="neutral"
-            href={""}
+            href="https://github.com/theHELDERscrolls"
             iconId="icon-github"
             social="github"
           />

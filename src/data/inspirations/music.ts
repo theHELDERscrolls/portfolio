@@ -45,7 +45,7 @@ export const music: Inspiration[] = [
     description:
       "Josh Meloy’s 'Oklahoma' delivers gritty country vocals and honest songwriting, reflecting on small-town life, heartbreak, and personal roots.",
     imageURL:
-      "https://i.scdn.co/image/ab67616d0000b273308c6ee41a75045f8210fd5b",
+      "https://cdn-images.dzcdn.net/images/cover/302919a8d6981705909a8dcc531f4d1b/0x1900-000000-80-0-0.jpg",
   },
   {
     id: 305,

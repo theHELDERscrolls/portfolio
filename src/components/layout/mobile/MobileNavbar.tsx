@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 
 export const MobileNavbar = () => {
   const [open, setOpen] = useState(false);
+  const date = new Date;
 
   const toggleMenu = () => setOpen((prev) => !prev);
 
@@ -60,7 +61,7 @@ export const MobileNavbar = () => {
         </div>
 
         <footer className="absolute z-50 -translate-x-1/2 border-t pt-25 border-indigo-400/50 max-w-2xs bottom-5 left-1/2">
-          <p className="font-mono text-xs font-semibold text-center text-neutral-400">Copyright © 2025 HELDER RUIZ</p>
+          <p className="font-mono text-xs font-semibold text-center text-neutral-400">Copyright © {date.getFullYear()} HELDER RUIZ</p>
         </footer>
       </nav>
     </>

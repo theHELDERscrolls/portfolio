@@ -55,11 +55,11 @@ export const InspirationCard = ({
   if (!inspiration) return null;
 
   return (
-    <div className="flex flex-col items-center justify-center max-w-[500px] px-4 py-2 border rounded-xl border-indigo-500/10 bg-indigo-800/10 shadow-[0_0_5px_#6366f1] cursor-default overflow-hidden">
+    <div className="flex flex-col items-center justify-center max-w-[500px] px-4 py-2 border rounded-xl border-indigo-500/10 bg-indigo-800/10 shadow-[0_0_5px_#7C86FF] cursor-default overflow-hidden">
       <header className="flex items-center justify-start w-full gap-2 font-orbitron">
         <h3
           key={inspiration.type} // key para reiniciar animación cuando cambia el tipo
-          className="text-xl sm:text-2xl font-extrabold text-indigo-400 drop-shadow-[0_0_5px_#6366f1] animate-slide-in-to-right"
+          className="text-xl sm:text-2xl font-extrabold text-indigo-400 drop-shadow-[0_0_5px_#7C86FF] animate-slide-in-to-right"
         >
           {inspiration.type}
         </h3>
