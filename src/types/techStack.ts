@@ -1,10 +1,8 @@
-import * as z from "zod";
+export type TechStackItemType = "KNOWN" | "LEARNING";
 
-export const TechStackItemSchema = z.object({
-  id: z.string(),
-  type: z.enum(["KNOWN", "LEARNING"]),
-  name: z.string(),
-  iconUrl: z.string(),
-});
-
-export type TechStackItem = z.infer<typeof TechStackItemSchema>;
+export interface TechStackItem {
+  id: string;
+  type: TechStackItemType;
+  name: string;
+  iconUrl: string;
+}

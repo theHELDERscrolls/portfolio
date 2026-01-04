@@ -1,65 +1,56 @@
-import * as z from "zod";
+export interface OpenWeather {
+  coord: Coord;
+  weather: Weather[];
+  base: string;
+  main: Main;
+  visibility: number;
+  wind: Wind;
+  clouds: Clouds;
+  dt: number;
+  sys: Sys;
+  timezone: number;
+  id: number;
+  name: string;
+  cod: number;
+}
 
-export const CloudsSchema = z.object({
-  all: z.number(),
-});
-export type Clouds = z.infer<typeof CloudsSchema>;
+export interface Clouds {
+  all: number;
+}
 
-export const CoordSchema = z.object({
-  lon: z.number(),
-  lat: z.number(),
-});
-export type Coord = z.infer<typeof CoordSchema>;
+export interface Coord {
+  lon: number;
+  lat: number;
+}
 
-export const MainSchema = z.object({
-  temp: z.number(),
-  feels_like: z.number(),
-  temp_min: z.number(),
-  temp_max: z.number(),
-  pressure: z.number(),
-  humidity: z.number(),
-  sea_level: z.number(),
-  grnd_level: z.number(),
-});
-export type Main = z.infer<typeof MainSchema>;
+export interface Main {
+  temp: number;
+  feels_like: number;
+  temp_min: number;
+  temp_max: number;
+  pressure: number;
+  humidity: number;
+  sea_level: number;
+  grnd_level: number;
+}
 
-export const SysSchema = z.object({
-  type: z.number(),
-  id: z.number(),
-  country: z.string(),
-  sunrise: z.number(),
-  sunset: z.number(),
-});
-export type Sys = z.infer<typeof SysSchema>;
+export interface Sys {
+  type: number;
+  id: number;
+  country: string;
+  sunrise: number;
+  sunset: number;
+}
 
-export const WeatherSchema = z.object({
-  id: z.number(),
-  main: z.string(),
-  description: z.string(),
-  icon: z.string(),
-});
-export type Weather = z.infer<typeof WeatherSchema>;
+export interface Weather {
+  id: number;
+  main: string;
+  description: string;
+  icon: string;
+}
 
-export const WindSchema = z.object({
-  speed: z.number(),
-  deg: z.number(),
-  gust: z.number(),
-});
-export type Wind = z.infer<typeof WindSchema>;
-
-export const OpenWeatherSchema = z.object({
-  coord: CoordSchema,
-  weather: z.array(WeatherSchema),
-  base: z.string(),
-  main: MainSchema,
-  visibility: z.number(),
-  wind: WindSchema,
-  clouds: CloudsSchema,
-  dt: z.number(),
-  sys: SysSchema,
-  timezone: z.number(),
-  id: z.number(),
-  name: z.string(),
-  cod: z.number(),
-});
-export type OpenWeather = z.infer<typeof OpenWeatherSchema>;
+export interface Wind {
+  speed: number;
+  deg: number;
+  gust: number;
+}
