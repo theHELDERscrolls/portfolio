@@ -1,3 +1,4 @@
+import { Svg } from "@/components";
 import { techStack } from "@/data";
 
 export const TechStack = () => {
@@ -16,12 +17,10 @@ export const TechStack = () => {
         </h3>
         <div className="flex flex-wrap items-center justify-center w-full gap-4 sm:justify-start">
           {knownTech.map((tech) => (
-            <img
-              key={tech.name}
-              src={tech.iconUrl}
-              alt={tech.name}
-              title={tech.name}
-              loading="lazy"
+            <Svg
+              key={tech.id}
+              iconId={tech.symbolId}
+              sprite="/techSprite.svg"
               className="w-12 h-12 p-2 border bg-indigo-800/10 border-indigo-500/10 rounded-xl shadow-[0_0_5px_#7C86FF]"
             />
           ))}
@@ -34,12 +33,10 @@ export const TechStack = () => {
         </h3>
         <div className="flex flex-wrap items-center justify-center w-full gap-4 sm:justify-start">
           {learningTech.map((tech) => (
-            <img
-              key={tech.name}
-              src={tech.iconUrl}
-              alt={tech.name}
-              title={tech.name}
-              loading="lazy"
+            <Svg
+              key={tech.id}
+              iconId={tech.symbolId}
+              sprite="/techSprite.svg"
               className="w-12 h-12 p-2 border bg-indigo-800/10 border-indigo-500/10 rounded-xl shadow-[0_0_5px_#7C86FF]"
             />
           ))}
