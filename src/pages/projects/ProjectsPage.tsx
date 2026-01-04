@@ -17,7 +17,7 @@ const ProjectsPage = () => {
 
       <div className="flex flex-col items-center justify-center flex-1 w-full">
         {/* Contenedor de los proyectos */}
-        <div className="flex flex-wrap items-center justify-center gap-8">
+        <div className="flex flex-wrap items-center w-full gap-8 justify-evenly">
           {projects.map((project) => (
             // Tarjeta del proyecto
             <ProjectCard key={project.title} project={project} />

@@ -1,1 +1,1 @@
-export * from "./ipApiClient";
+export * from "./ipGeolocationClient";

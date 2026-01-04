@@ -1,7 +1,11 @@
 import { SocialButton, Svg } from "@/components/ui";
 
 const USED_APIS = [
-  { name: "Ip API", url: "https://ipapi.co/", iconId: "icon-location" },
+  {
+    name: "Ip Geolocation",
+    url: "https://ipgeolocation.io/",
+    iconId: "icon-location",
+  },
   {
     name: "Open Weather",
     url: "https://openweathermap.org/",
@@ -15,7 +19,7 @@ const USED_APIS = [
 ];
 
 export const DesktopFooter = () => {
-  const date = new Date;
+  const date = new Date();
 
   return (
     <footer className="flex items-center justify-between w-full p-5 mt-5 border-t border-indigo-400/50">

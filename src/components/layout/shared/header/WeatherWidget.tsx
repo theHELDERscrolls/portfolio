@@ -1,7 +1,7 @@
-import { useUserLocation, useOpenWeather } from "@/hooks";
+import { useGeolocation, useOpenWeather } from "@/hooks";
 
 export const WeatherWidget = () => {
-  const { coords } = useUserLocation();
+  const { coords } = useGeolocation();
   const { weather } = useOpenWeather(
     coords?.lat.toString(),
     coords?.lon.toString()
