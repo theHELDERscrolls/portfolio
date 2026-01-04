@@ -1,3 +1,4 @@
-export * from "./inspirations";
-export * from "./techStack";
 export * from "./experience";
+export * from "./inspirations";
+export * from "./projects";
+export * from "./techStack";

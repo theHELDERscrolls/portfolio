@@ -1,6 +1,6 @@
 import type { ExperienceItem } from "@/types";
 
-export const Experience: ExperienceItem[] = [
+export const experience: ExperienceItem[] = [
   {
     type: "academic",
     field: "sports-science",

@@ -1,12 +1,12 @@
 import { Divider, SectionTitle } from "@/components";
-import { Experience } from "@/data";
+import { experience } from "@/data";
 import { sortExperienceByDate } from "@/utils";
 import gsap from "gsap";
 import { useEffect } from "react";
 import { AcademicExperienceCard, WorkExperienceCard } from "./components";
 
 const ExperiencePage = () => {
-  const sortedExperience = sortExperienceByDate(Experience);
+  const sortedExperience = sortExperienceByDate(experience);
 
   useEffect(() => {
     const hasSeenLoaderScreen =
