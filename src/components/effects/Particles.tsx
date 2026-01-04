@@ -2,18 +2,18 @@ import React, { useEffect, useRef } from "react";
 import { Renderer, Camera, Geometry, Program, Mesh } from "ogl";
 
 interface ParticlesProps {
-  alphaParticles: boolean;
-  cameraDistance?: number;
-  className?: string;
-  disableRotation: boolean;
-  moveParticlesOnHover: boolean;
-  particleBaseSize: number;
-  particleColors: string[];
-  particleCount: number;
+  particleCount?: number;
+  particleSpread?: number;
+  speed?: number;
+  particleColors?: string[];
+  moveParticlesOnHover?: boolean;
   particleHoverFactor?: number;
-  particleSpread: number;
+  alphaParticles?: boolean;
+  particleBaseSize?: number;
   sizeRandomness?: number;
-  speed: number;
+  cameraDistance?: number;
+  disableRotation?: boolean;
+  className?: string;
 }
 
 const defaultColors: string[] = ["#ffffff", "#ffffff", "#ffffff"];
@@ -63,7 +63,14 @@ const vertex = /* glsl */ `
     mPos.z += sin(t * random.w + 6.28 * random.y) * mix(0.1, 1.5, random.z);
     
     vec4 mvPos = viewMatrix * mPos;
-    gl_PointSize = (uBaseSize * (1.0 + uSizeRandomness * (random.x - 0.5))) / length(mvPos.xyz);
+
+    if (uSizeRandomness == 0.0) {
+      gl_PointSize = uBaseSize;
+    } else {
+      gl_PointSize = (uBaseSize * (1.0 + uSizeRandomness * (random.x - 0.5))) / length(mvPos.xyz);
+    }
+    
+    gl_Position = projectionMatrix * mvPos;
     gl_Position = projectionMatrix * mvPos;
   }
 `;
@@ -231,6 +238,7 @@ const Particles: React.FC<ParticlesProps> = ({
         container.removeChild(gl.canvas);
       }
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     particleCount,
     particleSpread,
@@ -242,7 +250,6 @@ const Particles: React.FC<ParticlesProps> = ({
     sizeRandomness,
     cameraDistance,
     disableRotation,
-    particleColors,
   ]);
 
   return (

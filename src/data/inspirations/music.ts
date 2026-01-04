@@ -1,9 +1,9 @@
-import type Inspiration from "../../types/inspiration";
+import type { Inspiration } from "@/types";
 
-// id 400-499
+// id 300-399
 export const music: Inspiration[] = [
   {
-    id: 400,
+    id: 300,
     type: "MUSIC",
     name: "Meteora",
     description:
@@ -12,7 +12,7 @@ export const music: Inspiration[] = [
       "https://i.pinimg.com/736x/75/b7/93/75b7936427e18ffada9a7902bc49dfe4.jpg",
   },
   {
-    id: 401,
+    id: 301,
     type: "MUSIC",
     name: "Therapy Session",
     description:
@@ -21,32 +21,34 @@ export const music: Inspiration[] = [
       "https://i.pinimg.com/736x/0b/b7/0d/0bb70d2dfa5d9e92416aba31c9a711c1.jpg",
   },
   {
-    id: 402,
+    id: 302,
     type: "MUSIC",
     name: "Even In Arcadia",
-    description: "A haunting and emotional journey by Sleep Token that blends metal, ambient, and soulful vocals into a deeply immersive experience.",
+    description:
+      "A haunting and emotional journey by Sleep Token that blends metal, ambient, and soulful vocals into a deeply immersive experience.",
     imageURL:
       "https://i.pinimg.com/736x/24/9b/6f/249b6fe0eac77f4a751345b8d46705f8.jpg",
   },
   {
-    id: 403,
+    id: 303,
     type: "MUSIC",
     name: "ATLANTIS",
-    description: "An acoustic reinterpretation of SOEN's powerful tracks, blending intimacy, intensity, and rich melodic textures in a live setting.",
+    description:
+      "An acoustic reinterpretation of SOEN's powerful tracks, blending intimacy, intensity, and rich melodic textures in a live setting.",
     imageURL:
       "https://i.pinimg.com/736x/94/7d/4d/947d4db6c985e68592cfbcc4891d8eac.jpg",
   },
   {
-    id: 404,
+    id: 304,
     type: "MUSIC",
     name: "Oklahoma",
     description:
       "Josh Meloy’s 'Oklahoma' delivers gritty country vocals and honest songwriting, reflecting on small-town life, heartbreak, and personal roots.",
     imageURL:
-      "https://i.scdn.co/image/ab67616d0000b273408c6ee41a75045f8210fd5b",
+      "https://cdn-images.dzcdn.net/images/cover/302919a8d6981705909a8dcc531f4d1b/0x1900-000000-80-0-0.jpg",
   },
   {
-    id: 405,
+    id: 305,
     type: "MUSIC",
     name: "A/B",
     description:
@@ -55,7 +57,7 @@ export const music: Inspiration[] = [
       "https://i.pinimg.com/736x/c5/7b/72/c57b72347eb6351f33997646addb0609.jpg",
   },
   {
-    id: 406,
+    id: 306,
     type: "MUSIC",
     name: "Exile",
     description:

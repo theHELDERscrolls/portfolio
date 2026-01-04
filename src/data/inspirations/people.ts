@@ -1,4 +1,4 @@
-import type Inspiration from "../../types/inspiration";
+import type { Inspiration } from "@/types";
 
 // id 100-199
 export const people: Inspiration[] = [
@@ -22,15 +22,6 @@ export const people: Inspiration[] = [
   },
   {
     id: 102,
-    name: "Pedro Vivar",
-    type: "PERSON",
-    description:
-      "Spanish coach, author, and speaker known for promoting Stoicism, physical discipline, and personal growth through action.",
-    imageURL:
-      "https://proassetspdlcom.cdnstatics2.com/usuaris/autores/fotos/80/original/000079673_1_Foto1-copia_202404021632.jpg",
-  },
-  {
-    id: 103,
     name: "David Goggins",
     type: "PERSON",
     description:
@@ -39,7 +30,7 @@ export const people: Inspiration[] = [
       "https://i.pinimg.com/736x/14/f5/a8/14f5a84273fc56e851077f7b923e2029.jpg",
   },
   {
-    id: 104,
+    id: 103,
     name: "Kobe Bryant",
     type: "PERSON",
     description:
@@ -48,7 +39,7 @@ export const people: Inspiration[] = [
       "https://i.pinimg.com/736x/fd/68/fe/fd68fe3ea4592af8143a02fd508a0616.jpg",
   },
   {
-    id: 105,
+    id: 104,
     name: "Myke Tyson",
     type: "PERSON",
     description:
@@ -57,21 +48,12 @@ export const people: Inspiration[] = [
       "https://i.pinimg.com/736x/60/24/23/60242390cf9b3a4d2101ece99f8d7bd8.jpg",
   },
   {
-    id: 106,
+    id: 105,
     name: "Rafael Nadal",
     type: "PERSON",
     description:
       "One of tennis's greatest champions, admired for his humility, fierce competitiveness, and mental strength on every surface.",
     imageURL:
       "https://i.pinimg.com/736x/82/19/f5/8219f58b781472c53e4a868642967de7.jpg",
-  },
-  {
-    id: 107,
-    name: "Alex Hormozi",
-    type: "PERSON",
-    description:
-      "Entrepreneur and author known for his no-fluff business advice. Shares insights on scaling, mindset, and value creation with radical honesty.",
-    imageURL:
-      "https://i.pinimg.com/736x/ab/12/4e/ab124e97bfeb092fa8f174272cbee711.jpg",
   },
 ];

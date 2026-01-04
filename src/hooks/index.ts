@@ -1,2 +1,4 @@
-export { default as useGithubRepos } from "./useGithubRepos";
-export { default as useMediaQuery } from "./useMediaQuery";
+export * from "./useMediaQuery";
+export * from "./useOpenWeather";
+export * from "./useQuote";
+export * from "./useGeolocation";

@@ -1,11 +1,15 @@
-export type ProjectStatus = "completed" | "new" | "coming-soon" | "in-process";
+import type { techStack } from "@/data";
 
-export interface ProjectProps {
+type TechId = (typeof techStack)[number]["id"];
+
+export type ProjectStatus = "completed" | "new" | "in-process";
+
+export type ProjectItem = {
   imgUrl: string;
   title: string;
   description: string;
-  tech: string[];
+  tech: TechId[];
   githubURL: string;
   deployURL: string | null;
   status: ProjectStatus;
-}
+};

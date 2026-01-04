@@ -1,3 +1,4 @@
+export * from "./experience";
 export * from "./inspirations";
-export * from "./tech";
-export * from "./work";
+export * from "./projects";
+export * from "./techStack";

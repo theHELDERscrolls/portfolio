@@ -1,1 +1,3 @@
-export { default as Footer } from "./Footer";
+export * from "./desktop/";
+export * from "./mobile";
+export * from "./shared/";
