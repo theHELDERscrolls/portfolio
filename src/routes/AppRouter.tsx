@@ -1,4 +1,9 @@
-import { AppLoaderWrapper, DesktopLayout, MobileLayout } from "@/components";
+import {
+  AppLoaderWrapper,
+  DesktopLayout,
+  MobileLayout,
+  ScrollToTop,
+} from "@/components";
 import { BrowserRouter, Route } from "react-router-dom";
 import { RoutesWithNoFound } from "./RoutesWithNoFound";
 import { useMediaQuery } from "@/hooks";
@@ -14,6 +19,7 @@ export const AppRouter = () => {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <AppLoaderWrapper>
         <RoutesWithNoFound>
           <Route

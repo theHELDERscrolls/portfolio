@@ -7,6 +7,7 @@ interface AppLoaderWrapperProps {
 
 export const AppLoaderWrapper = ({ children }: AppLoaderWrapperProps) => {
   const [showLoadingScreen, setShowLoadingScreen] = useState(false);
+  const [loaderFinished, setLoaderFinished] = useState(false);
 
   useEffect(() => {
     const visited = sessionStorage.getItem("visited");
@@ -14,22 +15,23 @@ export const AppLoaderWrapper = ({ children }: AppLoaderWrapperProps) => {
     if (!visited) {
       sessionStorage.setItem("visited", "true");
       setShowLoadingScreen(true);
-
-      const timer = setTimeout(() => {
-        setShowLoadingScreen(false);
-      }, 4500);
-
-      return () => clearTimeout(timer);
+    } else {
+      setLoaderFinished(true);
     }
   }, []);
 
   return (
     <div className="relative w-full h-full">
-      {children}
+      {loaderFinished && children}
 
       {showLoadingScreen && (
         <div className="fixed inset-0 z-[9999]">
-          <LoadingScreen onFinish={() => setShowLoadingScreen(false)} />
+          <LoadingScreen
+            onFinish={() => {
+              setShowLoadingScreen(false);
+              setLoaderFinished(true);
+            }}
+          />
         </div>
       )}
     </div>

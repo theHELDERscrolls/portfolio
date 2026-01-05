@@ -1,6 +1,6 @@
 import gsap from "gsap";
 import { DrawSVGPlugin } from "gsap/all";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(DrawSVGPlugin);
 
@@ -9,32 +9,48 @@ interface LoadingScreenProps {
 }
 
 export const LoadingScreen = ({ onFinish }: LoadingScreenProps) => {
+  const firstScreenRef = useRef<HTMLDivElement>(null);
+  const secondScreenRef = useRef<HTMLDivElement>(null);
+  const svgRef = useRef<SVGSVGElement>(null);
+
   useEffect(() => {
+    if (!svgRef.current || !firstScreenRef.current || !secondScreenRef.current)
+      return;
+
+    const paths = svgRef.current.querySelectorAll("path");
+
     const tl = gsap.timeline({
       defaults: { ease: "power2.inOut" },
     });
 
+    // Dibuja el logo
     tl.fromTo(
-      "svg path",
-      {
-        drawSVG: "0%",
-        strokeWidth: 6,
-        stroke: "#E5E5E5",
-        opacity: 0,
-      },
-      { drawSVG: "100%", duration: 3, stagger: 0.2, opacity: 1 }
+      paths,
+      { drawSVG: "0%", opacity: 0, strokeWidth: 6, stroke: "#E5E5E5" },
+      { drawSVG: "100%", opacity: 1, duration: 3, stagger: 0.2 }
     );
 
-    tl.to("svg path:nth-child(n+3)", {
-      duration: 1,
-      stroke: "#615FFF",
-      filter: "drop-shadow(0px 0px 10px #7C86FF)",
+    // Cambia color y añade glow
+    tl.to(
+      Array.from(paths).slice(2),
+      {
+        duration: 1,
+        stroke: "#615FFF",
+        filter: "drop-shadow(0px 0px 10px #7C86FF)",
+      },
+      "+=0.3"
+    );
+
+    // Desplaza first screen hacia arriba
+    tl.to(firstScreenRef.current, {
+      y: "-100%",
+      duration: 1.5,
+      ease: "power4.inOut",
     });
 
-    tl.to("#first-screen", { y: "-100%", duration: 1.5, ease: "power4.inOut" });
-
+    // Desplaza second screen hacia arriba y termina loader
     tl.to(
-      "#second-screen",
+      secondScreenRef.current,
       {
         y: "-100%",
         duration: 1.5,
@@ -52,10 +68,11 @@ export const LoadingScreen = ({ onFinish }: LoadingScreenProps) => {
     <div className="relative w-full h-dvh overflow-hidden">
       {/* FIRST SCREEN */}
       <div
-        id="first-screen"
+        ref={firstScreenRef}
         className="absolute inset-0 z-20 flex items-center justify-center bg-neutral-950"
       >
         <svg
+          ref={svgRef}
           width="636"
           height="440"
           viewBox="0 0 636 440"
@@ -91,7 +108,7 @@ export const LoadingScreen = ({ onFinish }: LoadingScreenProps) => {
       </div>
       {/* SECOND SCREEN */}
       <div
-        id="second-screen"
+        ref={secondScreenRef}
         className="absolute inset-0 z-10 flex items-center justify-center bg-indigo-900"
       ></div>
     </div>
