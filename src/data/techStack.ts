@@ -71,6 +71,13 @@ export const techStack = [
     symbolId: "tech-react",
   },
   {
+    id: "scss",
+    type: "KNOWN",
+    name: "SCSS",
+    sprite: "/techSprite.svg",
+    symbolId: "tech-sass",
+  },
+  {
     id: "tailwindcss",
     type: "KNOWN",
     name: "Tailwind CSS",

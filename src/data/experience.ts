@@ -103,4 +103,18 @@ export const experience: ExperienceItem[] = [
     startDate: "2024-09",
     endDate: "2025-05",
   },
+  {
+    type: "work",
+    field: "software-development",
+
+    title: "Software Developer",
+    organization: "Optare Solutions",
+
+    description:
+      "Contributing to the development of enterprise software for the telecommunications industry, supporting the delivery of a mission-critical operations platform.",
+    location: "Remote",
+
+    startDate: "2026-01",
+    endDate: "present",
+  },
 ];

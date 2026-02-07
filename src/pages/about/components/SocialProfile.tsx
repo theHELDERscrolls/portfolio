@@ -1,4 +1,5 @@
 import { Svg } from "@/components";
+import { useMediaQuery } from "@/hooks";
 
 type SocialColor = "neutral" | "lime" | "cyan";
 
@@ -33,6 +34,8 @@ export const SocialProfile = ({
   social,
   color = "neutral",
 }: SocialProfileProps) => {
+  const isBigScreen = useMediaQuery("(min-width: 1360px)");
+
   return (
     <a
       href={href}
@@ -41,10 +44,12 @@ export const SocialProfile = ({
       className={`relative flex items-center justify-between w-full h-full gap-3 p-3 overflow-hidden transition-all duration-300 ease-in-out rounded-xl group ${bgClasses[color]} hover:backdrop-blur-xs`}
     >
       {/* Icono superior derecha */}
-      <Svg
-        iconId="icon-share"
-        className={`absolute w-8 h-8 transition-all duration-300 ease-in-out translate-x-50 right-3 top-3 ${textClasses[color]} group-hover:translate-0`}
-      />
+      {isBigScreen && (
+        <Svg
+          iconId="icon-share"
+          className={`absolute w-8 h-8 transition-all duration-300 ease-in-out translate-x-50 right-3 top-3 ${textClasses[color]} group-hover:translate-0`}
+        />
+      )}
 
       {/* Icono grande de fondo */}
       <Svg
