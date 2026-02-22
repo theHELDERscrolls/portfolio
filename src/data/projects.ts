@@ -21,4 +21,14 @@ export const projects: ProjectItem[] = [
     deployURL: null,
     status: "in-process",
   },
+  {
+    imgUrl: "/assets/projects/project_reitera.jpg",
+    title: "Reitera",
+    description:
+      "Web-based study application built around flashcards that leverages spaced repetition and active recall to enhance long-term learning. Users can create and manage decks, study using the FSRS algorithm, and monitor their progress through an interactive dashboard with detailed statistics.",
+    tech: ["angular", "postgresql", "scss", "springboot", "typescript"],
+    githubURL: "https://github.com/theHELDERscrolls/Reitera",
+    deployURL: null,
+    status: "in-process",
+  },
 ];
