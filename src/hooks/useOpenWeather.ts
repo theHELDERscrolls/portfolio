@@ -7,7 +7,7 @@ export const useOpenWeather = (
   lon: string | undefined
 ) => {
   const [weather, setWeather] = useState<OpenWeather | null>(null);
-  const [loading, setLoaing] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   const fetchWeather = useCallback(async () => {
@@ -24,7 +24,7 @@ export const useOpenWeather = (
       console.error(error);
       setError("No data available.");
     } finally {
-      setLoaing(false);
+      setLoading(false);
     }
   }, [lat, lon]);
 
