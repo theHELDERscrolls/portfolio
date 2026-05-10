@@ -51,7 +51,7 @@ export const techStack = [
   },
   {
     id: "nodejs",
-    type: "",
+    type: "KNOWN",
     name: "Node.js",
     sprite: "/techSprite.svg",
     symbolId: "tech-nodejs",

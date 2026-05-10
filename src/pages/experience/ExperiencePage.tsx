@@ -16,7 +16,7 @@ const ExperiencePage = () => {
 
     if (!hasSeenLoaderScreen) {
       tl.fromTo(
-        "#home-page",
+        "#experience-page",
         { opacity: 0 },
         { opacity: 1, duration: 1.5 },
         "+=6.5"

@@ -11,6 +11,7 @@ export class QuotesApiNinjaService {
   > {
     if (!API_KEY) {
       console.error("Missing Ninja Quotes API key (VITE_QUOTES_API_NINJA_KEY)");
+      return;
     }
 
     try {

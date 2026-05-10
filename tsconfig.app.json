@@ -28,13 +28,9 @@
     "paths": {
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
-      "@context/*": ["src/context/*"],
       "@hooks/*": ["src/hooks/*"],
-      "@layout/*": ["src/layout/*"],
-      "@models/*": ["src/models/*"],
       "@pages/*": ["src/pages/*"],
       "@routes/*": ["src/routes/*"],
-      "@services/*": ["src/services/*"],
       "@types/*": ["src/types/*"],
       "@utils/*": ["src/utils/*"]
     }
