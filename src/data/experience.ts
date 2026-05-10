@@ -111,10 +111,10 @@ export const experience: ExperienceItem[] = [
     organization: "Optare Solutions",
 
     description:
-      "Contributing to the development of enterprise software for the telecommunications industry, supporting the delivery of a mission-critical operations platform.",
+      "Developed frontend for BSS and OSS portals with Angular, collaborating with backend teams on Spring Boot microservice integration within an enterprise telco project. Configured CI/CD pipelines with Jenkins, Docker, and Kubernetes across multi-stage environments. Participated in agile workflows, code reviews, and technical decisions in a professional team.",
     location: "Remote",
 
     startDate: "2026-01",
-    endDate: "present",
+    endDate: "2026-04",
   },
 ];

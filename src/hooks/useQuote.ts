@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 export const useQuote = () => {
   const [quote, setQuote] = useState<QuoteElement | null>(null);
-  const [loading, setLoaing] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   const fetchQuote = async () => {
@@ -15,7 +15,7 @@ export const useQuote = () => {
       
       if (saved) {
         setQuote(JSON.parse(saved));
-        setLoaing(false);
+        setLoading(false);
         return;
       }
 
@@ -34,7 +34,7 @@ export const useQuote = () => {
       setError("No quote available.");
       console.error(error);
     } finally {
-      setLoaing(false);
+      setLoading(false);
     }
   };
 

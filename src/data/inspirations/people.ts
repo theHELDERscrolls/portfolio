@@ -40,7 +40,7 @@ export const people: Inspiration[] = [
   },
   {
     id: 104,
-    name: "Myke Tyson",
+    name: "Mike Tyson",
     type: "PERSON",
     description:
       "Former heavyweight boxing champion known for his explosive power, comeback story, and personal evolution beyond the ring.",
