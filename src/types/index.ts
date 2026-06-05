@@ -1,6 +1,2 @@
-export * from "./experience";
-export * from "./inpiration";
-export * from "./ipGeolocation";
-export * from "./openWeather";
-export * from "./project";
-export * from "./quotesApiNinja";
+export type { ProjectItem, ProjectStatus } from "./project";
+export type { ExperienceItem, ExperienceType, Field } from "./experience";
