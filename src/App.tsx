@@ -1,7 +1,9 @@
-import { AppRouter } from "./routes/";
-
 function App() {
-  return <AppRouter />;
+  return (
+    <main>
+      <h1>Helder Ruiz</h1>
+    </main>
+  );
 }
 
 export default App;

@@ -15,7 +15,7 @@ export const projects: ProjectItem[] = [
     imgUrl: "/assets/projects/project_bs_v2.png",
     title: "Brawl Stats V2",
     description:
-      "Check key stats and data for Brawl Stars with this fan-made tool. Explore brawlers’ performance, compare metrics, and access intuitive visualizations. Perfect for players and enthusiasts looking to improve their strategy.",
+      "Check key stats and data for Brawl Stars with this fan-made tool. Explore brawlers' performance, compare metrics, and access intuitive visualizations. Perfect for players and enthusiasts looking to improve their strategy.",
     tech: ["express", "nodejs", "react", "tailwindcss", "typescript"],
     githubURL: "https://github.com/theHELDERscrolls/brawl_stats_v2",
     deployURL: null,
