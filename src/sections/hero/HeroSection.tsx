@@ -26,9 +26,14 @@ export const HeroSection = () => {
           </p>
 
           <div className="flex items-center gap-3">
-            <BrutalButton href="/cv_mock.pdf" download iconName="file-cv">
-              Download CV
-            </BrutalButton>
+            <div className="sm:hidden">
+              <BrutalButton href="/cv_mock.pdf" download iconName="file-cv" iconOnly />
+            </div>
+            <div className="hidden sm:block">
+              <BrutalButton href="/cv_mock.pdf" download iconName="file-cv">
+                Download CV
+              </BrutalButton>
+            </div>
 
             <BrutalButton
               href="https://github.com/theHELDERscrolls"
