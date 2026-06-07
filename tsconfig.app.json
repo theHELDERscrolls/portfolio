@@ -27,10 +27,11 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
+      "@components": ["src/components/index.ts"],
       "@components/*": ["src/components/*"],
       "@hooks/*": ["src/hooks/*"],
-      "@pages/*": ["src/pages/*"],
-      "@routes/*": ["src/routes/*"],
+      "@sections": ["src/sections/index.ts"],
+      "@sections/*": ["src/sections/*"],
       "@types/*": ["src/types/*"],
       "@utils/*": ["src/utils/*"]
     }

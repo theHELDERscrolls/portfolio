@@ -1,5 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Space+Grotesk:wght@300..700&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-bricolage-grotesque: "Bricolage Grotesque", sans-serif;
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+
+  --header-height: 67px;
+  --section-min-height: calc(100dvh - var(--header-height));
+
+  --section-px: 1.5rem;
+  --section-px-md: 4rem;
+  --section-py: 3rem;
+}
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
 }
