@@ -7,10 +7,6 @@
 
   --header-height: 67px;
   --section-min-height: calc(100dvh - var(--header-height));
-
-  --section-px: 1.5rem;
-  --section-px-md: 4rem;
-  --section-py: 3rem;
 }
 
 html {

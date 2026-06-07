@@ -2,7 +2,7 @@ import { Logo } from "../ui";
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 z-50 flex items-center w-full gap-8 px-4 py-2 font-bold border-b-3 bg-neutral-400 border-b-neutral-950 text-neutral-900 font-bricolage-grotesque">
+    <header className="sticky top-0 z-50 flex items-center w-full gap-8 px-4 py-2 font-bold border-b-3 bg-neutral-400 border-b-neutral-900 text-neutral-900 font-bricolage-grotesque">
       <Logo />
 
       <ul className="flex items-center justify-center gap-8">
