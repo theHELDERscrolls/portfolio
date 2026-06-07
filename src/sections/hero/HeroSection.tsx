@@ -4,7 +4,7 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="flex items-center justify-center w-full h-[var(--section-min-height)] bg-neutral-100 px-6 md:px-16 py-12"
+      className="flex items-center justify-center w-full min-h-[var(--section-min-height)] bg-neutral-100 px-6 md:px-16 py-12"
     >
       <div className="grid w-full grid-cols-1 gap-12 max-w-7xl md:grid-cols-2 md:gap-8">
         {/* Left — texto y CTA */}

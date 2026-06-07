@@ -1,5 +1,5 @@
 import { Header } from "./components";
-import { HeroSection } from "./sections";
+import { ExperienceSection, HeroSection } from "./sections";
 
 function App() {
   return (
@@ -7,6 +7,7 @@ function App() {
       <Header />
       <main className="flex flex-col w-full bg-stone-100">
         <HeroSection />
+        <ExperienceSection />
       </main>
     </>
   );
