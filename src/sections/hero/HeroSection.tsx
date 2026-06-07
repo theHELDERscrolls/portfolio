@@ -4,7 +4,7 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="flex items-center justify-center w-full h-[var(--section-min-height)] bg-neutral-100 px-6 md:px-16 py-12"
+      className="flex items-center justify-center w-full min-h-[var(--section-min-height)] bg-neutral-100 px-6 md:px-16 py-12"
     >
       <div className="grid w-full grid-cols-1 gap-12 max-w-7xl md:grid-cols-2 md:gap-8">
         {/* Left — texto y CTA */}
@@ -16,7 +16,7 @@ export const HeroSection = () => {
             <h1 className="font-bricolage-grotesque font-extrabold leading-none text-neutral-900 text-[clamp(3.5rem,8vw,7rem)]">
               Hi, I'm
               <br />
-              <span>Helder.</span>
+              <span>Helder</span>
             </h1>
           </div>
 
@@ -26,9 +26,25 @@ export const HeroSection = () => {
           </p>
 
           <div className="flex items-center gap-3">
-            <BrutalButton href="/cv_mock.pdf" download iconName="file-cv">
-              Download CV
-            </BrutalButton>
+            <div className="sm:hidden">
+              <BrutalButton
+                href="/Helder_Ruiz_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                iconName="file-cv"
+                iconOnly
+              />
+            </div>
+            <div className="hidden sm:block">
+              <BrutalButton
+                href="/Helder_Ruiz_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                iconName="file-cv"
+              >
+                Download CV
+              </BrutalButton>
+            </div>
 
             <BrutalButton
               href="https://github.com/theHELDERscrolls"
@@ -37,6 +53,7 @@ export const HeroSection = () => {
               aria-label="GitHub"
               iconName="brand-github"
               iconOnly
+              className="hover:bg-slate-200"
             />
 
             <BrutalButton
@@ -46,6 +63,7 @@ export const HeroSection = () => {
               aria-label="LinkedIn"
               iconName="brand-linkedin"
               iconOnly
+              className="hover:bg-blue-200"
             />
           </div>
         </div>
@@ -54,7 +72,7 @@ export const HeroSection = () => {
         <div className="flex items-center justify-center md:justify-end">
           <div className="relative w-full max-w-sm md:max-w-md">
             <img
-              src="/HR_owl.jpg"
+              src="/images/HR_owl.jpg"
               alt="Helder Ruiz"
               className="w-full object-cover border-3 border-neutral-900 shadow-[8px_8px_0_0_#171717]"
             />

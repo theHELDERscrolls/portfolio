@@ -5,8 +5,31 @@
   --font-bricolage-grotesque: "Bricolage Grotesque", sans-serif;
   --font-space-grotesk: "Space Grotesk", sans-serif;
 
-  --header-height: 67px;
+  --header-height: 56px;
   --section-min-height: calc(100dvh - var(--header-height));
+
+  --animate-menu-slide: menu-slide 0.2s ease-out;
+  --animate-menu-slide-out: menu-slide-out 0.2s ease-in;
+
+  @keyframes menu-slide {
+    from {
+      transform: translateY(-100%);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes menu-slide-out {
+    from {
+      transform: translateY(0);
+    }
+
+    to {
+      transform: translateY(-100%);
+    }
+  }
 }
 
 html {
