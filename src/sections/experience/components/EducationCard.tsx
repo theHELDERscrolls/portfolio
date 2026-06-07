@@ -1,8 +1,11 @@
+import { CurrentMarker } from "./CurrentMarker";
+
 export type EducationCardProps = {
   degree: string;
   institution: string;
-  period: string;
+  period?: string;
   logoBg?: string;
+  current?: boolean;
 };
 
 export const EducationCard = ({
@@ -10,8 +13,10 @@ export const EducationCard = ({
   institution,
   period,
   logoBg,
+  current = false,
 }: EducationCardProps) => (
-  <div className="relative flex flex-col gap-2 p-6 overflow-hidden border-2 bg-neutral-100 border-neutral-900 shadow-[4px_4px_0_0_#171717]">
+  <div className="relative flex flex-col gap-2 p-6 border-2 bg-neutral-100 border-neutral-900 shadow-[4px_4px_0_0_#171717]">
+    {current && <CurrentMarker />}
     {logoBg && (
       <img
         src={logoBg}
@@ -26,8 +31,10 @@ export const EducationCard = ({
     <p className="text-sm font-semibold font-space-grotesk text-neutral-600">
       {institution}
     </p>
-    <span className="pt-2 mt-auto text-xs font-space-grotesk text-neutral-500">
-      {period}
-    </span>
+    {!current && period && (
+      <span className="pt-2 mt-auto text-xs font-space-grotesk text-neutral-500">
+        {period}
+      </span>
+    )}
   </div>
 );

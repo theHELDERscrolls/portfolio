@@ -24,20 +24,30 @@ export const ExperienceSection = () => {
               description="Developed and maintained the BSS and OSS portal frontends (Angular) for a leading national fiber operator, within an 8-developer team. Delivered a dynamic graph for fiber service lifecycle visualization — a long-standing unresolved feature — and a network resource inventory panel. Set up CI/CD pipelines with Jenkins, Docker, and Kubernetes across multi-stage environments."
               tags={[
                 "Angular",
-                "TypeScript",
-                "Spring Boot",
-                "Jenkins",
+                "AWS",
                 "Docker",
+                "Jenkins",
                 "Kubernetes",
+                "PostgreSQL",
+                "Spring Boot",
+                "TypeScript",
               ]}
               logoBg="/logos/optare.webp"
+              current
             />
             <WorkCard
               title="Frontend Developer"
               company="Freelance"
               period="06/2024 – 05/2025"
               description="Built responsive and scalable web interfaces using React, TypeScript, Tailwind CSS, and GSAP across personal and collaborative projects. Emphasis on reusable component architecture, accessibility, and clean code, with full ownership of the development lifecycle from planning through code review."
-              tags={["React", "TypeScript", "Tailwind CSS", "GSAP"]}
+              tags={[
+                "NodeJs",
+                "MongoDB",
+                "GSAP",
+                "Tailwind CSS",
+                "TypeScript",
+                "React",
+              ]}
             />
             <WorkCard
               title="Researcher"
@@ -59,13 +69,11 @@ export const ExperienceSection = () => {
             <EducationCard
               degree="Higher Technician in Web Application Development"
               institution="thePower"
-              period="2024 – 2026"
               logoBg="/logos/thePower.webp"
             />
             <EducationCard
               degree="Postgraduate Program in Full-Stack Web Application Development"
               institution="thePower"
-              period="2024 – 2026"
               logoBg="/logos/thePower.webp"
             />
             <EducationCard

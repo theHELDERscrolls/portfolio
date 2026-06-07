@@ -1,14 +1,16 @@
 import { useState } from "react";
+import { CurrentMarker } from "./CurrentMarker";
 
 const BADGE_THRESHOLD = 4;
 
 export type WorkCardProps = {
   title: string;
   company: string;
-  period: string;
+  period?: string;
   description: string;
   tags: string[];
   logoBg?: string;
+  current?: boolean;
 };
 
 export const WorkCard = ({
@@ -18,11 +20,14 @@ export const WorkCard = ({
   description,
   tags,
   logoBg,
+  current = false,
 }: WorkCardProps) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="relative flex flex-col gap-4 p-6 overflow-hidden border-2 bg-neutral-100 border-neutral-900 shadow-[4px_4px_0_0_#171717]">
+    <div className="relative flex flex-col gap-4 p-6 border-2 bg-neutral-100 border-neutral-900 shadow-[4px_4px_0_0_#171717]">
+      {current && <CurrentMarker />}
+
       {logoBg && (
         <img
           src={logoBg}
@@ -41,9 +46,11 @@ export const WorkCard = ({
             {company}
           </p>
         </div>
-        <span className="text-sm font-space-grotesk text-neutral-500 shrink-0 sm:pt-1">
-          {period}
-        </span>
+        {!current && period && (
+          <span className="text-sm font-space-grotesk text-neutral-500 shrink-0 sm:pt-1">
+            {period}
+          </span>
+        )}
       </div>
 
       <p className="text-sm leading-relaxed text-balance font-space-grotesk text-neutral-700">
