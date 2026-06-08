@@ -3,15 +3,15 @@ import { CurrentMarker } from "./CurrentMarker";
 
 const BADGE_THRESHOLD = 4;
 
-export type WorkCardProps = {
+interface WorkCardProps {
   title: string;
   company: string;
   period?: string;
   description: string;
-  tags: string[];
+  tags: readonly string[];
   logoBg?: string;
   current?: boolean;
-};
+}
 
 export const WorkCard = ({
   title,
@@ -42,7 +42,7 @@ export const WorkCard = ({
           <p className="text-xl font-extrabold font-bricolage-grotesque text-neutral-900">
             {title}
           </p>
-          <p className="text-sm font-semibold font-space-grotesk text-neutral-600">
+          <p className="text-sm font-extrabold font-space-grotesk text-neutral-600">
             {company}
           </p>
         </div>
@@ -53,7 +53,7 @@ export const WorkCard = ({
         )}
       </div>
 
-      <p className="text-sm leading-relaxed text-balance font-space-grotesk text-neutral-700">
+      <p className="text-sm font-medium leading-relaxed text-balance font-space-grotesk text-neutral-700">
         {description}
       </p>
 
