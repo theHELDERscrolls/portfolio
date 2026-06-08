@@ -1,12 +1,12 @@
 import { CurrentMarker } from "./CurrentMarker";
 
-export type EducationCardProps = {
+interface EducationCardProps {
   degree: string;
   institution: string;
   period?: string;
   logoBg?: string;
   current?: boolean;
-};
+}
 
 export const EducationCard = ({
   degree,
