@@ -1,5 +1,5 @@
 import { EducationCard, WorkCard } from "./components";
-import { EDUCATION, WORK_EXPERIENCE } from "./data/experience.data";
+import { EDUCATION, WORK_EXPERIENCE } from "./data";
 
 export const ExperienceSection = () => {
   return (
