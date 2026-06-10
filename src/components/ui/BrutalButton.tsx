@@ -6,6 +6,8 @@ interface BrutalButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   iconOnly?: boolean;
   iconOnlyMobile?: boolean;
   size?: "sm" | "md";
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 }
 
 const brutalBase =
@@ -35,23 +37,39 @@ export const BrutalButton = ({
   size = "md",
   children,
   className,
+  href,
+  type,
+  disabled,
   ...props
 }: BrutalButtonProps) => {
   const s = sizeStyles[size];
   const isIconMobile = iconOnlyMobile ? s.iconOnlyMobile : s.withText;
   const layoutClass = iconOnly ? s.iconOnly : isIconMobile;
+  const disabledClass = disabled ? "opacity-60 pointer-events-none" : "";
+  const fullClass = `${brutalBase} ${s.base} ${layoutClass} ${disabledClass} ${className ?? ""}`;
 
-  return (
-    <a
-      className={`${brutalBase} ${s.base} ${layoutClass} ${className ?? ""}`}
-      {...props}
-    >
+  const content = (
+    <>
       {iconName && <Icon name={iconName} className={s.icon} />}
       {iconOnlyMobile ? (
         <span className="hidden sm:inline">{children}</span>
       ) : (
         children
       )}
-    </a>
+    </>
+  );
+
+  if (href) {
+    return (
+      <a href={href} className={fullClass} {...props}>
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <button type={type ?? "button"} disabled={disabled} className={fullClass}>
+      {content}
+    </button>
   );
 };

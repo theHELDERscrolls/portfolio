@@ -1,5 +1,10 @@
 import { Header } from "./components";
-import { ExperienceSection, HeroSection, PorjectSection } from "./sections";
+import {
+  ContactSection,
+  ExperienceSection,
+  HeroSection,
+  PorjectSection,
+} from "./sections";
 
 function App() {
   return (
@@ -9,6 +14,7 @@ function App() {
         <HeroSection />
         <ExperienceSection />
         <PorjectSection />
+        <ContactSection />
       </main>
     </>
   );
