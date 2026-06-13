@@ -67,7 +67,7 @@ export const ContactForm = () => {
             required
             minLength={2}
             maxLength={FIELD_LIMITS.from_name}
-            placeholder="Carlos"
+            placeholder="Antonio"
           />
           <FormField
             id="last_name"
@@ -76,7 +76,7 @@ export const ContactForm = () => {
             required
             minLength={2}
             maxLength={FIELD_LIMITS.last_name}
-            placeholder="García"
+            placeholder="Ruiz"
           />
         </div>
 
@@ -88,7 +88,7 @@ export const ContactForm = () => {
             type="email"
             required
             maxLength={FIELD_LIMITS.from_email}
-            placeholder="carlos@ejemplo.com"
+            placeholder="antonio@ejemplo.com"
           />
           <FormField
             id="phone"

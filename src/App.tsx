@@ -1,4 +1,4 @@
-import { Header } from "./components";
+import { Footer, Header } from "./components";
 import {
   ContactSection,
   ExperienceSection,
@@ -16,6 +16,7 @@ function App() {
         <PorjectSection />
         <ContactSection />
       </main>
+      <Footer />
     </>
   );
 }
