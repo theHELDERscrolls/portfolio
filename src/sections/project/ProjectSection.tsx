@@ -16,8 +16,8 @@ export const PorjectSection = () => {
         </h2>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          {PROJECTS.map((project) => (
-            <ProjectCard key={project.id} {...project} />
+          {PROJECTS.map((project, i) => (
+            <ProjectCard key={project.id} {...project} animationDelay={i * 150} />
           ))}
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useInView } from "@/hooks";
 import { CurrentMarker } from "./CurrentMarker";
 
 const BADGE_THRESHOLD = 4;
@@ -11,6 +12,7 @@ interface WorkCardProps {
   tags: readonly string[];
   logoBg?: string;
   current?: boolean;
+  animationDelay?: number;
 }
 
 export const WorkCard = ({
@@ -20,12 +22,18 @@ export const WorkCard = ({
   tags,
   logoBg,
   current = false,
+  animationDelay = 0,
 }: WorkCardProps) => {
   const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
+  const { ref, inView } = useInView<HTMLDivElement>();
 
   return (
-    <div className="relative flex flex-col gap-4 p-6 border-3 bg-neutral-100 border-neutral-900 shadow-[6px_6px_0_0_#000]">
+    <div
+      ref={ref}
+      className={`relative flex flex-col gap-4 p-6 border-3 bg-neutral-100 border-neutral-900 shadow-[6px_6px_0_0_#000] ${inView ? "animate-fade-up" : "opacity-0"}`}
+      style={{ animationDelay: `${animationDelay}ms` }}
+    >
       {current && <CurrentMarker />}
 
       {logoBg && (

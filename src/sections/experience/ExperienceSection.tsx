@@ -48,16 +48,16 @@ export const ExperienceSection = () => {
         <div role="tabpanel">
           {activeTab === "work" && (
             <div className="flex flex-col gap-4">
-              {WORK_EXPERIENCE.map((job) => (
-                <WorkCard key={job.id} {...job} />
+              {WORK_EXPERIENCE.map((job, i) => (
+                <WorkCard key={job.id} {...job} animationDelay={i * 120} />
               ))}
             </div>
           )}
 
           {activeTab === "education" && (
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              {EDUCATION.map((edu) => (
-                <EducationCard key={edu.id} {...edu} />
+              {EDUCATION.map((edu, i) => (
+                <EducationCard key={edu.id} {...edu} animationDelay={i * 100} />
               ))}
             </div>
           )}

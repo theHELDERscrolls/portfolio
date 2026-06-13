@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { useInView } from "@/hooks";
 import { CurrentMarker } from "./CurrentMarker";
 
 interface EducationCardProps {
@@ -7,6 +8,7 @@ interface EducationCardProps {
   period?: string;
   logoBg?: string;
   current?: boolean;
+  animationDelay?: number;
 }
 
 export const EducationCard = ({
@@ -15,11 +17,17 @@ export const EducationCard = ({
   period,
   logoBg,
   current = false,
+  animationDelay = 0,
 }: EducationCardProps) => {
   const { t } = useTranslation();
+  const { ref, inView } = useInView<HTMLDivElement>();
 
   return (
-    <div className="relative flex flex-col gap-2 p-6 border-3 overflow-hidden bg-neutral-100 border-neutral-900 shadow-[6px_6px_0_0_#000]">
+    <div
+      ref={ref}
+      className={`relative flex flex-col gap-2 p-6 border-3 overflow-hidden bg-neutral-100 border-neutral-900 shadow-[6px_6px_0_0_#000] ${inView ? "animate-fade-up" : "opacity-0"}`}
+      style={{ animationDelay: `${animationDelay}ms` }}
+    >
       {current && <CurrentMarker />}
       {logoBg && (
         <img
