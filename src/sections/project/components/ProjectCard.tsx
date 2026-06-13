@@ -23,7 +23,7 @@ export const ProjectCard = ({
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col w-full min-h-96 border-2 overflow-hidden border-neutral-900 transition-all ease-in-out duration-300 hover:-translate-1 hover:shadow-[10px_10px_0_0_#171717] group">
+    <div className="flex flex-col w-full min-h-96 border-3 overflow-hidden border-neutral-900 transition-all ease-in-out duration-300 hover:-translate-1 hover:shadow-[10px_10px_0_0_#000] group">
       <header className="relative flex items-center justify-center w-full gap-4 p-1 bg-neutral-400 min-h-12">
         <span className="font-mono font-bold">{filename}</span>
         <div className="absolute flex items-center justify-center gap-2 sm:gap-4 top-1 right-2">
@@ -35,7 +35,7 @@ export const ProjectCard = ({
       <img
         src={image}
         alt={title}
-        className="object-cover object-top transition-all duration-300 ease-in-out border-y-2 border-neutral-900 max-h-50 grayscale group-hover:grayscale-0 group-hover:scale-105"
+        className="object-cover object-top transition-all duration-300 ease-in-out border-y-3 border-neutral-900 max-h-50 grayscale group-hover:grayscale-0 group-hover:scale-105"
       />
 
       <div className="flex flex-col items-start justify-center flex-1 gap-4 p-4">

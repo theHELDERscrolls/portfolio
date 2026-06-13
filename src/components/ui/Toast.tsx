@@ -19,16 +19,21 @@ export const Toast = ({ type, message, onClose }: ToastProps) => {
     <div
       role="alert"
       aria-live="polite"
-      className={`fixed bottom-6 right-6 z-50 flex items-center gap-3 max-w-sm px-4 py-3 border-2 border-neutral-900 font-space-grotesk text-sm font-semibold shadow-[4px_4px_0_0_#171717] animate-toast-in ${
-        type === "success" ? "bg-lime-200 text-neutral-900" : "bg-red-200 text-neutral-900"
+      className={`fixed bottom-6 right-6 z-50 flex items-center gap-3 max-w-sm px-4 py-3 border-3 border-neutral-900 font-space-grotesk text-sm font-semibold shadow-[6px_6px_0_0_#000] animate-toast-in ${
+        type === "success"
+          ? "bg-lime-200 text-neutral-900"
+          : "bg-red-200 text-neutral-900"
       }`}
     >
-      <Icon name={type === "success" ? "circle-check" : "circle-x"} className="size-[18px] shrink-0" />
+      <Icon
+        name={type === "success" ? "circle-check" : "circle-x"}
+        className="size-4.5 shrink-0"
+      />
       <span className="flex-1">{message}</span>
       <button
         type="button"
         onClick={onClose}
-        className="cursor-pointer hover:opacity-60 transition-opacity"
+        className="transition-opacity cursor-pointer hover:opacity-60"
         aria-label="Cerrar notificación"
       >
         <Icon name="x" className="size-4" />

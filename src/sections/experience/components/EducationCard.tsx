@@ -19,7 +19,7 @@ export const EducationCard = ({
   const { t } = useTranslation();
 
   return (
-    <div className="relative flex flex-col gap-2 p-6 border-2 overflow-hidden bg-neutral-100 border-neutral-900 shadow-[4px_4px_0_0_#171717]">
+    <div className="relative flex flex-col gap-2 p-6 border-3 overflow-hidden bg-neutral-100 border-neutral-900 shadow-[6px_6px_0_0_#000]">
       {current && <CurrentMarker />}
       {logoBg && (
         <img

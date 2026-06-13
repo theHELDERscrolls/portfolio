@@ -74,7 +74,7 @@ export const HeroSection = () => {
             <img
               src="/images/HR_owl.jpg"
               alt="Helder Ruiz"
-              className="w-full object-cover border-3 border-neutral-900 shadow-[8px_8px_0_0_#171717]"
+              className="w-full object-cover border-3 border-neutral-900 shadow-[8px_8px_0_0_#000]"
             />
           </div>
         </div>

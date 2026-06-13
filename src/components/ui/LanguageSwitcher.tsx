@@ -31,34 +31,33 @@ export const LanguageSwitcher = () => {
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="p-2 border-2 border-neutral-900 bg-neutral-100 text-neutral-900 shadow-[3px_3px_0_0_#171717] transition-all hover:translate-x-px hover:translate-y-px hover:shadow-[2px_2px_0_0_#171717] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none cursor-pointer"
+        className="p-2 border-3 border-neutral-900 bg-neutral-100 text-neutral-900 shadow-[4px_4px_0_0_#000] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0_0_#000] active:translate-x-1 active:translate-y-1 active:shadow-none cursor-pointer"
         aria-label="Select language"
         aria-expanded={open}
-        aria-haspopup="listbox"
+        aria-haspopup="menu"
       >
         <Icon name="globe" className="size-5" />
       </button>
 
       {open && (
-        <ul
-          role="listbox"
-          className="absolute right-0 top-full mt-1 min-w-[7rem] border-2 border-neutral-900 bg-neutral-100 shadow-[4px_4px_0_0_#171717] z-50"
-        >
+        <ul className="absolute right-0 top-full mt-1 min-w-28 border-3 border-neutral-900 bg-neutral-100 shadow-[6px_6px_0_0_#000] z-50">
           {LANGUAGES.map(({ code, label }) => {
             const isActive = current === code;
             return (
-              <li key={code} role="option" aria-selected={isActive}>
+              <li key={code} role="none">
                 <button
                   type="button"
+                  role="menuitemradio"
+                  aria-checked={isActive}
                   onClick={() => {
                     i18n.changeLanguage(code);
                     setOpen(false);
                   }}
-                  className="flex items-center justify-between w-full gap-3 px-4 py-2 text-sm font-bold font-bricolage-grotesque text-neutral-900 hover:bg-neutral-200 transition-colors cursor-pointer"
+                  className="flex items-center justify-between w-full gap-3 px-4 py-2 text-sm font-bold transition-colors cursor-pointer font-bricolage-grotesque text-neutral-900 hover:bg-neutral-200"
                 >
                   <span>{label}</span>
                   {isActive && (
-                    <span className="w-2 h-2 shrink-0 bg-lime-300 border border-neutral-900" />
+                    <span className="w-2 h-2 border shrink-0 bg-lime-300 border-neutral-900" />
                   )}
                 </button>
               </li>

@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Space+Grotesk:wght@300..700&family=Syne:wght@400..800&display=swap");
 @import "tailwindcss";
 
 @theme {
   --font-bricolage-grotesque: "Bricolage Grotesque", sans-serif;
   --font-space-grotesk: "Space Grotesk", sans-serif;
+  --font-syne: "Syne", sans-serif;
 
   --header-height: 56px;
   --section-min-height: calc(100dvh - var(--header-height));

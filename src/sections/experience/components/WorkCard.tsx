@@ -25,7 +25,7 @@ export const WorkCard = ({
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="relative flex flex-col gap-4 p-6 border-2 bg-neutral-100 border-neutral-900 shadow-[4px_4px_0_0_#171717]">
+    <div className="relative flex flex-col gap-4 p-6 border-3 bg-neutral-100 border-neutral-900 shadow-[6px_6px_0_0_#000]">
       {current && <CurrentMarker />}
 
       {logoBg && (

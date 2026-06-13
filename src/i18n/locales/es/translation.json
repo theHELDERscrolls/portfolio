@@ -19,6 +19,18 @@
     "education": "Educación",
     "showMore": "+{{count}} más",
     "showLess": "Ver menos",
+    "tabs": {
+      "work": "Trabajo",
+      "education": "Educación",
+      "stack": "Tech Stack"
+    },
+    "stack_categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Base de datos",
+      "devops": "DevOps",
+      "tools": "Herramientas & IA"
+    },
     "items": {
       "optare_dev": {
         "title": "Desarrollador de Software",
