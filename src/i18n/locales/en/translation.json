@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "home": "Home",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "role": "Full-Stack Developer",
+    "greeting": "Hi, I'm",
+    "description": "Developer based in Spain. I like building things that work well, look clean, and make sense to the people using them.",
+    "downloadCv": "Download CV"
+  },
+  "experience": {
+    "title": "Experience",
+    "work": "Work",
+    "education": "Education",
+    "showMore": "+{{count}} more",
+    "showLess": "Show less",
+    "items": {
+      "optare_dev": {
+        "title": "Software Developer",
+        "description": "Software developer focused on OSM systems. Continuing at Optare with expanded responsibilities and ownership, building on the internship experience while onboarding into new technical domains."
+      },
+      "optare_intern": {
+        "title": "Software Developer Intern",
+        "description": "Frontend development across the OSS and BSS portals for a national fiber operator, primarily with Angular. Worked on backend features using Spring Boot and microservices, and participated in CI/CD workflows with Jenkins and Docker/Kubernetes for AWS deployments."
+      },
+      "freelance": {
+        "title": "Frontend Developer",
+        "description": "Built responsive and scalable web interfaces using React, TypeScript, Tailwind CSS, and GSAP across personal and collaborative projects. Emphasis on reusable component architecture, accessibility, and clean code, with full ownership of the development lifecycle from planning through code review."
+      },
+      "researcher": {
+        "title": "Researcher",
+        "description": "Participated in the first study combining isometric force measurement with the ROM Sport battery in populations with reduced mobility, analysing data from over 1,000 participants. Conducted comparative statistical analysis to identify range of motion patterns and support preventive strategies, within a multidisciplinary team of physiotherapists, physicians, and researchers."
+      }
+    },
+    "education_items": {
+      "daw": {
+        "degree": "Higher Technician in Web Application Development"
+      },
+      "fullstack": {
+        "degree": "Postgraduate Program in Full-Stack Web Application Development"
+      },
+      "sport": {
+        "degree": "Bachelor's Degree in Physical Activity and Sport Sciences"
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "repository": "Repository",
+    "deploy": "Deploy",
+    "items": {
+      "reitera": {
+        "description": "Spaced repetition flashcard app powered by the FSRS-6 algorithm. Create decks, study smarter and track your learning progress. Built as a TFG project with Angular and Spring Boot."
+      },
+      "brawl_stats": {
+        "description": "Full-stack web app that displays Brawl Stars player and club statistics using the official API."
+      },
+      "memex": {
+        "description": "A terminal REPL that turns an LLM into a personal wiki manager. Ingest sources, writes structured pages, runs incremental audits and generates Anki flashcards."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "heading": "Let's work together.",
+    "subheading": "Have a project in mind or just want to reach out? Fill out the form and I'll get back to you as soon as possible.",
+    "form": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "submit": "Send message",
+      "sending": "Sending...",
+      "placeholders": {
+        "firstName": "Antonio",
+        "lastName": "Ruiz",
+        "email": "antonio@ejemplo.com",
+        "phone": "(+01) 234 56 78 90",
+        "message": "Hi, I'd love to connect with you — whether it's about a project, a job opportunity, or just to say hello."
+      }
+    },
+    "toast": {
+      "success": "Message sent! I'll get back to you soon.",
+      "error": "Something went wrong. Please try again.",
+      "cooldown": "Please wait a moment before sending again.",
+      "invalid": "Please fill in all required fields correctly."
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

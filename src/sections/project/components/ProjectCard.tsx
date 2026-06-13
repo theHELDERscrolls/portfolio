@@ -1,9 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { BrutalButton } from "@/components";
 
 interface ProjectCardProps {
+  id: string;
   filename: string;
   title: string;
-  description: string;
   tags: readonly string[];
   image: string;
   githubUrl: string;
@@ -11,14 +12,16 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard = ({
+  id,
   filename,
   title,
-  description,
   tags,
   image,
   githubUrl,
   liveUrl,
 }: ProjectCardProps) => {
+  const { t } = useTranslation();
+
   return (
     <div className="flex flex-col w-full min-h-96 border-2 overflow-hidden border-neutral-900 transition-all ease-in-out duration-300 hover:-translate-1 hover:shadow-[10px_10px_0_0_#171717] group">
       <header className="relative flex items-center justify-center w-full gap-4 p-1 bg-neutral-400 min-h-12">
@@ -40,7 +43,9 @@ export const ProjectCard = ({
           <h3 className="text-xl font-extrabold font-bricolage-grotesque">
             {title}
           </h3>
-          <p className="text-balance font-space-grotesk">{description}</p>
+          <p className="text-balance font-space-grotesk">
+            {t(`projects.items.${id}.description`)}
+          </p>
 
           <div className="flex flex-wrap items-end flex-1 gap-2">
             {tags.map((tag) => (
@@ -63,7 +68,7 @@ export const ProjectCard = ({
             iconOnlyMobile
             className="transition-all ease-in-out cursor-pointer hover:bg-slate-200"
           >
-            Repository
+            {t("projects.repository")}
           </BrutalButton>
           {liveUrl && (
             <BrutalButton
@@ -74,7 +79,7 @@ export const ProjectCard = ({
               iconOnlyMobile
               className="transition-all ease-in-out cursor-pointer hover:bg-cyan-200"
             >
-              Deploy
+              {t("projects.deploy")}
             </BrutalButton>
           )}
         </div>

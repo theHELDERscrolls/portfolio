@@ -17,6 +17,7 @@ export const FIELD_LIMITS = {
 
 function sanitize(value: unknown, maxLength: number): string {
   if (typeof value !== "string") return "";
+
   return DOMPurify.sanitize(value.trim(), {
     ALLOWED_TAGS: [],
     ALLOWED_ATTR: [],
@@ -66,7 +67,9 @@ export async function sendEmail(
       },
       { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY },
     );
+
     localStorage.setItem(COOLDOWN_KEY, Date.now().toString());
+
     return "success";
   } catch {
     return "error";

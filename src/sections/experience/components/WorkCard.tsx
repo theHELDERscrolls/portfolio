@@ -1,27 +1,27 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { CurrentMarker } from "./CurrentMarker";
 
 const BADGE_THRESHOLD = 4;
 
 interface WorkCardProps {
-  title: string;
+  id: string;
   company: string;
   period?: string;
-  description: string;
   tags: readonly string[];
   logoBg?: string;
   current?: boolean;
 }
 
 export const WorkCard = ({
-  title,
+  id,
   company,
   period,
-  description,
   tags,
   logoBg,
   current = false,
 }: WorkCardProps) => {
+  const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -40,7 +40,7 @@ export const WorkCard = ({
       <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <p className="text-xl font-extrabold font-bricolage-grotesque text-neutral-900">
-            {title}
+            {t(`experience.items.${id}.title`)}
           </p>
           <p className="text-sm font-extrabold font-space-grotesk text-neutral-600">
             {company}
@@ -54,7 +54,7 @@ export const WorkCard = ({
       </div>
 
       <p className="text-sm font-medium leading-relaxed text-balance font-space-grotesk text-neutral-700">
-        {description}
+        {t(`experience.items.${id}.description`)}
       </p>
 
       <div className="flex flex-wrap items-center gap-2">
@@ -71,7 +71,7 @@ export const WorkCard = ({
             onClick={() => setExpanded(true)}
             className="px-2 py-1 text-xs font-semibold transition-colors border-2 sm:hidden font-space-grotesk text-neutral-700 border-neutral-600 hover:bg-neutral-200"
           >
-            +{tags.length - BADGE_THRESHOLD} more
+            {t("experience.showMore", { count: tags.length - BADGE_THRESHOLD })}
           </button>
         )}
         {tags.length > BADGE_THRESHOLD && expanded && (
@@ -79,7 +79,7 @@ export const WorkCard = ({
             onClick={() => setExpanded(false)}
             className="px-2 py-1 text-xs font-semibold transition-colors border-2 sm:hidden font-space-grotesk text-neutral-700 border-neutral-600 hover:bg-neutral-200"
           >
-            Show less
+            {t("experience.showLess")}
           </button>
         )}
       </div>
