@@ -1,4 +1,5 @@
 import emailjs from "@emailjs/browser";
+import DOMPurify from "dompurify";
 
 export type FormStatus = "idle" | "success" | "error" | "cooldown" | "invalid";
 
@@ -16,11 +17,10 @@ export const FIELD_LIMITS = {
 
 function sanitize(value: unknown, maxLength: number): string {
   if (typeof value !== "string") return "";
-  return value
-    .trim()
-    .replace(/<[^>]*>/g, "")
-    .replace(/[<>]/g, "")
-    .slice(0, maxLength);
+  return DOMPurify.sanitize(value.trim(), {
+    ALLOWED_TAGS: [],
+    ALLOWED_ATTR: [],
+  }).slice(0, maxLength);
 }
 
 export async function sendEmail(
