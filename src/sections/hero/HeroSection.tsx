@@ -1,28 +1,29 @@
+import { useTranslation } from "react-i18next";
 import { BrutalButton } from "@/components";
 
 export const HeroSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       id="hero"
       className="flex items-center justify-center w-full min-h-(--section-min-height) bg-neutral-100 px-4 md:px-16 py-12"
     >
       <div className="grid w-full grid-cols-1 gap-12 max-w-7xl md:grid-cols-2 md:gap-8">
-        {/* Left — texto y CTA */}
         <div className="flex flex-col justify-center gap-6">
           <div className="flex flex-col gap-2">
             <span className="text-sm font-semibold tracking-widest uppercase font-space-grotesk text-neutral-500">
-              Full-Stack Developer
+              {t("hero.role")}
             </span>
             <h1 className="font-bricolage-grotesque font-extrabold leading-none text-neutral-900 text-[clamp(3.5rem,8vw,7rem)]">
-              Hi, I'm
+              {t("hero.greeting")}
               <br />
               <span>Helder</span>
             </h1>
           </div>
 
           <p className="max-w-md text-base leading-relaxed font-space-grotesk text-neutral-700">
-            Developer based in Spain. I like building things that work well,
-            look clean, and make sense to the people using them.
+            {t("hero.description")}
           </p>
 
           <div className="flex items-center gap-3">
@@ -42,7 +43,7 @@ export const HeroSection = () => {
                 rel="noopener noreferrer"
                 iconName="file-cv"
               >
-                Download CV
+                {t("hero.downloadCv")}
               </BrutalButton>
             </div>
 
@@ -68,7 +69,6 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        {/* Right — imagen */}
         <div className="flex items-center justify-center md:justify-end">
           <div className="relative w-full max-w-sm md:max-w-md">
             <img

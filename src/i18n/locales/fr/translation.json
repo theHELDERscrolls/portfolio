@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "contact": "Contact",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
+  },
+  "hero": {
+    "role": "Développeur Full-Stack",
+    "greeting": "Bonjour, je suis",
+    "description": "Développeur basé en Espagne. J'aime créer des choses qui fonctionnent bien, ont une apparence soignée et ont du sens pour ceux qui les utilisent.",
+    "downloadCv": "Télécharger le CV"
+  },
+  "experience": {
+    "title": "Expérience",
+    "work": "Travail",
+    "education": "Formation",
+    "showMore": "+{{count}} de plus",
+    "showLess": "Voir moins",
+    "items": {
+      "optare_dev": {
+        "title": "Développeur Logiciel",
+        "description": "Développeur logiciel spécialisé dans les systèmes OSM. Je continue chez Optare avec des responsabilités et une autonomie accrues, en m'appuyant sur l'expérience du stage tout en abordant de nouveaux domaines techniques."
+      },
+      "optare_intern": {
+        "title": "Développeur Logiciel Stagiaire",
+        "description": "Développement frontend sur les portails OSS et BSS pour un opérateur national de fibre, principalement avec Angular. Travail sur des fonctionnalités backend avec Spring Boot et microservices, et participation aux flux CI/CD avec Jenkins et Docker/Kubernetes pour les déploiements AWS."
+      },
+      "freelance": {
+        "title": "Développeur Frontend",
+        "description": "Création d'interfaces web responsives et évolutives avec React, TypeScript, Tailwind CSS et GSAP dans des projets personnels et collaboratifs. Accent sur l'architecture de composants réutilisables, l'accessibilité et le code propre, avec une maîtrise complète du cycle de développement."
+      },
+      "researcher": {
+        "title": "Chercheur",
+        "description": "J'ai participé à la première étude combinant la mesure de force isométrique avec la batterie ROM Sport dans des populations à mobilité réduite, en analysant les données de plus de 1 000 participants. J'ai mené des analyses statistiques comparatives pour identifier les schémas de plage de mouvement et soutenir les stratégies préventives, au sein d'une équipe multidisciplinaire de kinésithérapeutes, médecins et chercheurs."
+      }
+    },
+    "education_items": {
+      "daw": {
+        "degree": "Technicien Supérieur en Développement d'Applications Web"
+      },
+      "fullstack": {
+        "degree": "Programme de Troisième Cycle en Développement d'Applications Web Full-Stack"
+      },
+      "sport": {
+        "degree": "Licence en Sciences des Activités Physiques et Sportives"
+      }
+    }
+  },
+  "projects": {
+    "title": "Projets",
+    "repository": "Dépôt",
+    "deploy": "Déploiement",
+    "items": {
+      "reitera": {
+        "description": "Application de flashcards avec répétition espacée basée sur l'algorithme FSRS-6. Créez des paquets, étudiez plus intelligemment et suivez vos progrès. Développé comme projet de fin d'études avec Angular et Spring Boot."
+      },
+      "brawl_stats": {
+        "description": "Application web full-stack affichant les statistiques de joueurs et de clubs de Brawl Stars via l'API officielle."
+      },
+      "memex": {
+        "description": "REPL de terminal qui transforme un LLM en gestionnaire de wiki personnel. Ingère des sources, rédige des pages structurées, exécute des audits incrémentiels et génère des flashcards pour Anki."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "heading": "Travaillons ensemble.",
+    "subheading": "Vous avez un projet en tête ou souhaitez simplement prendre contact ? Remplissez le formulaire et je vous répondrai dès que possible.",
+    "form": {
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Email",
+      "phone": "Téléphone",
+      "message": "Message",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "placeholders": {
+        "firstName": "Antonio",
+        "lastName": "Ruiz",
+        "email": "antonio@exemple.com",
+        "phone": "(+01) 234 56 78 90",
+        "message": "Bonjour, je souhaiterais vous contacter, que ce soit pour un projet, une opportunité professionnelle ou simplement pour dire bonjour."
+      }
+    },
+    "toast": {
+      "success": "Message envoyé ! Je vous répondrai bientôt.",
+      "error": "Une erreur s'est produite. Veuillez réessayer.",
+      "cooldown": "Veuillez patienter avant d'envoyer à nouveau.",
+      "invalid": "Veuillez remplir correctement tous les champs obligatoires."
+    }
+  },
+  "footer": {
+    "rights": "Tous droits réservés."
+  }
+}

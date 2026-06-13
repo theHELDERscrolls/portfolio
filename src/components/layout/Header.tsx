@@ -1,18 +1,20 @@
 import { useState } from "react";
-import { Icon, Logo } from "../ui";
-
-const NAV_LINKS = [
-  { href: "#hero", label: "Home" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
-];
-
-const CLOSE_DURATION = 200;
+import { useTranslation } from "react-i18next";
+import { Icon, LanguageSwitcher, Logo } from "../ui";
 
 export const Header = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
+
+  const NAV_LINKS = [
+    { href: "#hero", label: t("nav.home") },
+    { href: "#experience", label: t("nav.experience") },
+    { href: "#projects", label: t("nav.projects") },
+    { href: "#contact", label: t("nav.contact") },
+  ];
+
+  const CLOSE_DURATION = 200;
 
   const openMenu = () => setIsOpen(true);
 
@@ -47,14 +49,21 @@ export const Header = () => {
           ))}
         </ul>
 
-        <button
-          className="md:hidden p-2 border-2 border-neutral-900 bg-neutral-100 text-neutral-900 shadow-[3px_3px_0_0_#171717] transition-all hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0_0_#171717] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none"
-          onClick={isOpen ? closeMenu : openMenu}
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isOpen}
-        >
-          <Icon name={isOpen ? "x" : "menu"} className="size-5" />
-        </button>
+        <div className="items-center hidden gap-3 ml-auto md:flex">
+          <LanguageSwitcher />
+        </div>
+
+        <div className="flex items-center gap-3 md:hidden">
+          <LanguageSwitcher />
+          <button
+            className="p-2 border-2 border-neutral-900 bg-neutral-100 text-neutral-900 shadow-[3px_3px_0_0_#171717] transition-all hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0_0_#171717] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none"
+            onClick={isOpen ? closeMenu : openMenu}
+            aria-label={isOpen ? t("nav.closeMenu") : t("nav.openMenu")}
+            aria-expanded={isOpen}
+          >
+            <Icon name={isOpen ? "x" : "menu"} className="size-5" />
+          </button>
+        </div>
       </header>
 
       {isOpen && (

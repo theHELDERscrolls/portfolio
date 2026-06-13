@@ -5,38 +5,20 @@ import {
   useRef,
   useState,
 } from "react";
+import { useTranslation } from "react-i18next";
 import { BrutalButton, Toast } from "@/components";
 import { FIELD_LIMITS, sendEmail } from "../utils";
 import type { FormStatus } from "../utils";
 import { FormField } from "./FormField";
 
-const toastConfig: Record<
-  Exclude<FormStatus, "idle">,
-  { type: "success" | "error"; message: string }
-> = {
-  success: {
-    type: "success",
-    message: "Message sent! I'll get back to you soon.",
-  },
-  error: { type: "error", message: "Something went wrong. Please try again." },
-  cooldown: {
-    type: "error",
-    message: "Please wait a moment before sending again.",
-  },
-  invalid: {
-    type: "error",
-    message: "Please fill in all required fields correctly.",
-  },
-};
-
 export const ContactForm = () => {
+  const { t } = useTranslation();
   const [status, formAction, isPending] = useActionState(sendEmail, "idle");
   const [dismissedForStatus, setDismissedForStatus] =
     useState<FormStatus>("idle");
   const formRef = useRef<HTMLFormElement>(null);
 
   const showToast = status !== "idle" && status !== dismissedForStatus;
-  
   const closeToast = useCallback(() => setDismissedForStatus(status), [status]);
 
   useEffect(() => {
@@ -63,20 +45,20 @@ export const ContactForm = () => {
           <FormField
             id="from_name"
             name="from_name"
-            label="First name"
+            label={t("contact.form.firstName")}
             required
             minLength={2}
             maxLength={FIELD_LIMITS.from_name}
-            placeholder="Antonio"
+            placeholder={t("contact.form.placeholders.firstName")}
           />
           <FormField
             id="last_name"
             name="last_name"
-            label="Last name"
+            label={t("contact.form.lastName")}
             required
             minLength={2}
             maxLength={FIELD_LIMITS.last_name}
-            placeholder="Ruiz"
+            placeholder={t("contact.form.placeholders.lastName")}
           />
         </div>
 
@@ -84,34 +66,34 @@ export const ContactForm = () => {
           <FormField
             id="from_email"
             name="from_email"
-            label="Email"
+            label={t("contact.form.email")}
             type="email"
             required
             maxLength={FIELD_LIMITS.from_email}
-            placeholder="antonio@ejemplo.com"
+            placeholder={t("contact.form.placeholders.email")}
           />
           <FormField
             id="phone"
             name="phone"
-            label="Phone"
+            label={t("contact.form.phone")}
             type="tel"
             required
             minLength={6}
             maxLength={FIELD_LIMITS.phone}
-            placeholder="(+01) 234 56 78 90"
+            placeholder={t("contact.form.placeholders.phone")}
           />
         </div>
 
         <FormField
           id="message"
           name="message"
-          label="Message"
+          label={t("contact.form.message")}
           type="textarea"
           required
           minLength={10}
           maxLength={FIELD_LIMITS.message}
           rows={6}
-          placeholder="Hi, I'd love to connect with you — whether it's about a project, a job opportunity, or just to say hello."
+          placeholder={t("contact.form.placeholders.message")}
         />
 
         <BrutalButton
@@ -120,14 +102,14 @@ export const ContactForm = () => {
           iconName="send"
           className="self-start cursor-pointer hover:bg-lime-200"
         >
-          {isPending ? "Sending..." : "Send message"}
+          {isPending ? t("contact.form.sending") : t("contact.form.submit")}
         </BrutalButton>
       </form>
 
       {showToast && (
         <Toast
-          type={toastConfig[status].type}
-          message={toastConfig[status].message}
+          type={status === "success" ? "success" : "error"}
+          message={t(`contact.toast.${status}`)}
           onClose={closeToast}
         />
       )}
