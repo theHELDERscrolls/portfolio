@@ -5,8 +5,7 @@ import { Icon } from "./Icon";
 const LANGUAGES = [
   { code: "en", label: "English" },
   { code: "es", label: "Español" },
-  { code: "it", label: "Italiano" },
-  { code: "fr", label: "Français" },
+  { code: "pt", label: "Português" },
 ] as const;
 
 export const LanguageSwitcher = () => {

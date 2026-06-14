@@ -77,7 +77,7 @@ export const WorkCard = ({
         {tags.length > BADGE_THRESHOLD && !expanded && (
           <button
             onClick={() => setExpanded(true)}
-            className="px-2 py-1 text-xs font-semibold transition-colors border-2 sm:hidden font-space-grotesk text-neutral-700 border-neutral-600 hover:bg-neutral-200"
+            className="px-2 py-1 text-xs font-semibold transition-colors border-3 sm:hidden font-space-grotesk text-neutral-700 border-neutral-900 hover:bg-neutral-200"
           >
             {t("experience.showMore", { count: tags.length - BADGE_THRESHOLD })}
           </button>
@@ -85,7 +85,7 @@ export const WorkCard = ({
         {tags.length > BADGE_THRESHOLD && expanded && (
           <button
             onClick={() => setExpanded(false)}
-            className="px-2 py-1 text-xs font-semibold transition-colors border-2 sm:hidden font-space-grotesk text-neutral-700 border-neutral-600 hover:bg-neutral-200"
+            className="px-2 py-1 text-xs font-semibold transition-colors border-3 sm:hidden font-space-grotesk text-neutral-700 border-neutral-900 hover:bg-neutral-200"
           >
             {t("experience.showLess")}
           </button>

@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { ProjectCard } from "./components";
 import { PROJECTS } from "./data";
 
-export const PorjectSection = () => {
+export const ProjectSection = () => {
   const { t } = useTranslation();
 
   return (

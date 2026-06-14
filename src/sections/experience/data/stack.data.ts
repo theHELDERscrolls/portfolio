@@ -12,14 +12,14 @@ export const TECH_STACK: TechCategory[] = [
   {
     id: "frontend",
     items: [
-      { name: "HTML5", url: "/tech/html5.svg" },
-      { name: "CSS", url: "/tech/css.svg" },
-      { name: "Sass", url: "/tech/sass.svg" },
-      { name: "JavaScript", url: "/tech/javascript.svg" },
-      { name: "TypeScript", url: "/tech/typescript.svg" },
-      { name: "React", url: "/tech/react.svg" },
       { name: "Angular", url: "/tech/angular.svg" },
+      { name: "CSS", url: "/tech/css.svg" },
+      { name: "HTML5", url: "/tech/html5.svg" },
+      { name: "JavaScript", url: "/tech/javascript.svg" },
+      { name: "React", url: "/tech/react.svg" },
+      { name: "Sass", url: "/tech/sass.svg" },
       { name: "Tailwind CSS", url: "/tech/tailwindcss.svg" },
+      { name: "TypeScript", url: "/tech/typescript.svg" },
     ],
   },
   {
@@ -41,6 +41,7 @@ export const TECH_STACK: TechCategory[] = [
   {
     id: "devops",
     items: [
+      { name: "Docker", url: "/tech/docker.svg" },
       { name: "Git", url: "/tech/git.svg" },
       { name: "GitHub", url: "/tech/github.svg" },
       { name: "GitLab", url: "/tech/gitlab.svg" },
@@ -51,8 +52,8 @@ export const TECH_STACK: TechCategory[] = [
   {
     id: "tools",
     items: [
-      { name: "GitHub Copilot", url: "/tech/copilot.svg" },
       { name: "Claude AI", url: "/tech/claude.svg" },
+      { name: "GitHub Copilot", url: "/tech/copilot.svg" },
       { name: "Postman", url: "/tech/postman.svg" },
       { name: "Swagger", url: "/tech/swagger.svg" },
     ],
