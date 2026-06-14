@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "Início",
+    "experience": "Experiência",
+    "projects": "Projetos",
+    "contact": "Contacto",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu"
+  },
+  "hero": {
+    "role": "Desenvolvedor Full-Stack",
+    "greeting": "Olá, sou o",
+    "description": "Desenvolvedor baseado em Espanha. Gosto de construir coisas que funcionem bem, tenham bom aspeto e façam sentido para quem as usa.",
+    "downloadCv": "Descarregar CV"
+  },
+  "experience": {
+    "title": "Experiência",
+    "work": "Trabalho",
+    "education": "Formação",
+    "showMore": "+{{count}} mais",
+    "showLess": "Ver menos",
+    "tabs": {
+      "work": "Trabalho",
+      "education": "Formação",
+      "stack": "Tech Stack"
+    },
+    "stack_categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Base de dados",
+      "devops": "DevOps",
+      "tools": "Ferramentas & IA"
+    },
+    "items": {
+      "optare_dev": {
+        "title": "Desenvolvedor de Software",
+        "description": "Desenvolvedor de software especializado em sistemas OSM. Continuo na Optare com maiores responsabilidades e autonomia, ampliando a experiência de estágio enquanto incorporo novos domínios técnicos."
+      },
+      "optare_intern": {
+        "title": "Desenvolvedor de Software Estagiário",
+        "description": "Desenvolvimento frontend nos portais OSS e BSS para um operador nacional de fibra, principalmente com Angular. Trabalhei em funcionalidades backend com Spring Boot e microsserviços, participando em fluxos CI/CD com Jenkins e Docker/Kubernetes para implementações na AWS."
+      },
+      "freelance": {
+        "title": "Desenvolvedor Frontend",
+        "description": "Criação de interfaces web responsivas e escaláveis com React, TypeScript, Tailwind CSS e GSAP em projetos pessoais e colaborativos. Ênfase na arquitetura de componentes reutilizáveis, acessibilidade e código limpo, com controlo total do ciclo de desenvolvimento desde o planeamento até à revisão de código."
+      },
+      "researcher": {
+        "title": "Investigador",
+        "description": "Participei no primeiro estudo que combina a medição de força isométrica com a bateria ROM Sport em populações com mobilidade reduzida, analisando dados de mais de 1.000 participantes. Realizei análises estatísticas comparativas para identificar padrões de amplitude de movimento e apoiar estratégias preventivas, numa equipa multidisciplinar de fisioterapeutas, médicos e investigadores."
+      }
+    },
+    "education_items": {
+      "daw": {
+        "degree": "Técnico Superior em Desenvolvimento de Aplicações Web"
+      },
+      "fullstack": {
+        "degree": "Mestrado em Desenvolvimento de Aplicações Web Full-Stack"
+      },
+      "sport": {
+        "degree": "Licenciatura em Ciências da Atividade Física e do Desporto"
+      }
+    }
+  },
+  "projects": {
+    "title": "Projetos",
+    "repository": "Repositório",
+    "deploy": "Publicação",
+    "items": {
+      "reitera": {
+        "description": "Aplicação de flashcards com repetição espaçada baseada no algoritmo FSRS-6. Cria baralhos, estuda de forma mais inteligente e acompanha o teu progresso. Desenvolvido como projeto final com Angular e Spring Boot."
+      },
+      "brawl_stats": {
+        "description": "Aplicação web full-stack que apresenta estatísticas de jogadores e clubes de Brawl Stars usando a API oficial."
+      },
+      "memex": {
+        "description": "REPL de terminal que transforma um LLM num gestor de wiki pessoal. Ingere fontes, escreve páginas estruturadas, executa auditorias incrementais e gera flashcards para o Anki."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "heading": "Vamos trabalhar juntos.",
+    "subheading": "Tens um projeto em mente ou queres simplesmente entrar em contacto? Preenche o formulário e responderei o mais brevemente possível.",
+    "form": {
+      "firstName": "Nome",
+      "lastName": "Apelido",
+      "email": "Email",
+      "phone": "Telefone",
+      "message": "Mensagem",
+      "submit": "Enviar mensagem",
+      "sending": "A enviar...",
+      "placeholders": {
+        "firstName": "António",
+        "lastName": "Ruiz",
+        "email": "antonio@exemplo.com",
+        "phone": "(+01) 234 56 78 90",
+        "message": "Olá, gostaria de entrar em contacto contigo, seja para falar de um projeto, uma oportunidade de trabalho ou simplesmente para dizer olá."
+      }
+    },
+    "toast": {
+      "success": "Mensagem enviada! Entrarei em contacto contigo em breve.",
+      "error": "Algo correu mal. Por favor, tenta novamente.",
+      "cooldown": "Por favor, aguarda um momento antes de enviar novamente.",
+      "invalid": "Por favor, preenche todos os campos obrigatórios corretamente."
+    }
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  }
+}

@@ -19,6 +19,18 @@
     "education": "Education",
     "showMore": "+{{count}} more",
     "showLess": "Show less",
+    "tabs": {
+      "work": "Work",
+      "education": "Education",
+      "stack": "Tech Stack"
+    },
+    "stack_categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "devops": "DevOps",
+      "tools": "Tools & AI"
+    },
     "items": {
       "optare_dev": {
         "title": "Software Developer",
@@ -42,7 +54,7 @@
         "degree": "Higher Technician in Web Application Development"
       },
       "fullstack": {
-        "degree": "Postgraduate Program in Full-Stack Web Application Development"
+        "degree": "Master's in Full-Stack Web Application Development"
       },
       "sport": {
         "degree": "Bachelor's Degree in Physical Activity and Sport Sciences"

@@ -1,8 +1,10 @@
 import { useTranslation } from "react-i18next";
+import { useInView } from "@/hooks";
 import { ContactForm } from "./components";
 
 export const ContactSection = () => {
   const { t } = useTranslation();
+  const { ref, inView } = useInView<HTMLDivElement>();
 
   return (
     <section
@@ -14,8 +16,13 @@ export const ContactSection = () => {
           {t("contact.title")}
         </h2>
 
-        <div className="grid grid-cols-1 gap-10 flex-1 lg:grid-cols-[2fr_3fr] lg:items-stretch">
-          <div className="flex flex-col justify-between gap-8">
+        <div
+          ref={ref}
+          className="grid grid-cols-1 gap-10 flex-1 lg:grid-cols-[2fr_3fr] lg:items-stretch"
+        >
+          <div
+            className={`flex flex-col justify-between gap-8 ${inView ? "animate-slide-left" : "opacity-0"}`}
+          >
             <div className="flex flex-col gap-4">
               <p className="font-bricolage-grotesque font-extrabold text-neutral-900 text-[clamp(1.5rem,3vw,2.25rem)] leading-tight">
                 {t("contact.heading")}
@@ -26,7 +33,12 @@ export const ContactSection = () => {
             </div>
           </div>
 
-          <ContactForm />
+          <div
+            className={inView ? "animate-fade-up" : "opacity-0"}
+            style={{ animationDelay: "150ms" }}
+          >
+            <ContactForm />
+          </div>
         </div>
       </div>
     </section>

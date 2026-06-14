@@ -56,7 +56,7 @@ export const Header = () => {
         <div className="flex items-center gap-3 md:hidden">
           <LanguageSwitcher />
           <button
-            className="p-2 border-2 border-neutral-900 bg-neutral-100 text-neutral-900 shadow-[3px_3px_0_0_#171717] transition-all hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0_0_#171717] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none"
+            className="p-2 border-3 border-neutral-900 bg-neutral-100 text-neutral-900 shadow-[4px_4px_0_0_#000] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0_0_#000] active:translate-x-1 active:translate-y-1 active:shadow-none"
             onClick={isOpen ? closeMenu : openMenu}
             aria-label={isOpen ? t("nav.closeMenu") : t("nav.openMenu")}
             aria-expanded={isOpen}
@@ -75,7 +75,7 @@ export const Header = () => {
               <a
                 href={href}
                 onClick={closeMenu}
-                className="flex w-full px-5 py-3 font-bold text-sm border-2 border-neutral-900 bg-neutral-100 text-neutral-900 shadow-[4px_4px_0_0_#171717] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_#171717] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none"
+                className="flex w-full px-5 py-3 font-bold text-sm border-3 border-neutral-900 bg-neutral-100 text-neutral-900 shadow-[6px_6px_0_0_#000] transition-all hover:translate-x-0.75 hover:translate-y-0.75 hover:shadow-[3px_3px_0_0_#000] active:translate-x-1.5 active:translate-y-1.5 active:shadow-none"
               >
                 {label}
               </a>

@@ -3,7 +3,7 @@ import {
   ContactSection,
   ExperienceSection,
   HeroSection,
-  PorjectSection,
+  ProjectSection,
 } from "./sections";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <main className="flex flex-col w-full bg-stone-100">
         <HeroSection />
         <ExperienceSection />
-        <PorjectSection />
+        <ProjectSection />
         <ContactSection />
       </main>
       <Footer />

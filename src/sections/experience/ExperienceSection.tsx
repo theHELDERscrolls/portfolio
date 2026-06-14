@@ -1,9 +1,20 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { EducationCard, WorkCard } from "./components";
+import { BrutalButton } from "@/components";
+import { EducationCard, StackTab, WorkCard } from "./components";
 import { EDUCATION, WORK_EXPERIENCE } from "./data";
+
+type ExperienceTab = "work" | "education" | "stack";
+
+const TABS: { id: ExperienceTab; icon: string; selectedBg: string }[] = [
+  { id: "work", icon: "briefcase", selectedBg: "bg-sky-200" },
+  { id: "education", icon: "school", selectedBg: "bg-violet-200" },
+  { id: "stack", icon: "code", selectedBg: "bg-amber-200" },
+];
 
 export const ExperienceSection = () => {
   const { t } = useTranslation();
+  const [activeTab, setActiveTab] = useState<ExperienceTab>("work");
 
   return (
     <section
@@ -15,26 +26,43 @@ export const ExperienceSection = () => {
           {t("experience.title")}
         </h2>
 
-        <div className="flex flex-col gap-6">
-          <h3 className="pb-2 text-sm font-bold tracking-widest uppercase border-b-2 font-space-grotesk text-neutral-900 border-neutral-900">
-            {t("experience.work")}
-          </h3>
-          <div className="flex flex-col gap-4">
-            {WORK_EXPERIENCE.map((job) => (
-              <WorkCard key={job.id} {...job} />
-            ))}
-          </div>
+        <div className="flex gap-3" role="tablist">
+          {TABS.map(({ id, icon, selectedBg }) => (
+            <BrutalButton
+              key={id}
+              type="button"
+              role="tab"
+              aria-selected={activeTab === id}
+              onClick={() => setActiveTab(id)}
+              iconName={icon}
+              iconOnlyMobile
+              selected={activeTab === id}
+              selectedBg={selectedBg}
+              className="justify-center flex-1"
+            >
+              {t(`experience.tabs.${id}`)}
+            </BrutalButton>
+          ))}
         </div>
 
-        <div className="flex flex-col gap-6">
-          <h3 className="pb-2 text-sm font-bold tracking-widest uppercase border-b-2 font-space-grotesk text-neutral-900 border-neutral-900">
-            {t("experience.education")}
-          </h3>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {EDUCATION.map((edu) => (
-              <EducationCard key={edu.id} {...edu} />
-            ))}
-          </div>
+        <div role="tabpanel">
+          {activeTab === "work" && (
+            <div className="flex flex-col gap-4">
+              {WORK_EXPERIENCE.map((job, i) => (
+                <WorkCard key={job.id} {...job} animationDelay={i * 120} />
+              ))}
+            </div>
+          )}
+
+          {activeTab === "education" && (
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {EDUCATION.map((edu, i) => (
+                <EducationCard key={edu.id} {...edu} animationDelay={i * 100} />
+              ))}
+            </div>
+          )}
+
+          {activeTab === "stack" && <StackTab />}
         </div>
       </div>
     </section>
