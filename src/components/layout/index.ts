@@ -1,3 +1,2 @@
-export * from "./desktop";
-export * from "./mobile";
-export * from "./shared";
+export * from "./Footer";
+export * from "./Header";

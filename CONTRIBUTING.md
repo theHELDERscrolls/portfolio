@@ -8,8 +8,7 @@ While this project is primarily personal, feedback and suggestions are always we
 ## How to contribute
 
 - Feel free to open an **issue** if you find a bug or have a suggestion.
-- If you want to submit a **pull request**, please open an issue first to
-  discuss the proposed changes.
+- If you want to submit a **pull request**, please open an issue first to discuss the proposed changes.
 
 ## Development setup
 
@@ -18,31 +17,17 @@ npm install
 npm run dev
 ```
 
-## Environment variables
-
-This project requires a `.env` file at the root of the project with the following variables:
-
-```env
-VITE_IP_GEOLOCATION
-VITE_OPEN_WEATHER_API_KEY
-VITE_QUOTES_API_NINJA_KEY
-```
-
-These variables are used to access third-party APIs (IP geolocation, weather and quotes).
-
 ## Code style
 
 - Follow the existing project structure.
 - Use TypeScript and keep types strict.
-- Prefer small, focused components and hooks.
+- Prefer small, focused components.
 
 ## Contact
-
-If you want to reach out, you can contact me at:
 
 - Email: <manuhelderruiz@gmail.com>
 - GitHub: <https://github.com/theHELDERscrolls>
 
 ---
 
-This project is licensed under the [MIT License](./LICENSE)..
+This project is licensed under the [MIT License](./LICENSE).
